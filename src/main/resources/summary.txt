@@ -1,0 +1,108 @@
+{h1#0,p#0} Pharma reps build trust and promote proper medication use.
+
+- Role: Build trusting relationships with healthcare professionals.  
+- Responsibility: Support optimal treatment for patients.  
+- Contribution: Promote proper medication use for better patient health.
+{h1#0,h2#0,p#0} Summary:  
+Pharmaceutical reps sell and explain medicines to healthcare providers.
+
+- Role: Provide medications to healthcare places.
+- Responsibility: Give accurate medicine information.
+- Relationship: Build trust with healthcare professionals.
+{h1#0,h2#0,p#1} Summary:  
+Roles and responsibilities of a pharmaceutical sales rep.
+
+- Roles: Explain the duties of a sales representative.
+- Responsibilities: Describe tasks for selling pharmaceutical products.
+{h1#0,h2#0,h3#0,p#0} **Summary:**  
+Pharma reps share medication info like usage, dosage, and side effects.
+
+- **Pharmaceutical sales representatives:** Share latest medication information.
+- **Indications:** Explain what the medications are used for.
+- **Dosages:** Provide correct dosage details.
+- **Side effects:** Inform about potential side effects.
+- **Interactions:** Clarify how medicines interact with others.
+{h1#0,h2#0,h3#0,p#1} Summary:  
+Specialized information aids in prescribing correct medicines.
+
+- Specialized Information: Important for accurate prescriptions.
+- Objective Information: Helps healthcare professionals.
+- Appropriate Medications: Ensures correct treatment for patients.
+{h1#0,h2#0,h3#1,p#0} Trust is vital for pharmaceutical sales reps with healthcare professionals.
+
+- Trust: Essential for sales reps with doctors, pharmacists, and nurses.
+- Professionals: Includes doctors, pharmacists, and nurses.
+{h1#0,h2#0,h3#1,p#1} Trust grows by actively answering questions and concerns about products.
+
+- Trust: Built by responding to product questions and concerns.
+- Sales: Not the only way to foster trust.
+- Approach: Be proactive in addressing customer inquiries.
+{h1#0,h2#0,h3#1,p#2} Healthcare trust relies on proper medication use and patient safety.
+
+- Trust: Important in healthcare for safety and medication use.
+- Medication: Proper use is essential for patient trust.
+- Safety: Directly linked to trust in healthcare.
+- Attitude: Sincerity is vital in healthcare settings.
+{h1#0,h2#0,h3#2,p#0} Summary:  
+Pharma reps should put patient health before product profit.
+
+- Pharmaceutical: The focus is on sales representatives in the industry.
+- Priority: Patient health and safety come first.
+- Profit: Product profit is less important than patient well-being.
+{h1#0,h2#0,h3#2,p#1} Ethical sales build trust and long-term relationships.
+
+- Ethical sales: Enhance credibility of sales representatives.
+- Avoidance: No excessive promotion or exaggerated claims.
+- Focus: Provide honest and objective information.
+{h1#0,h2#1,p#0} Pharma reps must follow rules to ensure safe medicine sales.
+
+- Compliance: Must follow pharmaceutical regulations.
+- Conduct: Engage in lawful and appropriate sales activities.
+- Safety: Ensure medicines are safe for healthcare professionals and patients.
+{h1#0,h2#1,p#1} Pharma reps' key legal duties.
+
+- Responsibilities: Main legal duties of pharmaceutical sales reps.
+- Obligations: Key obligations of pharmaceutical sales reps.
+{h1#0,h2#1,h3#0,p#0} Pharmaceutical reps must follow laws on drugs and data privacy.
+
+- Laws: Reps need to know and follow drug-related laws.
+- Regulations: PMD Act and Personal Information Protection Act are key.
+- Processes: Laws cover making, selling, and sharing drug info.
+- Privacy: Personal data handling is also regulated.
+{h1#0,h2#1,h3#0,p#1} Legal compliance is crucial to avoid severe penalties.
+
+- Non-compliance: Risks to the company.
+- Violations: Can lead to severe penalties.
+- Penalties: Include loss of trust or suspension of operations.
+- Compliance: Essential for business safety.
+{h1#0,h2#1,h3#1,p#0} Summary:  
+Pharmaceutical reps give honest info about medicine.
+
+- Responsibility: Provide correct details on medicines.
+- Information: Explain efficacy, side effects, and usage.
+- Honesty: Avoid exaggerating or misleading claims.
+{h1#0,h2#1,h3#1,p#1} Summary:   
+Proper sales conduct ensures fairness and legal compliance.
+
+- Sales Pressure: Avoid excessive pressure to prevent legal issues.
+- Practices: Inappropriate practices can harm professionals or patients.
+- Importance: Providing accurate information is crucial.
+- Conduct: Proper sales behavior is essential for fairness.
+{h1#0,h2#1,h3#2,p#0} Summary:  
+Pharma reps must handle personal info of patients and healthcare properly.
+
+- Sales Activities: Pharma reps meet healthcare facilities and patients.
+- Personal Info: They may access sensitive information.
+- Obligation: Must handle information with care and responsibility.
+{h1#0,h2#1,h3#2,p#1} Summary:  
+Using personal data wrongly or sharing it without consent is not allowed.
+
+- Law: Personal Information Protection Act
+- Usage: Only for intended purposes
+- Sharing: No third-party disclosure without consent
+{h1#0,h2#1,h3#2,p#2} Summary:  
+Be careful to avoid legal issues from data leaks.
+
+- Information: Leaks can cause serious problems.
+- Consideration: Careful attention is needed.
+- Legal: Misuse may lead to legal trouble.
