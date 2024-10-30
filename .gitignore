@@ -1,4 +1,6 @@
-target/
+target/*
+!target/*.war
+
 .idea/
 
 # Elastic Beanstalk Files
