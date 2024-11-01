@@ -1,128 +1,137 @@
-{h1#0,p#0:Chapter 1:Fundamental Concepts and Responsibilities} [Q] What important responsibility does a pharmaceutical sales representative have?
-[A] A pharmaceutical sales representative has the important responsibility of building trusting relationships with healthcare professionals and supporting optimal treatment for patients.
+{h1#0,p#0:Chapter 1:Fundamental Concepts and Responsibilities} [Q] What is an important responsibility of a pharmaceutical sales representative?  
+[A] Building trusting relationships with healthcare professionals and supporting optimal treatment for patients.  
 
-[Q] How do pharmaceutical sales representatives contribute to patients' health and quality of life?
-[A] By promoting the proper use of medications, pharmaceutical sales representatives contribute to the health and quality of life of patients.
+[Q] How do pharmaceutical sales representatives promote the proper use of medications?  
+[A] By fulfilling their responsibility of building trusting relationships and supporting treatment, they promote the proper use of medications.  
+
+[Q] What do pharmaceutical sales representatives contribute to by promoting proper medication use?  
+[A] They contribute to the health and quality of life of patients.  
 ---
-{h1#0,h2#0,p#0:Section 1.1:Basic Role of Pharmaceutical Sales} [Q] What are pharmaceutical sales representatives responsible for providing to healthcare institutions, pharmacies, hospitals, and more?  
+{h1#0,h2#0,p#0:Section 1.1:Basic Role of Pharmaceutical Sales} [Q] What are pharmaceutical sales representatives responsible for?
+
 [A] Pharmaceutical sales representatives are responsible for providing medications to healthcare institutions, pharmacies, hospitals, and more.
 
-[Q] What goes beyond simple sales in the role of pharmaceutical sales representatives?  
-[A] Their role goes beyond simple sales because they are expected to provide accurate information about medications and build trusting relationships with healthcare professionals.
+[Q] What is expected of pharmaceutical sales representatives besides simple sales?
+
+[A] Besides simple sales, pharmaceutical sales representatives are expected to provide accurate information about medications and build trusting relationships with healthcare professionals.
 ---
 {h1#0,h2#0,p#1:Section 1.1:Basic Role of Pharmaceutical Sales} [Q] What is explained below?  
-[A] The basic roles and responsibilities of a pharmaceutical sales representative are explained.
----
-{h1#0,h2#0,h3#0,p#0:Section 1.1.1:Information Provision and Education} [Q] What do pharmaceutical sales representatives do?
-[A] They play a role in providing the latest information about medications.
+[A] The basic roles and responsibilities of a pharmaceutical sales representative.
 
-[Q] What are pharmaceutical sales representatives required to communicate accurately?
-[A] They are required to communicate information regarding indications, dosages, side effects, and interactions of products.
+[Q] Whose roles and responsibilities are explained?  
+[A] A pharmaceutical sales representative's.
 ---
-{h1#0,h2#0,h3#0,p#1:Section 1.1.1:Information Provision and Education} [Q] What is essential for healthcare professionals to have?
+{h1#0,h2#0,h3#0,p#0:Section 1.1.1:Information Provision and Education} [Q] What role do pharmaceutical sales representatives play?
+[A] Pharmaceutical sales representatives play a role in providing the latest information about medications.
+
+[Q] What specific information are pharmaceutical sales representatives required to communicate?
+[A] They are required to accurately communicate information regarding indications, dosages, side effects, and interactions of products.
+---
+{h1#0,h2#0,h3#0,p#1:Section 1.1.1:Information Provision and Education} [Q] What is essential to provide for healthcare professionals?
 [A] It is essential to provide specialized and objective information.
 
-[Q] Why do healthcare professionals need specialized and objective information?
+[Q] Why is it important to provide specialized and objective information?
 [A] So that healthcare professionals can prescribe appropriate medications for patients.
 ---
-{h1#0,h2#0,h3#1,p#0:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] Who must pharmaceutical sales representatives establish trust with?  
-[A] They must establish trust with healthcare professionals.
+{h1#0,h2#0,h3#1,p#0:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] Who do pharmaceutical sales representatives need to establish trust with?  
+[A] Pharmaceutical sales representatives must establish trust with healthcare professionals.
 
-[Q] Can you name some healthcare professionals that pharmaceutical sales representatives should trust?  
-[A] Yes, they should trust doctors, pharmacists, and nurses.
+[Q] Can you name some healthcare professionals that pharmaceutical sales representatives work with?  
+[A] Yes, they include doctors, pharmacists, and nurses.
 ---
-{h1#0,h2#0,h3#1,p#1:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] How is trust fostered according to the sentence?  
-[A] Trust is fostered through sales activities and by proactively responding to questions and concerns about products.  
+{h1#0,h2#0,h3#1,p#1:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] What helps build trust besides sales activities?  
+[A] Trust is fostered through a proactive approach to responding to questions and concerns about products.
 
-[Q] What does the sentence say about responding to questions and concerns?  
-[A] The sentence says that a proactive approach to responding to questions and concerns helps foster trust.
+[Q] How should we respond to questions and concerns about products?  
+[A] We should have a proactive approach to responding to questions and concerns about products.
 ---
-{h1#0,h2#0,h3#1,p#2:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] What is trust in the healthcare setting related to?  
-[A] Trust in the healthcare setting is related to the appropriate use of medications and patient safety.
+{h1#0,h2#0,h3#1,p#2:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] What is directly related to the appropriate use of medications and patient safety in the healthcare setting?  
+[A] Trust in the healthcare setting is directly related to the appropriate use of medications and patient safety.
 
 [Q] What is essential in the healthcare setting?  
 [A] A sincere attitude is essential in the healthcare setting.
 ---
-{h1#0,h2#0,h3#2,p#0:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What are pharmaceutical sales representatives expected to prioritize first?
-[A] They are expected to prioritize the health and safety of patients first.
+{h1#0,h2#0,h3#2,p#0:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What are pharmaceutical sales representatives expected to prioritize?  
+[A] Pharmaceutical sales representatives are expected to prioritize the health and safety of patients.
 
-[Q] What should pharmaceutical sales representatives put before product profit?
-[A] They should put the health and safety of patients before product profit.
+[Q] What should come before product profit for pharmaceutical sales representatives?  
+[A] The health and safety of patients should come before product profit for pharmaceutical sales representatives.
 ---
 {h1#0,h2#0,h3#2,p#1:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What does practicing ethical sales activities enhance?
-
 [A] Practicing ethical sales activities enhances the credibility of the sales representative.
 
 [Q] What does practicing ethical sales activities contribute to?
-
 [A] Practicing ethical sales activities contributes to building long-term relationships.
 
-[Q] What should be avoided in sales activities?
-
+[Q] What is crucial to avoid in sales activities?
 [A] It is crucial to avoid excessive promotion or exaggerated claims.
 
-[Q] What should sales representatives focus on?
-
-[A] Sales representatives should focus on honest and objective information provision.
+[Q] What should sales activities focus on?
+[A] Sales activities should focus on honest and objective information provision.
 ---
-{h1#0,h2#1,p#0:Section 1.2:Legal Responsibilities and Obligations} [Q] What are pharmaceutical sales representatives legally required to do?
-[A] Pharmaceutical sales representatives are legally required to comply with regulations related to pharmaceuticals and to conduct sales activities in a lawful and appropriate manner.
+{h1#0,h2#1,p#0:Section 1.2:Legal Responsibilities and Obligations} [Q] What are pharmaceutical sales representatives legally required to comply with?
+[A] Pharmaceutical sales representatives are legally required to comply with regulations related to pharmaceuticals.
 
-[Q] How do pharmaceutical sales representatives help ensure the safe and effective provision of medicines?
-[A] By fulfilling their responsibilities, pharmaceutical sales representatives help ensure the safe and effective provision of medicines for healthcare professionals and patients.
+[Q] How should pharmaceutical sales representatives conduct their sales activities?
+[A] They should conduct sales activities in a lawful and appropriate manner.
+
+[Q] What do pharmaceutical sales representatives help ensure by fulfilling their responsibilities?
+[A] By fulfilling their responsibilities, they help ensure the safe and effective provision of medicines for healthcare professionals and patients.
 ---
-{h1#0,h2#1,p#1:Section 1.2:Legal Responsibilities and Obligations} [Q] What are the main legal responsibilities of pharmaceutical sales representatives?  
-[A] The main legal responsibilities of pharmaceutical sales representatives are listed below.  
+{h1#0,h2#1,p#1:Section 1.2:Legal Responsibilities and Obligations} [Q] What are the main responsibilities of pharmaceutical sales representatives?  
+[A] The main responsibilities are legal ones.  
 
-[Q] What are the obligations of pharmaceutical sales representatives?  
-[A] The obligations of pharmaceutical sales representatives are mentioned below.
+[Q] What are the main obligations of pharmaceutical sales representatives?  
+[A] The main obligations are legal ones.
 ---
 {h1#0,h2#1,h3#0,p#0:Section 1.2.1:Importance of Compliance with Laws} [Q] What are pharmaceutical sales representatives required to do?
 [A] Pharmaceutical sales representatives are obligated to understand and comply with relevant laws regarding pharmaceuticals.
 
-[Q] What are the key regulations that pharmaceutical sales representatives must know?
-[A] The key regulations include the Pharmaceuticals and Medical Devices Act (PMD Act) and the Personal Information Protection Act.
+[Q] What are some key regulations that pharmaceutical representatives need to know?
+[A] Key regulations include the Pharmaceuticals and Medical Devices Act (PMD Act) and the Personal Information Protection Act.
 
-[Q] What do these key regulations govern?
+[Q] What do these regulations govern?
 [A] These regulations govern all processes from manufacturing and sales to information provision and personal data handling.
 ---
-{h1#0,h2#1,h3#0,p#1:Section 1.2.1:Importance of Compliance with Laws} [Q] What can non-compliance or violations pose to the company?  
+{h1#0,h2#1,h3#0,p#1:Section 1.2.1:Importance of Compliance with Laws} [Q] What can happen if there are non-compliance or violations at the company?  
 [A] Non-compliance or violations can pose significant risks to the company.
 
-[Q] What could happen to the company if it faces significant risks?  
-[A] The company could potentially face severe penalties.
-
-[Q] What are some examples of severe penalties the company might face?  
-[A] Examples of severe penalties include loss of trust or suspension of business operations.
+[Q] What are some consequences of non-compliance or violations?  
+[A] The consequences can include severe penalties such as loss of trust or suspension of business operations.
 
 [Q] Why is legal compliance important for the company?  
 [A] Legal compliance is essential because it helps avoid significant risks and severe penalties.
 ---
-{h1#0,h2#1,h3#1,p#0:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What are pharmaceutical sales representatives responsible for providing?  
+{h1#0,h2#1,h3#1,p#0:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What are pharmaceutical sales representatives responsible for providing?
 [A] Pharmaceutical sales representatives are responsible for providing accurate information on the efficacy, side effects, and usage of medicines.
 
-[Q] What should pharmaceutical sales representatives avoid in their descriptions of product characteristics?  
+[Q] What should pharmaceutical sales representatives avoid?
 [A] They should avoid exaggerated claims or misleading descriptions of product characteristics.
 ---
-{h1#0,h2#1,h3#1,p#1:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What may constitute legal violations and carry risks of disadvantaging healthcare professionals or patients?  
-[A] Excessive sales pressure or inappropriate sales practices may constitute legal violations and carry risks of disadvantaging healthcare professionals or patients.
+{h1#0,h2#1,h3#1,p#1:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What might excessive sales pressure or inappropriate sales practices lead to?  
+[A] Excessive sales pressure or inappropriate sales practices may lead to legal violations.
 
-[Q] What does the situation underscore?  
-[A] It underscores the importance of proper information provision and sales conduct.
+[Q] What risks do excessive sales pressure or inappropriate sales practices carry?  
+[A] They carry risks of disadvantaging healthcare professionals or patients.
+
+[Q] What does the situation highlight the importance of?  
+[A] The situation highlights the importance of proper information provision and sales conduct.
 ---
-{h1#0,h2#1,h3#2,p#0:Section 1.2.3:Responsibility for Personal Information Protection} [Q] What do pharmaceutical sales representatives do during sales activities?  
-[A] They may come into contact with personal information of healthcare facilities or patients.
+{h1#0,h2#1,h3#2,p#0:Section 1.2.3:Responsibility for Personal Information Protection} [Q] What might pharmaceutical sales representatives encounter during sales activities?
+[A] Pharmaceutical sales representatives may come into contact with the personal information of healthcare facilities or patients.
 
-[Q] What are pharmaceutical sales representatives obligated to do with personal information?  
+[Q] What are pharmaceutical sales representatives obligated to do with the personal information they handle?
 [A] They are obligated to handle such information appropriately.
 ---
-{h1#0,h2#1,h3#2,p#1:Section 1.2.3:Responsibility for Personal Information Protection} [Q] What does the Personal Information Protection Act prohibit regarding the use of acquired information?  
-[A] The Personal Information Protection Act prohibits using acquired information beyond the intended purpose.
+{h1#0,h2#1,h3#2,p#1:Section 1.2.3:Responsibility for Personal Information Protection} [Q] What is the law that protects personal information?
+[A] The Personal Information Protection Act protects personal information.
 
-[Q] What is not allowed under the Personal Information Protection Act without consent?  
-[A] Disclosing acquired information to third parties without consent is not allowed under the Personal Information Protection Act.
+[Q] What is prohibited under the Personal Information Protection Act?
+[A] Using acquired information beyond the intended purpose or disclosing it to third parties without consent is prohibited.
 ---
-{h1#0,h2#1,h3#2,p#2:Section 1.2.3:Responsibility for Personal Information Protection} [Q] Why is it important to pay careful attention and consideration to information leaks or misuse?
+{h1#0,h2#1,h3#2,p#2:Section 1.2.3:Responsibility for Personal Information Protection} [Q] What can information leaks or misuse lead to?  
+[A] Information leaks or misuse can lead to serious legal issues.
 
-[A] Because they can lead to serious legal issues.
+[Q] What is necessary because of the risk of information leaks or misuse?  
+[A] Careful attention and consideration are necessary.
 ---

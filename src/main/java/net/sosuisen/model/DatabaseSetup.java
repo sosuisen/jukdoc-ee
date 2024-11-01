@@ -38,6 +38,7 @@ public class DatabaseSetup {
                 	position_tag VARCHAR(30) PRIMARY KEY,
                 	position_name VARCHAR(30) NOT NULL,
                 	section_title VARCHAR(100) NOT NULL,
+                	is_header BOOLEAN NOT NULL DEFAULT FALSE,
                 	paragraph TEXT NOT NULL
                 	)
                 """);
@@ -65,20 +66,17 @@ public class DatabaseSetup {
 
                 if (positionTag.isEmpty() || paragraph.isEmpty()) continue;
 
-                if (!positionTag.contains("p#")) {
-                    continue;
-                }
+                boolean isHeader = !positionTag.contains("p#");
 
-                // is paragraph
-
-                var sql = "INSERT INTO paragraph VALUES (?, ?, ?, ?)";
+                var sql = "INSERT INTO paragraph VALUES (?, ?, ?, ?, ?)";
                 try (
                         Connection con = ds.getConnection();
                         PreparedStatement pstmt = con.prepareStatement(sql);) {
                     pstmt.setString(1, positionTag);
                     pstmt.setString(2, positionName);
                     pstmt.setString(3, sectionTitle);
-                    pstmt.setString(4, paragraph);
+                    pstmt.setBoolean(4, isHeader);
+                    pstmt.setString(5, paragraph);
                     pstmt.executeUpdate();
                 } catch (SQLException e) {
                     throw new IllegalStateException(e);
