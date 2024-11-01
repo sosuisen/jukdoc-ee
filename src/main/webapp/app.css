@@ -1,0 +1,32 @@
+body {
+	padding :24px;
+	background-color: #f0f0ff;
+}
+
+.row_create {
+	display: grid;
+	grid-template-columns: 100px 100px 100px 50px;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 100px 100px 100px 50px 50px;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 10px 0px 10px 0px;
+}
+
+.paragraph {
+    margin: 0px 0px 10px 12px;
+}
+
+.read {
+    background-color: #fffff0;
+}
+
+.unread {
+
+}

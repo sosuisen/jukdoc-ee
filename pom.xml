@@ -46,6 +46,31 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>jakarta.mvc</groupId>
+            <artifactId>jakarta.mvc-api</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.krazo</groupId>
+            <artifactId>krazo-jersey</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.krazo.ext</groupId>
+            <artifactId>krazo-thymeleaf</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>axios</artifactId>
+            <version>1.7.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars.npm</groupId>
+            <artifactId>alpinejs</artifactId>
+            <version>3.14.3</version>
+        </dependency>
+        <dependency>
             <groupId>dev.langchain4j</groupId>
             <artifactId>langchain4j</artifactId>
             <version>0.35.0</version>

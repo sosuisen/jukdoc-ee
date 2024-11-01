@@ -9,7 +9,6 @@ import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.regex.Pattern;
 
 import static net.sosuisen.Constants.PARAGRAPH_PATTERN;
 import static net.sosuisen.Constants.QA_PATTERN;

@@ -25,10 +25,9 @@ public class MarkdownParser {
             var parser = new MarkdownParser();
             structuredParagraph = parser.parseMarkdown(markdown);
             Path outputPath;
-            if(args.length == 2) {
+            if (args.length == 2) {
                 outputPath = Path.of(args[1]);
-            }
-            else {
+            } else {
                 outputPath = inputPath.resolveSibling("structured_paragraph.txt");
             }
             Files.writeString(outputPath, structuredParagraph);

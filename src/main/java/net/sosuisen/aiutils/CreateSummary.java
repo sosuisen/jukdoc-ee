@@ -4,7 +4,6 @@ import dev.langchain4j.model.openai.OpenAiChatModel;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.regex.Pattern;
 
 import static net.sosuisen.Constants.PARAGRAPH_PATTERN;
 
@@ -85,7 +84,7 @@ public class CreateSummary {
             var outputPath = inputPath.resolveSibling("summary.txt");
             Files.writeString(outputPath, summaries.toString());
             System.out.println("Summary created at: " + outputPath);
-         } catch (Exception e) {
+        } catch (Exception e) {
             System.out.println("Error:" + e);
         }
     }

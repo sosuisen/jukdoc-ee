@@ -1,6 +1,5 @@
 package net.sosuisen.model;
 
-import dev.ai4j.openai4j.chat.Message;
 import jakarta.annotation.Resource;
 
 import javax.sql.DataSource;
@@ -18,7 +17,7 @@ public class ParagraphDAO {
         var paragraphs = new ArrayList<Paragraph>();
         try (
                 Connection conn = ds.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM paragraph");
+                PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM paragraph")
         ) {
             ResultSet rs = pstmt.executeQuery();
             while (rs.next()) {
@@ -26,6 +25,7 @@ public class ParagraphDAO {
                         rs.getString("position_tag"),
                         rs.getString("position_name"),
                         rs.getString("section_title"),
+                        rs.getBoolean("is_header"),
                         rs.getString("paragraph")
                 ));
             }
