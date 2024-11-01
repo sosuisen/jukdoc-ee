@@ -106,6 +106,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
+                    <packagingExcludes>WEB-INF/classes/net/sosuisen/aiutils/**</packagingExcludes>
                 </configuration>
             </plugin>
             <!-- Execute 'mvn clean package payara-micro:dev' to run the application. -->
