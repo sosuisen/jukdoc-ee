@@ -5,21 +5,27 @@ import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
 import dev.langchain4j.store.embedding.EmbeddingSearchResult;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
+import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 import jakarta.ws.rs.core.Response;
+import net.sosuisen.model.ParagraphDAO;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.sql.SQLException;
 import java.util.Objects;
 
 @Path("hello")
 public class HelloWorldResource {
 
+    @Inject
+    private ParagraphDAO paragraphDAO;
+
     @GET
-    public Response hello(@QueryParam("name") String query) {
+    public Response hello(@QueryParam("name") String query) throws SQLException {
         if ((query == null) || query.trim().isEmpty()) {
             query = "medicine";
         }
@@ -63,8 +69,12 @@ public class HelloWorldResource {
         } catch (Exception e) {
             System.out.println("Error:" + e);
         }
+
+        // var response = responseText.toString();
+        String response = paragraphDAO.getAll().stream().map(Object::toString).reduce("", (a, b) -> a + b);
+
         return Response
-                .ok(responseText.toString())
+                .ok(response)
                 .build();
     }
 
