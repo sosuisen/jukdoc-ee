@@ -40,7 +40,7 @@ public class RetrieveQA {
             result.matches().forEach(match -> {
                 System.out.printf("""
                                 score: %f
-                                paragraph: %s
+                                query: %s
                                 position_tag: %s
                                 position_name: %s
                                 section_title: %s
