@@ -1,7 +1,6 @@
 package net.sosuisen.resources;
 
 import jakarta.inject.Inject;
-import jakarta.mvc.MvcContext;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -10,7 +9,7 @@ import jakarta.ws.rs.core.MediaType;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import net.sosuisen.model.Paragraph;
+import net.sosuisen.model.ParagraphDTO;
 import net.sosuisen.model.ParagraphDAO;
 
 import java.sql.SQLException;
@@ -26,7 +25,7 @@ public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
 
     @GET
-    public ArrayList<Paragraph> getParagraphs() throws SQLException {
+    public ArrayList<ParagraphDTO> getParagraphs() throws SQLException {
         return paragraphDAO.getAll();
     }
 }
