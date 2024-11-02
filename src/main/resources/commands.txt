@@ -1,0 +1,63 @@
+yes,proceed_current_topic
+yeah,proceed_current_topic
+uh-huh,proceed_current_topic
+hmm,proceed_current_topic
+I see,proceed_current_topic
+I agree,proceed_current_topic
+right,proceed_current_topic
+I think so,proceed_current_topic
+that's right,proceed_current_topic
+you're right,proceed_current_topic
+I believe so,proceed_current_topic
+sure,proceed_current_topic
+exactly,proceed_current_topic
+affirmative,proceed_current_topic
+yep,proceed_current_topic
+okay,proceed_current_topic
+ok,proceed_current_topic
+understood,proceed_current_topic
+alright,proceed_current_topic
+got it,proceed_current_topic
+of course,proceed_current_topic
+makes sense,proceed_current_topic
+I get it,proceed_current_topic
+gotcha,proceed_current_topic
+interesting,proceed_current_topic
+continue,proceed_current_topic
+please continue,proceed_current_topic
+go on,proceed_current_topic
+go ahead,proceed_current_topic
+please proceed,proceed_current_topic
+tell me more,proceed_current_topic
+what else,proceed_current_topic
+any other ideas?,proceed_current_topic
+more,proceed_current_topic
+tell me in detail,proceed_current_topic
+explain further,proceed_current_topic
+next,proceed_current_topic
+read on,proceed_current_topic
+please read on,proceed_current_topic
+that's fine,proceed_current_topic
+sounds good,proceed_current_topic
+all right,proceed_current_topic
+go for it,proceed_current_topic
+why not,proceed_current_topic
+you got it,proceed_current_topic
+carry on,proceed_current_topic
+keep going,proceed_current_topic
+as you were,proceed_current_topic
+what do you mean,repeat_only_current_topic
+can you explain,repeat_only_current_topic
+what does that mean,repeat_only_current_topic
+could you clarify,repeat_only_current_topic
+I don’t understand,repeat_only_current_topic
+could you repeat that,repeat_only_current_topic
+say that again,repeat_only_current_topic
+come again,repeat_only_current_topic
+sorry, what?,repeat_only_current_topic
+I didn’t catch that,repeat_only_current_topic
+could you elaborate,repeat_only_current_topic
+what was that?,repeat_only_current_topic
+pardon me?,repeat_only_current_topic
+please explain,repeat_only_current_topic
+run that by me again,repeat_only_current_topic
