@@ -40,7 +40,7 @@ public class Chat {
              var reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)))) {
             var line = "";
             while ((line = reader.readLine()) != null) {
-                openingWords.append(line);
+                openingWords.append(line + "<br/>");
             }
         } catch (IOException e) {
             log.severe("Failed to read opening words from " + openingWordsPath);

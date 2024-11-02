@@ -9,7 +9,11 @@
 </head>
 <body class="container"
       x-data="{ paragraphs: [], history: [] }"
-      x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' }).then(res => { if (res.status==200) paragraphs = res.data })">
+      x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' })
+                 .then(res => res.status==200 ? paragraphs = res.data : null);
+              $get('/chat/opening-words', { error: 'Cannot get opening words' })
+                 .then(res => res.status == 200 ? history.push(res.data) : null);
+">
 
 <div class="title-area">
     Jukdoc
@@ -37,7 +41,7 @@
             </div>
 
             <template x-for="msg in history">
-                <div class="chat-message" x-text="msg.message"></div>
+                <div class="chat-message" x-html="msg.message"></div>
             </template>
         </div>
         <form class="chat-input-container"
