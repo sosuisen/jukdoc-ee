@@ -59,7 +59,7 @@ public class Chat {
                 if (RE_ANAPHORA.matcher(mes).find()) {
                     System.out.println("includes anaphora");
                 } else {
-                    var retrievalDocs = retirieveContext(mes);
+                    var retrievalDocs = retrieveContext(mes);
                     var context = retrievalDocs.stream()
                             .map(Document::toString)
                             .collect(Collectors.joining("\n\n"));
@@ -72,7 +72,7 @@ public class Chat {
         return new ChatMessage("AI", "test");
     }
 
-    private ArrayList<Document> retirieveContext(String message) throws SQLException {
+    private ArrayList<Document> retrieveContext(String message) throws SQLException {
         var maxParagraphDocs = 1;
         var paragraphDocs = paragraphService.query(message, maxParagraphDocs, 0.8);
         var qaDocs = qaService.query(message, 3, 0.8);
