@@ -46,8 +46,9 @@
                     <div class="chat-message" x-html="msg.message"></div>
                     <template x-for="refStr in msg.refs">
                         <div class="ref-block"
-                             @click="location.href='#'+refStr.split(':')[1].replaceAll(/#/g, '-')"
-                             x-text="'[*' + refStr.split(':')[0] + '] ' + refStr.split(':')[2]">
+                             x-data="{ refArr: refStr.split(':') }"
+                             @click="location.href='#'+refArr[1].replaceAll(/#/g, '-')"
+                             x-text="'[*' + refArr[0] + '] ' + refArr[2]">
                         </div>
                     </template>
                 </div>
