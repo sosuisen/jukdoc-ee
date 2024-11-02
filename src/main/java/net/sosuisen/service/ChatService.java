@@ -58,7 +58,7 @@ public class ChatService {
             count++;
             contextBuilder.append("[reference: ").append(count).append("] ").append(doc.getContext()).append("\n");
             refsBuilder.append("[reference: ").append(count).append("], ");
-            refsHintBuilder.append("* If the response includes the above [reference: ").append(count).append("], ")
+            refsHintBuilder.append("* If the response sentence includes the above [reference: ").append(count).append("], ")
                     .append("add [*").append(count).append("] at the end of the sentence.\n");
         }
 

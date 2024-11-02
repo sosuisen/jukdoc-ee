@@ -24,7 +24,8 @@
 
         <div x-data="{ markAsRead(tag) { (paragraphs.find(para => para.positionTag === tag)).read = true; } }">
             <template x-for="para in paragraphs">
-                <div :class="(para.read ? 'read' : 'unread') + ' ' + (para.header ? 'header' : 'paragraph')">
+                <div :class="(para.read ? 'read' : 'unread') + ' ' + (para.header ? 'header' : 'paragraph')"
+                     :id="para.positionTag.replaceAll(/#/g, '-')">
                     <button @click="markAsRead(para.positionTag)">MarkAsRead</button>
                     <span x-text="para.paragraph"></span>(<span x-text="para.positionTag"></span>)
                 </div>
@@ -33,7 +34,7 @@
     </div>
 
     <div class="chat-column">
-        <div class="chat-area">
+        <div class="chat-history">
             <div style="color: red" x-show="$store.errors.length > 0">
                 <template x-for="error in $store.errors">
                     <div x-text="error"></div>
@@ -41,7 +42,15 @@
             </div>
 
             <template x-for="msg in history">
-                <div class="chat-message" x-html="msg.message"></div>
+                <div class="message-rect">
+                    <div class="chat-message" x-html="msg.message"></div>
+                    <template x-for="refStr in msg.refs">
+                        <div class="ref-block"
+                             @click="location.href='#'+refStr.split(':')[1].replaceAll(/#/g, '-')"
+                             x-text="'[*' + refStr.split(':')[0] + '] ' + refStr.split(':')[2]">
+                        </div>
+                    </template>
+                </div>
             </template>
         </div>
         <form class="chat-input-container"
@@ -60,7 +69,6 @@
 
 <script type="module">
     import rest from '${mvc.basePath}/../rest.js';
-
     rest.start('${mvc.basePath}/api', '${mvc.csrf.token}');
 </script>
 </body>

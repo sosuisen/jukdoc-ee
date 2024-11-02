@@ -10,8 +10,13 @@ import lombok.extern.slf4j.Slf4j;
 import net.sosuisen.model.*;
 import net.sosuisen.service.ChatService;
 
+import java.sql.Array;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
@@ -33,7 +38,7 @@ public class Chat {
     @GET
     @Path("opening-words")
     public ChatMessage getOpeningWords() {
-        return new ChatMessage("AI", staticMessage.getOpeningWords());
+        return new ChatMessage("AI", staticMessage.getOpeningWords(), new ArrayList<>());
     }
 
     @POST
@@ -57,21 +62,41 @@ public class Chat {
                     var retrievalDocs = chatService.retrieveDocuments(query);
 
                     var answer = chatService.proceedByPrompt(retrievalDocs, query);
+
+                    var reEachRef = Pattern.compile("\\[*(\\d+)]", Pattern.DOTALL);
+                    var refs = new ArrayList<Integer>();
+                    var matcher = reEachRef.matcher(answer);
+                    while (matcher.find()) {
+                        int ref = Integer.parseInt(matcher.group(1));
+                        if (ref <= retrievalDocs.size()) {
+                            refs.add(ref);
+                        }
+                    }
                     System.out.println("response: " + answer);
+
+                    List<String> uniqueRefs = refs.stream()
+                            .sorted()
+                            .distinct()
+                            .map(ref -> ref + ":" + retrievalDocs.get(ref -1).getPositionTag() + ":" + retrievalDocs.get(ref - 1).getPositionName())
+                            .toList();
+
+                    for (var ref : uniqueRefs) {
+                        System.out.println("uniqueRefs: " + ref);
+                    }
+
                     if (history.size() >= HISTORY_SIZE) {
                         history.removeFirst();
                     }
                     var answerInHistory = answer.replaceAll("\\[\\*\\d+]", "");
-
                     history.add(new HistoryDocument(query, answerInHistory));
-                    return new ChatMessage("AI", answer);
+                    return new ChatMessage("AI", answer, uniqueRefs);
 
                 }
             }
 
         }
 
-        return new ChatMessage("AI", "test");
+        return new ChatMessage("AI", "no answer", new ArrayList<>());
     }
 
 }
