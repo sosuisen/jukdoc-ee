@@ -8,7 +8,7 @@
     <title>Jukdoc</title>
 </head>
 <body class="container"
-      x-data="{ paragraphs: [] }"
+      x-data="{ paragraphs: [], history: [] }"
       x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' }).then(res => { if (res.status==200) paragraphs = res.data })">
 
 <div class="title-area">
@@ -17,12 +17,6 @@
 <div class="main-content">
     <div class="document-column">
         <h1>Original Document</h1>
-
-        <div style="color: red" x-show="$store.errors.length > 0">
-            <template x-for="error in $store.errors">
-                <div x-text="error"></div>
-            </template>
-        </div>
 
         <div x-data="{ markAsRead(tag) { (paragraphs.find(para => para.positionTag === tag)).read = true; } }">
             <template x-for="para in paragraphs">
@@ -36,12 +30,30 @@
 
     <div class="chat-column">
         <div class="chat-area">
+            <div style="color: red" x-show="$store.errors.length > 0">
+                <template x-for="error in $store.errors">
+                    <div x-text="error"></div>
+                </template>
+            </div>
 
+            <template x-for="msg in history">
+                <div class="chat-message" x-text="msg.message"></div>
+            </template>
         </div>
-        <div class="chat-input-container">
-            <input type="text" class="chat-input" placeholder="Enter your message..."/>
+        <form class="chat-input-container"
+              x-data="{ param: { message: '' } }"
+              @submit.prevent="
+              $post('/chat/query', { param, error: 'Cannot send message' })
+              .then(res => {
+                  if (res.status == 200) {
+                      history.push(res.data);
+                  }
+              });
+              param.message = '';"
+        >
+            <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
             <button class="send-button">Send</button>
-        </div>
+        </form>
     </div>
 
 </div>

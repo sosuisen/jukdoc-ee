@@ -24,7 +24,6 @@ import java.util.ArrayList;
 @Path("/api/paragraphs")
 public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
-    private final MvcContext mvcContext;
 
     @GET
     public ArrayList<Paragraph> getMessages() throws SQLException {

@@ -1,6 +1,8 @@
 package net.sosuisen.model;
 
 import jakarta.annotation.Resource;
+import jakarta.enterprise.context.ApplicationScoped;
+import lombok.NoArgsConstructor;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -9,6 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+@ApplicationScoped
+@NoArgsConstructor(force = true)
 public class ParagraphDAO {
     @Resource
     private DataSource ds;
