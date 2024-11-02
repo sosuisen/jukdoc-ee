@@ -44,11 +44,7 @@
               x-data="{ param: { message: '' } }"
               @submit.prevent="
               $post('/chat/query', { param, error: 'Cannot send message' })
-              .then(res => {
-                  if (res.status == 200) {
-                      history.push(res.data);
-                  }
-              });
+              .then(res => res.status == 200 ? history.push(res.data) : null);
               param.message = '';"
         >
             <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
