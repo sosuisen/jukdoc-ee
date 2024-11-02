@@ -12,6 +12,7 @@ import lombok.extern.java.Log;
 import net.sosuisen.model.ChatMessage;
 import net.sosuisen.model.MessageDTO;
 import net.sosuisen.model.ParagraphDAO;
+import net.sosuisen.model.StaticMessage;
 import net.sosuisen.service.QAService;
 
 import java.io.BufferedReader;
@@ -30,32 +31,18 @@ import java.util.Objects;
 public class Chat {
     private final ParagraphDAO paragraphDAO;
     private final QAService qaService;
+    private final StaticMessage staticMessage;
 
     @GET
     @Path("opening-words")
     public ChatMessage getOpeningWords() throws IOException {
-        var openingWordsPath = "opening_words.txt";
-        var openingWords = new StringBuilder();
-        try (InputStream inputStream = Chat.class.getClassLoader().getResourceAsStream(openingWordsPath);
-             var reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)))) {
-            var line = "";
-            while ((line = reader.readLine()) != null) {
-                openingWords.append(line + "<br/>");
-            }
-        } catch (IOException e) {
-            log.severe("Failed to read opening words from " + openingWordsPath);
-            throw e;
-        }
-
-        return new ChatMessage("AI", openingWords.toString());
+        return new ChatMessage("AI", staticMessage.getOpeningWords());
     }
 
     @POST
     @Path("query")
     public ChatMessage query(@Valid MessageDTO msg) throws SQLException {
-        System.out.println("message: " + msg.getMessage());
         var response = qaService.query(msg.getMessage());
-        // String response = paragraphDAO.getAll().stream().map(Object::toString).reduce("", (a, b) -> a + b);
         return new ChatMessage("AI", response);
     }
 
