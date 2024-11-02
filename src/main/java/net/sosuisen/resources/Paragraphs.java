@@ -26,7 +26,7 @@ public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
 
     @GET
-    public ArrayList<Paragraph> getMessages() throws SQLException {
+    public ArrayList<Paragraph> getParagraphs() throws SQLException {
         return paragraphDAO.getAll();
     }
 }
