@@ -1,24 +1,17 @@
 package net.sosuisen.resources;
 
 import jakarta.inject.Inject;
-import jakarta.mvc.MvcContext;
 import jakarta.validation.Valid;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
 import net.sosuisen.model.*;
 import net.sosuisen.service.QAService;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.sql.SQLException;
-import java.util.Objects;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Produces(MediaType.APPLICATION_JSON)
@@ -44,10 +37,10 @@ public class Chat {
 
     @POST
     @Path("query")
-    public ChatMessage query(@Valid MessageDTO message) throws SQLException {
-        var query = message.getMessage();
+    public ChatMessage query(@Valid QueryDTO query) throws SQLException {
+        var mes = query.getMessage();
 
-        ChatCommand.Command command = chatCommand.getCommand(query);
+        ChatCommand.Command command = chatCommand.getCommand(mes);
         System.out.println("command: " + command);
 
         if (command == null) {
@@ -56,18 +49,18 @@ public class Chat {
             // Additionally, if the question contains anaphora (e.g., "What is that?"),
             // an appropriate search result will not be achieved.
             // Providing only the previous conversation history and question to GPT will automatically resolve the anaphora.
-            if (query.length() > 3) {
-                if (RE_ANAPHORA.matcher(query).find()){
+            if (mes.length() > 3) {
+                if (RE_ANAPHORA.matcher(mes).find()){
                     System.out.println("includes anaphora");
                 }
                 else {
-                    return new ChatMessage("AI", query);
+                    return new ChatMessage("AI", mes);
                 }
             }
 
         }
 
-        var response = qaService.query(query);
+        var response = qaService.query(mes);
         return new ChatMessage("AI", response);
     }
 

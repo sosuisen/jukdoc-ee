@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-public class MessageDTO {
+public class QueryDTO {
     @NotBlank
     private String message;
 }
