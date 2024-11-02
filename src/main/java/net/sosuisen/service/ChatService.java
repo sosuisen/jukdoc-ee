@@ -9,6 +9,7 @@ import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import net.sosuisen.model.Document;
+import net.sosuisen.model.History;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -25,6 +26,7 @@ public class ChatService {
     OpenAiChatModel chatModel;
     private final ParagraphService paragraphService;
     private final QAService qaService;
+    private final History history;
 
     @PostConstruct
     public void init() {
@@ -35,7 +37,18 @@ public class ChatService {
                 .build();
     }
 
-    private String getPrompt(String log, ArrayList<Document> retrievalDocs, String query) {
+    private String getPrompt(ArrayList<Document> retrievalDocs, String query) {
+        var chatHistory = history.stream()
+                .map(doc -> {
+                    var a = "You: " + doc.getAnswer();
+                    var q = doc.getQuery();
+                    if (q.isEmpty()){
+                        return a + "\n";
+                    }
+                    return "Me: " + q + "\nYou: " + a + "\n";
+                })
+                .collect(Collectors.joining("\n"));
+
         var count = 0;
         var contextBuilder = new StringBuilder();
         var refsBuilder = new StringBuilder();
@@ -45,7 +58,7 @@ public class ChatService {
             count++;
             contextBuilder.append("[reference: ").append(count).append("] ").append(doc.getContext()).append("\n");
             refsBuilder.append("[reference: ").append(count).append("], ");
-            refsHintBuilder.append("* If the response includes the above 【reference: ").append(count).append("], ")
+            refsHintBuilder.append("* If the response includes the above [reference: ").append(count).append("], ")
                     .append("add [*").append(count).append("] at the end of the sentence.\n");
         }
 
@@ -79,14 +92,14 @@ public class ChatService {
                 %s
                 
                 [My Question] %s
-                """.formatted(log, contextBuilder.toString(), refsBuilder.toString(), refsHintBuilder.toString(), query);
+                """.formatted(chatHistory, contextBuilder.toString(), refsBuilder.toString(), refsHintBuilder.toString(), query);
 
         System.out.println("prompt: " + prompt);
         return prompt;
     }
 
-    public String proceedByPrompt(String log, ArrayList<Document> retrievalDocs, String query) {
-        var prompt = getPrompt(log, retrievalDocs, query);
+    public String proceedByPrompt(ArrayList<Document> retrievalDocs, String query) {
+        var prompt = getPrompt(retrievalDocs, query);
         var response = chatModel.generate(List.of(
                 SystemMessage.from("You are a skilled assistant."),
                 UserMessage.from(prompt)));
