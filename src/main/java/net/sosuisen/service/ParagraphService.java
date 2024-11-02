@@ -38,7 +38,7 @@ public class ParagraphService {
         if (result.matches().isEmpty()) {
             return null;
         } else {
-            for(var match : result.matches()){
+            for (var match : result.matches()) {
                 documents.add(new Document("paragraph",
                         match.embedded().metadata().getString("position_tag"),
                         match.embedded().metadata().getString("position_name"),
