@@ -5,10 +5,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import lombok.NoArgsConstructor;
 
 import javax.sql.DataSource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 @ApplicationScoped
@@ -36,4 +33,4 @@ public class ParagraphDAO {
         }
         return paragraphs;
     }
-}
+ }

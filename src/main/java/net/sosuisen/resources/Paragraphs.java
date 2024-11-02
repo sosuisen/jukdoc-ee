@@ -9,8 +9,8 @@ import jakarta.ws.rs.core.MediaType;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-import net.sosuisen.model.ParagraphDTO;
 import net.sosuisen.model.ParagraphDAO;
+import net.sosuisen.model.ParagraphDTO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
