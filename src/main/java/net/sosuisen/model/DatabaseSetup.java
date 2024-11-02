@@ -27,7 +27,7 @@ public class DatabaseSetup {
     @Resource
     private DataSource ds;
 
-    public void onStart(@Observes @Initialized(ApplicationScoped.class) Object event) {
+    public void onStart(@Observes @Initialized(ApplicationScoped.class) Object event) throws IOException {
         // Initialize a Payara Micro built-in H2 database
 
         update(ds, "DROP TABLE IF EXISTS paragraph");
@@ -85,6 +85,7 @@ public class DatabaseSetup {
 
         } catch (IOException e) {
             log.error("Error reading paragraph file: {}", e.getMessage());
+            throw e;
         }
 
         var summaryPath = "summary.txt";
@@ -122,6 +123,7 @@ public class DatabaseSetup {
 
         } catch (IOException e) {
             log.error("Error reading summary file: " + e.getMessage());
+            throw e;
         }
     }
 
