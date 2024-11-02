@@ -52,6 +52,8 @@ body {
     padding: 20px;
     box-sizing: border-box;
     border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
 }
 
 .chat-input-container {
@@ -99,4 +101,56 @@ body {
 
 .unread {
 
+}
+
+.message-rect {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    max-width: 70%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.from-ai {
+    background-color: #e1f5fe;
+    color: #333;
+    align-self: flex-start;
+    text-align: left;
+}
+
+.from-user {
+    background-color: #c8e6c9;
+    color: #333;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.chat-message {
+    white-space: pre-line;
+    margin-bottom: 8px;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.chat-refs {
+    font-size: 14px;
+    color: #1e88e5;
+    margin-top: 10px;
+}
+
+.ref {
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.ref:hover {
+    text-decoration: underline;
 }

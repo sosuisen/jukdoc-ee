@@ -42,21 +42,24 @@
             </div>
 
             <template x-for="msg in history">
-                <div class="message-rect">
+                <div :class="'message-rect ' + (msg.speaker === 'AI' ? 'from-ai' : 'from-user')">
                     <div class="chat-message" x-html="msg.message"></div>
+                    <div class="chat-refs">
                     <template x-for="refStr in msg.refs">
-                        <div class="ref-block"
+                        <span class="ref"
                              x-data="{ refArr: refStr.split(':') }"
                              @click="location.href='#'+refArr[1].replaceAll(/#/g, '-')"
                              x-text="'[*' + refArr[0] + '] ' + refArr[2]">
-                        </div>
+                        </span>
                     </template>
+                    </div>
                 </div>
             </template>
         </div>
         <form class="chat-input-container"
               x-data="{ param: { message: '' } }"
               @submit.prevent="
+              history.push({ speaker: 'User', message: param.message, refs: [] });
               $post('/chat/query', { param, error: 'Cannot send message' })
               .then(res => res.status == 200 ? history.push(res.data) : null);
               param.message = '';"
