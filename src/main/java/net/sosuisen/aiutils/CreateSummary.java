@@ -79,6 +79,7 @@ public class CreateSummary {
 
                 summaries.append("""
                         {%s} %s
+                        ---
                         """.formatted(positionTag, summary));
             }
             var outputPath = inputPath.resolveSibling("summary.txt");
