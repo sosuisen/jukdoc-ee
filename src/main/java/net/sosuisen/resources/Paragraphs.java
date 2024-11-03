@@ -13,6 +13,7 @@ import net.sosuisen.model.ParagraphDAO;
 import net.sosuisen.model.ParagraphDTO;
 import net.sosuisen.model.ReadingRecordDAO;
 import net.sosuisen.model.UserStatus;
+import net.sosuisen.security.CsrfValidator;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -27,9 +28,12 @@ public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
     private final ReadingRecordDAO readingRecordDAO;
     private final UserStatus userStatus;
+    private final CsrfValidator csrfValidator;
 
     @GET
     public ArrayList<ParagraphDTO> getParagraphs() throws SQLException {
+        csrfValidator.validateCsrfToken();
+
         var paragraphs = paragraphDAO.getAll();
         var positionTags = readingRecordDAO.getAll(userStatus.getUserName());
         System.out.println("positionTags: " + positionTags);

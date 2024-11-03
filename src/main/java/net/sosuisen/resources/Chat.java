@@ -11,6 +11,7 @@ import net.sosuisen.model.ChatCommand;
 import net.sosuisen.model.ChatMessage;
 import net.sosuisen.model.QueryDTO;
 import net.sosuisen.model.StaticMessage;
+import net.sosuisen.security.CsrfValidator;
 import net.sosuisen.service.ChatService;
 
 import java.sql.SQLException;
@@ -26,18 +27,21 @@ public class Chat {
     private final StaticMessage staticMessage;
     private final ChatCommand chatCommand;
     private final ChatService chatService;
+    private final CsrfValidator csrfValidator;
 
     @GET
     @Path("opening-words")
     public ChatMessage getOpeningWords() {
+        csrfValidator.validateCsrfToken();
         return new ChatMessage("AI", staticMessage.getOpeningWords(), new ArrayList<>());
     }
 
     @POST
     @Path("query")
     public ChatMessage query(@Valid QueryDTO queryObj) throws SQLException {
-        var query = queryObj.getMessage();
+        csrfValidator.validateCsrfToken();
 
+        var query = queryObj.getMessage();
         ChatCommand.Command command = chatCommand.get(query);
         if (command != null) {
             return chatService.proceedByCommand(command, query);
