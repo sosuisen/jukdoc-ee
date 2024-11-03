@@ -37,22 +37,20 @@ public class RetrieveQA {
 
             EmbeddingSearchRequest request = new EmbeddingSearchRequest(embedding, 3, 0.1, null);
             EmbeddingSearchResult<TextSegment> result = embeddingStore.search(request);
-            result.matches().forEach(match -> {
-                System.out.printf("""
-                                score: %f
-                                query: %s
-                                position_tag: %s
-                                position_name: %s
-                                section_title: %s
-                                answer: %s
-                                """, match.score(),
-                        match.embedded().text(),
-                        match.embedded().metadata().getString("position_tag"),
-                        match.embedded().metadata().getString("position_name"),
-                        match.embedded().metadata().getString("section_title"),
-                        match.embedded().metadata().getString("answer")
-                );
-            });
+            result.matches().forEach(match -> System.out.printf("""
+                            score: %f
+                            query: %s
+                            position_tag: %s
+                            position_name: %s
+                            section_title: %s
+                            answer: %s
+                            """, match.score(),
+                    match.embedded().text(),
+                    match.embedded().metadata().getString("position_tag"),
+                    match.embedded().metadata().getString("position_name"),
+                    match.embedded().metadata().getString("section_title"),
+                    match.embedded().metadata().getString("answer")
+            ));
         } catch (Exception e) {
             System.out.println("Error:" + e);
         }
