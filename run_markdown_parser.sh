@@ -8,4 +8,4 @@ fi
 
 ARGS="$1"
 
-./mvnw exec:java -Dexec.mainClass="net.sosuisen.aiutils.MarkdownParser" -Dexec.args="$ARGS ./src/main/resources/structured_paragraph.txt"
+./mvnw exec:java -Dexec.mainClass="net.sosuisen.offlineutils.MarkdownParser" -Dexec.args="$ARGS ./src/main/resources/structured_paragraph.txt"

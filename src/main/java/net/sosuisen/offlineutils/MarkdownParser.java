@@ -1,4 +1,4 @@
-package net.sosuisen.aiutils;
+package net.sosuisen.offlineutils;
 
 import java.io.IOException;
 import java.nio.file.Files;

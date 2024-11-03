@@ -1,4 +1,4 @@
-package net.sosuisen.aiutils;
+package net.sosuisen.offlineutils;
 
 import dev.langchain4j.data.embedding.Embedding;
 import dev.langchain4j.data.segment.TextSegment;
