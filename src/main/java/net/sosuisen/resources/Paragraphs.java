@@ -36,7 +36,7 @@ public class Paragraphs {
 
         var paragraphs = paragraphDAO.getAll();
         var positionTags = readingRecordDAO.getAll(userStatus.getUserName());
-        System.out.println("positionTags: " + positionTags);
+
         for(var paragraph : paragraphs) {
             if (positionTags.contains(paragraph.getPositionTag())) {
                 paragraph.setRead(true);

@@ -62,7 +62,7 @@ public class DatabaseSetup {
 
         var paragraphPath = "structured_paragraph.txt";
         try (InputStream inputStream = DatabaseSetup.class.getClassLoader().getResourceAsStream(paragraphPath);
-             var reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)))) {
+             var reader = new BufferedReader(new InputStreamReader(inputStream))) {
             var line = "";
             while ((line = reader.readLine()) != null) {
                 var matcher = PARAGRAPH_PATTERN.matcher(line);
@@ -93,14 +93,14 @@ public class DatabaseSetup {
                 }
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             log.error("Error reading paragraph file: {}", e.getMessage());
-            throw e;
         }
 
         var summaryPath = "summary.txt";
         try (InputStream inputStream = DatabaseSetup.class.getClassLoader().getResourceAsStream(summaryPath);
-             var reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)))) {
+             var reader = new BufferedReader(new InputStreamReader(inputStream))) {
             var line = "";
             var summaryBlock = new StringBuilder();
             while ((line = reader.readLine()) != null) {
@@ -131,9 +131,9 @@ public class DatabaseSetup {
                 }
             }
 
-        } catch (IOException e) {
+        } catch (Exception e) {
+            e.printStackTrace();
             log.error("Error reading summary file: {}", e.getMessage());
-            throw e;
         }
     }
 

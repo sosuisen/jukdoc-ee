@@ -4,6 +4,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import net.sosuisen.ai.annotation.SystemMessage;
 import net.sosuisen.ai.annotation.Temperature;
 import net.sosuisen.ai.service.AssistantService;
@@ -19,6 +20,7 @@ import java.util.stream.Collectors;
 @ApplicationScoped
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor_ = @Inject)
+@Slf4j
 public class ChatService {
     @SuppressWarnings("FieldCanBeLocal")
     private final int HISTORY_SIZE = 3;
@@ -93,7 +95,7 @@ public class ChatService {
                 [My Question] %s
                 """.formatted(chatHistory, contextBuilder.toString(), refsBuilder.toString(), refsHintBuilder.toString(), query);
 
-        System.out.println("prompt: " + prompt);
+        log.debug("prompt: {}", prompt);
         return prompt;
     }
 
@@ -136,7 +138,7 @@ public class ChatService {
         // Call API
         var prompt = getPrompt(retrievalDocs, query);
         var answer = assistantService.generate(prompt);
-        System.out.println("response: " + answer);
+        log.debug("response: {}", answer);
 
         // Process references
         var reEachRef = Pattern.compile("\\[*(\\d+)]", Pattern.DOTALL);
