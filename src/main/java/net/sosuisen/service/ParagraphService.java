@@ -6,6 +6,7 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import net.sosuisen.ai.annotation.MaxResults;
 import net.sosuisen.ai.annotation.StoreJsonPath;
+import net.sosuisen.ai.annotation.Threshold;
 import net.sosuisen.ai.service.EmbeddingSearchService;
 import net.sosuisen.model.Document;
 
@@ -17,6 +18,7 @@ public class ParagraphService {
     @Inject
     @StoreJsonPath("paragraph_store.json")
     @MaxResults(1)
+    @Threshold(0.5)
     private EmbeddingSearchService embeddingSearchService;
 
     public ArrayList<Document> query(String query) {

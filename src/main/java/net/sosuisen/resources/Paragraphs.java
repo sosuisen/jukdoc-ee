@@ -11,6 +11,8 @@ import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import net.sosuisen.model.ParagraphDAO;
 import net.sosuisen.model.ParagraphDTO;
+import net.sosuisen.model.ReadingRecordDAO;
+import net.sosuisen.model.UserStatus;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -23,9 +25,19 @@ import java.util.ArrayList;
 @Path("/api/paragraphs")
 public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
+    private final ReadingRecordDAO readingRecordDAO;
+    private final UserStatus userStatus;
 
     @GET
     public ArrayList<ParagraphDTO> getParagraphs() throws SQLException {
-        return paragraphDAO.getAll();
+        var paragraphs = paragraphDAO.getAll();
+        var positionTags = readingRecordDAO.getAll(userStatus.getUserName());
+        System.out.println("positionTags: " + positionTags);
+        for(var paragraph : paragraphs) {
+            if (positionTags.contains(paragraph.getPositionTag())) {
+                paragraph.setRead(true);
+            }
+        }
+        return paragraphs;
     }
 }

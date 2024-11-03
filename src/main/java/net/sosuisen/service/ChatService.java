@@ -28,6 +28,7 @@ public class ChatService {
     private final ParagraphService paragraphService;
     private final QAService qaService;
     private final UserStatus userStatus;
+    private final ReadingRecordDAO readingRecordDAO;
 
     @Inject
     @SystemMessage("You are a skilled assistant.")
@@ -107,7 +108,7 @@ public class ChatService {
         return new ChatMessage("AI", "I'm sorry, but I don't have any information on that topic.", new ArrayList<>());
     }
 
-    public ChatMessage proceedByCommand(ChatCommand.Command command, String query) {
+    public ChatMessage proceedByCommand(ChatCommand.Command command, String query) throws SQLException {
         return switch (command) {
             case PROCEED_CURRENT_TOPIC -> proceedCurrentTopic(query);
             case REPEAT_ONLY_CURRENT_TOPIC -> promptToAI(getDocumentFromLatestHistory(), query);
@@ -131,7 +132,7 @@ public class ChatService {
         return promptToAI(retrievalDocs, query);
     }
 
-    private ChatMessage promptToAI(List<Document> retrievalDocs, String query) {
+    private ChatMessage promptToAI(List<Document> retrievalDocs, String query) throws SQLException {
         // Call API
         var prompt = getPrompt(retrievalDocs, query);
         var answer = assistantService.generate(prompt);
@@ -165,6 +166,10 @@ public class ChatService {
         }
         var sanitizedAnswer = answer.replaceAll("\\[\\*\\d+]", "");
         userStatus.getHistory().add(new HistoryDocument(query, sanitizedAnswer, referredDocs));
+
+        for (var doc : referredDocs) {
+            readingRecordDAO.create(userStatus.getUserName(), doc.getPositionTag());
+        }
 
         return new ChatMessage("AI", answer, uniqueRefs);
     }

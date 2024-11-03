@@ -32,6 +32,7 @@ public class DatabaseSetup {
 
         update(ds, "DROP TABLE IF EXISTS paragraph");
         update(ds, "DROP TABLE IF EXISTS summary");
+        update(ds, "DROP TABLE IF EXISTS reading_record");
 
         update(ds, """
                 CREATE TABLE IF NOT EXISTS paragraph(
@@ -47,6 +48,15 @@ public class DatabaseSetup {
                 CREATE TABLE IF NOT EXISTS summary (
                     position_tag VARCHAR(30) PRIMARY KEY,
                 	summary TEXT NOT NULL
+                	)
+                """);
+
+        update(ds, """
+                CREATE TABLE IF NOT EXISTS reading_record (
+                    user_name CHAR(36) NOT NULL,
+                    position_tag VARCHAR(30) NOT NULL,
+                    reading_time TIMESTAMP NOT NULL,
+                    PRIMARY KEY (user_name, position_tag)
                 	)
                 """);
 
@@ -71,7 +81,7 @@ public class DatabaseSetup {
                 var sql = "INSERT INTO paragraph VALUES (?, ?, ?, ?, ?)";
                 try (
                         Connection con = ds.getConnection();
-                        PreparedStatement pstmt = con.prepareStatement(sql);) {
+                        PreparedStatement pstmt = con.prepareStatement(sql)) {
                     pstmt.setString(1, positionTag);
                     pstmt.setString(2, positionName);
                     pstmt.setString(3, sectionTitle);
@@ -112,7 +122,7 @@ public class DatabaseSetup {
 
                 try (
                         Connection con = ds.getConnection();
-                        PreparedStatement pstmt = con.prepareStatement(sql);) {
+                        PreparedStatement pstmt = con.prepareStatement(sql)) {
                     pstmt.setString(1, positionTag);
                     pstmt.setString(2, summary);
                     pstmt.executeUpdate();
@@ -122,7 +132,7 @@ public class DatabaseSetup {
             }
 
         } catch (IOException e) {
-            log.error("Error reading summary file: " + e.getMessage());
+            log.error("Error reading summary file: {}", e.getMessage());
             throw e;
         }
     }
@@ -131,6 +141,7 @@ public class DatabaseSetup {
         try {
             update(ds, "DROP TABLE IF EXISTS paragraph");
             update(ds, "DROP TABLE IF EXISTS summary");
+            update(ds, "DROP TABLE IF EXISTS reading_record");
         } catch (Exception e) {
             log.warn("Exception on drop tables: {}", e.getMessage());
         }
@@ -139,7 +150,7 @@ public class DatabaseSetup {
     private void update(DataSource ds, String query) {
         try (
                 Connection con = ds.getConnection();
-                PreparedStatement pstmt = con.prepareStatement(query);) {
+                PreparedStatement pstmt = con.prepareStatement(query)) {
             pstmt.executeUpdate();
         } catch (SQLException e) {
             throw new IllegalStateException(e);

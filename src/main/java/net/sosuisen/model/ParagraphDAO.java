@@ -30,7 +30,8 @@ public class ParagraphDAO {
                         rs.getString("position_name"),
                         rs.getString("section_title"),
                         rs.getBoolean("is_header"),
-                        rs.getString("paragraph")
+                        rs.getString("paragraph"),
+                        false
                 ));
             }
         }

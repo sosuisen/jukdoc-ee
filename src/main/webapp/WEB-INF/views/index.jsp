@@ -16,7 +16,14 @@
 ">
 
 <div class="title-area">
-    Jukdoc
+    <div class="title">Jukdoc</div>
+    <div class="reading-completion-rate"
+         x-data="{ rate: 0 }"
+         x-effect="rate = paragraphs.length > 0 ? Math.round(paragraphs.filter(para => para.read && !para.header).length / paragraphs.filter(para => !para.header).length * 100) : 0">
+        <span class="rate-title">Reading completion rate:</span>
+        <span class="rate-value" x-text="rate + '%'"></span>
+    </div>
+    <div class="username">User: ${userName}</div>
 </div>
 <div class="main-content">
     <div class="document-column">
@@ -61,7 +68,15 @@
               @submit.prevent="
               history.push({ speaker: 'User', message: param.message, refs: [] });
               $post('/chat/query', { param, error: 'Cannot send message' })
-              .then(res => res.status == 200 ? history.push(res.data) : null);
+              .then(res => {
+                if(res.status == 200){
+                  history.push(res.data);
+                  res.data.refs.forEach(refStr => {
+                    const ref = refStr.split(':');
+                    paragraphs.find(para => para.positionTag === ref[1]).read = true;
+                  });
+                }
+              });
               param.message = '';"
         >
             <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>

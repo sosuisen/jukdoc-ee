@@ -13,4 +13,5 @@ import java.util.ArrayList;
 public class UserStatus implements Serializable {
     private ArrayList<HistoryDocument> History = new ArrayList<>();
     private String positionTag = "";
+    private String userName = "";
 }

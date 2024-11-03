@@ -14,13 +14,42 @@ body {
 
 .title-area {
     width: 100%;
-    padding: 10px;
+    padding: 15px 20px;
     background-color: #333;
     color: #ffffff;
     text-align: center;
     font-size: 24px;
     font-weight: bold;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #555;
+}
+
+.title-area .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #00bcd4;
+}
+
+.title-area .username {
+    font-size: 18px;
+    font-weight: normal;
+    color: #ddd;
+    margin-left: 15px;
+}
+
+.title-area .reading-completion-rate{
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.title-area .reading-completion-rate .rate-title{
+}
+
+.title-area .reading-completion-rate .rate-value{
+    color: #76ff03;
 }
 
 .main-content {
