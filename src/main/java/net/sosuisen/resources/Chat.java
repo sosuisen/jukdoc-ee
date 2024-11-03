@@ -7,7 +7,10 @@ import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import net.sosuisen.model.*;
+import net.sosuisen.model.ChatCommand;
+import net.sosuisen.model.ChatMessage;
+import net.sosuisen.model.QueryDTO;
+import net.sosuisen.model.StaticMessage;
 import net.sosuisen.service.ChatService;
 
 import java.sql.SQLException;

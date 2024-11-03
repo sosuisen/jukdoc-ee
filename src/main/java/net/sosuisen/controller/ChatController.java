@@ -8,7 +8,6 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
 
 @Controller
 @RequestScoped

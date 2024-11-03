@@ -5,7 +5,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 @AllArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 public class Document {
     private String type;
     private String positionTag;

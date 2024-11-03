@@ -6,7 +6,10 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @ApplicationScoped
 public class ChatCommand {
@@ -14,7 +17,9 @@ public class ChatCommand {
         PROCEED_CURRENT_TOPIC,
         REPEAT_ONLY_CURRENT_TOPIC
     }
+
     Map<String, Command> commandMap = new HashMap<>();
+
     public ChatCommand() {
         try (InputStream inputStream = ChatCommand.class.getResourceAsStream("/commands.txt");
              BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream))) {
@@ -24,7 +29,7 @@ public class ChatCommand {
                 String[] parts = line.split(",", 2);
                 if (parts.length == 2) {
                     String key = parts[0].trim().toLowerCase();
-                    if(key.endsWith("?")){
+                    if (key.endsWith("?")) {
                         key = key.substring(0, key.length() - 1);
                     }
                     String value = parts[1].trim();

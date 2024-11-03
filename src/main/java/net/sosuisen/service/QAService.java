@@ -1,15 +1,14 @@
 package net.sosuisen.service;
 
 import dev.langchain4j.data.segment.TextSegment;
-import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
-import dev.langchain4j.store.embedding.EmbeddingSearchRequest;
 import dev.langchain4j.store.embedding.EmbeddingSearchResult;
-import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
-import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import net.sosuisen.ai.annotation.MaxResults;
+import net.sosuisen.ai.annotation.StoreJsonPath;
+import net.sosuisen.ai.service.EmbeddingSearchService;
 import net.sosuisen.model.Document;
 import net.sosuisen.model.SummaryDAO;
 
@@ -21,39 +20,21 @@ import java.util.Comparator;
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor_ = @Inject)
 public class QAService {
-    private static final String qaStorePath = "qa_store.json";
-
     private final SummaryDAO summaryDAO;
 
-    private InMemoryEmbeddingStore<TextSegment> embeddingStore;
-    private OpenAiEmbeddingModel model;
+    @Inject
+    @StoreJsonPath("qa_store.json")
+    @MaxResults(3)
+    private EmbeddingSearchService embeddingSearchService;
 
-    @PostConstruct
-    public void init() {
-        embeddingStore = VectorStoreLoader.load(qaStorePath);
-        model = OpenAiEmbeddingModel.builder()
-                .apiKey(System.getenv("OPENAI_API_KEY"))
-                .modelName("text-embedding-3-small")
-                .build();
-    }
+    public ArrayList<Document> query(String query) throws SQLException {
+        EmbeddingSearchResult<TextSegment> result = embeddingSearchService.search(query);
 
-    public ArrayList<Document> query(String query, int maxQADocs, double threshold) throws SQLException {
-        var segment = TextSegment.from(query);
-        var embedding = model.embed(segment).content();
-
-        // To handle cases where there are multiple QAs with the same score, retrieve a larger number than maxQADocs.
-        EmbeddingSearchRequest request = new EmbeddingSearchRequest(embedding, maxQADocs + 7, threshold, null);
-        EmbeddingSearchResult<TextSegment> result = embeddingStore.search(request);
         if (result.matches().isEmpty()) {
             return null;
         } else {
             var documents = new ArrayList<Document>();
-            var prevScore = 0.0d;
             for (var match : result.matches()) {
-                var score = match.score();
-                if (prevScore != score && documents.size() >= maxQADocs) {
-                    break;
-                }
                 var question = match.embedded().text();
                 var answer = match.embedded().metadata().getString("answer");
                 var positionTag = match.embedded().metadata().getString("position_tag");
@@ -63,14 +44,12 @@ public class QAService {
                 if (summary != null) {
                     context += "\n" + summary.getSummary();
                 }
-
                 documents.add(new Document("qa",
                         positionTag,
                         match.embedded().metadata().getString("position_name"),
                         match.embedded().metadata().getString("section_title"),
                         context,
-                        score));
-                prevScore = score;
+                        match.score()));
             }
             // Documents are sorted in descending order by score and in ascending order by position tag.
             documents.sort(

@@ -3,7 +3,6 @@ package net.sosuisen.model;
 import jakarta.enterprise.context.ApplicationScoped;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
-import net.sosuisen.resources.Chat;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,6 +15,7 @@ import java.util.Objects;
 @Slf4j
 public class StaticMessage {
     private final String openingWords;
+
     public StaticMessage() throws IOException {
         var openingWordsPath = "opening_words.txt";
         var openingWordsBuilder = new StringBuilder();

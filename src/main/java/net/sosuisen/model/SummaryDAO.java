@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 
 @ApplicationScoped
 @NoArgsConstructor
@@ -24,7 +23,7 @@ public class SummaryDAO {
         ) {
             pstmt.setString(1, positionTag);
             ResultSet rs = pstmt.executeQuery();
-            if(rs.next()) {
+            if (rs.next()) {
                 return new SummaryDTO(
                         rs.getString("position_tag"),
                         rs.getString("summary")
@@ -33,4 +32,4 @@ public class SummaryDAO {
             return null;
         }
     }
- }
+}

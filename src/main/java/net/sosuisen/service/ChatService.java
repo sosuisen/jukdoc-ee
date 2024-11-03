@@ -1,13 +1,12 @@
 package net.sosuisen.service;
 
-import dev.langchain4j.data.message.SystemMessage;
-import dev.langchain4j.data.message.UserMessage;
-import dev.langchain4j.model.openai.OpenAiChatModel;
-import jakarta.annotation.PostConstruct;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
+import net.sosuisen.ai.annotation.SystemMessage;
+import net.sosuisen.ai.annotation.Temperature;
+import net.sosuisen.ai.service.AssistantService;
 import net.sosuisen.model.*;
 
 import java.sql.SQLException;
@@ -16,8 +15,6 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
-
-import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_4_O_MINI;
 
 @ApplicationScoped
 @NoArgsConstructor(force = true)
@@ -28,26 +25,21 @@ public class ChatService {
     // Pattern that matches anaphoric expressions
     private final Pattern RE_ANAPHORA = Pattern.compile("\\b(that|this|those|these|such|it|its|he|his|she|her|they|their)(?=[\\s?!.,]|$)", Pattern.CASE_INSENSITIVE);
 
-    private OpenAiChatModel chatModel;
     private final ParagraphService paragraphService;
     private final QAService qaService;
     private final UserStatus userStatus;
 
-    @PostConstruct
-    public void init() {
-        chatModel = OpenAiChatModel.builder()
-                .apiKey(System.getenv("OPENAI_API_KEY"))
-                .modelName(GPT_4_O_MINI)
-                .temperature(0.0)
-                .build();
-    }
+    @Inject
+    @SystemMessage("You are a skilled assistant.")
+    @Temperature(0.0)
+    private AssistantService assistantService;
 
     private String getPrompt(List<Document> retrievalDocs, String query) {
         var chatHistory = userStatus.getHistory().stream()
                 .map(doc -> {
                     var a = "You: " + doc.getAnswer();
                     var q = doc.getQuery();
-                    if (q.isEmpty()){
+                    if (q.isEmpty()) {
                         return a + "\n";
                     }
                     return "Me: " + q + "\nYou: " + a + "\n";
@@ -104,7 +96,7 @@ public class ChatService {
         return prompt;
     }
 
-   private List<Document> getDocumentFromLatestHistory() {
+    private List<Document> getDocumentFromLatestHistory() {
         if (!userStatus.getHistory().isEmpty()) {
             return userStatus.getHistory().getLast().getReferredDocs();
         }
@@ -142,10 +134,7 @@ public class ChatService {
     private ChatMessage promptToAI(List<Document> retrievalDocs, String query) {
         // Call API
         var prompt = getPrompt(retrievalDocs, query);
-        var response = chatModel.generate(List.of(
-                SystemMessage.from("You are a skilled assistant."),
-                UserMessage.from(prompt)));
-        var answer = response.content().text();
+        var answer = assistantService.generate(prompt);
         System.out.println("response: " + answer);
 
         // Process references
@@ -184,11 +173,10 @@ public class ChatService {
      * Retrieve documents from the Embedding Stores for RAG
      */
     private ArrayList<Document> retrieveDocuments(String message) throws SQLException {
-        var maxParagraphDocs = 1;
         // Retrieve direct answers from the QA store
-        var qaDocs = qaService.query(message, 3, 0.8);
+        var qaDocs = qaService.query(message);
         // Retrieve relevant paragraphs from the paragraph store
-        var paragraphDocs = paragraphService.query(message, maxParagraphDocs, 0.8);
+        var paragraphDocs = paragraphService.query(message);
 
         var mergedDocs = new ArrayList<Document>();
         if (qaDocs != null) {
@@ -198,13 +186,6 @@ public class ChatService {
             mergedDocs.addAll(paragraphDocs);
         }
         mergedDocs.sort(Comparator.comparingDouble(Document::getScore).reversed());
-
-        /*
-        var context = mergedDocs.stream()
-                .map(Document::toString)
-                .collect(Collectors.joining("\n\n"));
-        System.out.println("context: " + context);
-        */
 
         return mergedDocs;
     }

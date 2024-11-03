@@ -11,7 +11,9 @@ import java.util.List;
 @Provider
 public class ConstraintViolationExceptionMapper implements ExceptionMapper<ConstraintViolationException> {
     public record ErrorResponse(String type, List<String> errors) {
-    };
+    }
+
+    ;
 
     @Override
     public Response toResponse(ConstraintViolationException exception) {

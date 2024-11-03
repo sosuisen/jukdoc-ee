@@ -8,7 +8,8 @@ import lombok.Setter;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 public class QueryDTO {
     @NotBlank
     private String message;
