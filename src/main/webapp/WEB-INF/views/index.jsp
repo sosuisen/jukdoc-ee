@@ -44,7 +44,7 @@
             <template x-for="msg in history">
                 <div :class="'message-rect ' + (msg.speaker === 'AI' ? 'from-ai' : 'from-user')">
                     <div class="chat-message" x-html="msg.message"></div>
-                    <div class="chat-refs">
+                    <div class="chat-refs" x-show="msg.speaker === 'AI'">
                     <template x-for="refStr in msg.refs">
                         <span class="ref"
                              x-data="{ refArr: refStr.split(':') }"

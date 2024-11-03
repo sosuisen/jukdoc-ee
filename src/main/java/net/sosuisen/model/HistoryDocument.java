@@ -1,14 +1,17 @@
 package net.sosuisen.model;
 
-import jakarta.persistence.NamedStoredProcedureQueries;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @AllArgsConstructor
-@Getter @Setter
+@Getter
+@Setter
 public class HistoryDocument {
     private String query;
     private String answer;
+    private List<Document> referredDocs;
 }

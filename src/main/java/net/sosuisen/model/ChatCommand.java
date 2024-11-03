@@ -45,7 +45,9 @@ public class ChatCommand {
         }
     }
 
-    public Command getCommand(String key) {
+    public Command get(String key) {
+        key = key.replaceAll("^[\\s　]+|[\\s　]+$", "");
+
         if (key.length() <= 1) return Command.PROCEED_CURRENT_TOPIC;
 
         List<String> removeChars = Arrays.asList(

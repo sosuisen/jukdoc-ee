@@ -1,6 +1,7 @@
 package net.sosuisen.model;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 import net.sosuisen.resources.Chat;
 
@@ -11,6 +12,7 @@ import java.io.InputStreamReader;
 import java.util.Objects;
 
 @ApplicationScoped
+@Getter
 @Slf4j
 public class StaticMessage {
     private final String openingWords;
@@ -30,7 +32,4 @@ public class StaticMessage {
         openingWords = openingWordsBuilder.toString();
     }
 
-    public String getOpeningWords() {
-        return openingWords;
-    }
 }

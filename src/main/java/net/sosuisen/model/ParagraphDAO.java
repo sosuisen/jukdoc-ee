@@ -9,7 +9,7 @@ import java.sql.*;
 import java.util.ArrayList;
 
 @ApplicationScoped
-@NoArgsConstructor(force = true)
+@NoArgsConstructor
 public class ParagraphDAO {
     @Resource
     private DataSource ds;

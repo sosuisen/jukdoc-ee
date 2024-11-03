@@ -1,5 +1,6 @@
 package net.sosuisen.resources;
 
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -15,11 +16,11 @@ import net.sosuisen.model.ParagraphDTO;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+@RequestScoped
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor_ = @Inject)
-@Log
 @Path("/api/paragraphs")
 public class Paragraphs {
     private final ParagraphDAO paragraphDAO;

@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @ApplicationScoped
-@NoArgsConstructor(force = true)
+@NoArgsConstructor
 public class SummaryDAO {
     @Resource
     private DataSource ds;

@@ -131,7 +131,7 @@ body {
 
 .chat-message {
     white-space: pre-line;
-    margin-bottom: 8px;
+    text-align: left;
 }
 
 .message-container {

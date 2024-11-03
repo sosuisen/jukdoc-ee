@@ -17,9 +17,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+@ApplicationScoped
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor_ = @Inject)
-@ApplicationScoped
 public class QAService {
     private static final String qaStorePath = "qa_store.json";
 

@@ -14,7 +14,6 @@ import lombok.extern.java.Log;
 @RequestScoped
 @NoArgsConstructor(force = true)
 @RequiredArgsConstructor(onConstructor_ = @Inject)
-@Log
 @Path("/")
 public class ChatController {
     private final Models models;
