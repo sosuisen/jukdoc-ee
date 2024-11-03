@@ -183,3 +183,8 @@ body {
 .ref:hover {
     text-decoration: underline;
 }
+
+.highlight {
+    background-color: #90c0ff;
+    transition: background-color 1s ease;
+}

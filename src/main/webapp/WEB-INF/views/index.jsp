@@ -32,7 +32,7 @@
         <div x-data="{ markAsRead(tag) { (paragraphs.find(para => para.positionTag === tag)).read = true; } }">
             <template x-for="para in paragraphs">
                 <div :class="(para.read ? 'read' : 'unread') + ' ' + (para.header ? 'header' : 'paragraph')"
-                     :id="para.positionTag.replaceAll(/#/g, '-')">
+                     :id="para.positionTag.replaceAll(/#/g, '-').replaceAll(/,/g, '_')">
                     <button @click="markAsRead(para.positionTag)">MarkAsRead</button>
                     <span x-text="para.paragraph"></span>(<span x-text="para.positionTag"></span>)
                 </div>
@@ -55,7 +55,7 @@
                     <template x-for="refStr in msg.refs">
                         <span class="ref"
                              x-data="{ refArr: refStr.split(':') }"
-                             @click="location.href='#'+refArr[1].replaceAll(/#/g, '-')"
+                             @click="const hash = refArr[1].replaceAll(/#/g, '-').replaceAll(/,/g, '_'); location.href='#'+ hash; highlightElement('#' + hash);"
                              x-text="'[*' + refArr[0] + '] ' + refArr[2]">
                         </span>
                     </template>
@@ -89,6 +89,21 @@
 <script type="module">
     import rest from '${mvc.basePath}/../rest.js';
     rest.start('${mvc.basePath}/api', '${mvc.csrf.token}');
+</script>
+<script>
+    let currentHighlightHash = null;
+    function highlightElement(hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+            if (currentHighlightHash) {
+                const currentElement = document.querySelector(currentHighlightHash);
+                if (currentElement)
+                    currentElement.classList.remove("highlight");
+            }
+            element.classList.add("highlight");
+            currentHighlightHash = hash;
+        }
+    }
 </script>
 </body>
 </html>
