@@ -13,5 +13,6 @@ public class ParagraphDTO {
     private String sectionTitle;
     private boolean header;
     private String paragraph;
+    private String summary;
     private boolean isRead;
 }

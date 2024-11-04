@@ -22,6 +22,7 @@ public class CreateSummary {
                 - Replace outdated expressions with modern ones.
                 - Use a polite tone.
                 - First, write a concise summary within 70 characters.
+                - It is not necessary to write "Summary:" before the summary.
                 - Then, under the summary, use bullet points starting with "-" for each topic.
                 - Begin each bullet with a keyword representing the content, followed by ":" and then the details.
                 - Use simple HTML to format the response.
@@ -57,7 +58,7 @@ public class CreateSummary {
 
                 if (positionTag.isEmpty() || paragraph.isEmpty()) continue;
 
-                if (!positionTag.contains("p#")) {
+                if (positionTag.contains("_p-000")) {
                     continue;
                 }
 
@@ -77,6 +78,7 @@ public class CreateSummary {
                         .modelName("gpt-4o")
                         .build();
                 String summary = model.generate(prompt);
+                summary = summary.replaceAll("(<b>)?Summary:(</b>)?", "");
                 System.out.println("Summary: " + summary);
 
                 summaries.append("""

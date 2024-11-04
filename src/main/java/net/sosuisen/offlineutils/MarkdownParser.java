@@ -47,9 +47,13 @@ public class MarkdownParser {
         String[] lines = markdown.split("\n");
 
         var currentHeaderDepth = 0; // depth of h1 is 1
-        var headerDepthMap = new HashMap<Integer, Integer>();
+        var headerDepthMap = new HashMap<Integer, Integer>(); // depth, count
+        headerDepthMap.put(1, 0);
+        headerDepthMap.put(2, 0);
+        headerDepthMap.put(3, 0);
+
         var headerTags = "";
-        var paragraphNumber = 0;
+        var paragraphNumber = 1;
         var positionName = "";
         var sectionTitle = "";
 
@@ -65,17 +69,18 @@ public class MarkdownParser {
 
             if (depth < 0) {
                 // line is paragraph
-                intermediateText.append("{%s,p#%s:%s:%s} %s\n".formatted(headerTags, paragraphNumber, positionName, sectionTitle, line));
+                intermediateText.append("{%s_p-%03d:%s:%s} %s\n".formatted(headerTags, paragraphNumber, positionName, sectionTitle, line));
                 paragraphNumber++;
                 continue;
             }
 
             // line is header
-            paragraphNumber = 0;
+            paragraphNumber = 1;
 
             if (depth < currentHeaderDepth) {
                 for (int i = depth + 1; i <= currentHeaderDepth; i++) {
-                    headerDepthMap.remove(i);
+                    // headerDepthMap.remove(i);
+                    headerDepthMap.put(i, 0);
                 }
             }
             currentHeaderDepth = depth;
@@ -93,18 +98,18 @@ public class MarkdownParser {
                 }
             }
 
-            headerDepthMap.put(depth, headerDepthMap.getOrDefault(depth, -1) + 1);
+            headerDepthMap.put(depth, headerDepthMap.getOrDefault(depth, 0) + 1);
 
             headerTags = headerDepthMap.entrySet().stream()
                     .sorted(Map.Entry.comparingByKey())
-                    .map(entry -> "h%d#%d".formatted(entry.getKey(), entry.getValue()))
-                    .reduce("%s,%s"::formatted)
+                    .map(entry -> "h%d-%03d".formatted(entry.getKey(), entry.getValue()))
+                    .reduce("%s_%s"::formatted)
                     .orElse("");
 
             var matcher = HEADER_PATTERN.matcher(line);
             var headerLine = matcher.find() ? matcher.group(2) : "";
 
-            intermediateText.append("{%s:%s:%s} %s\n".formatted(headerTags, positionName, sectionTitle, headerLine));
+            intermediateText.append("{%s_p-000:%s:%s} %s\n".formatted(headerTags, positionName, sectionTitle, headerLine));
         }
         return intermediateText.toString();
     }

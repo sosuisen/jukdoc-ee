@@ -1,404 +1,473 @@
-{h1#0,h2#0,p#0} Summary:  
-Pharma reps supply medicines and info to healthcare facilities.
+{h1-001_h2-001_h3-000_p-001} Pharmaceutical reps sell and inform about medicines.
 
-- Role: Provide medicines to medical institutions, pharmacies, and hospitals.
-- Responsibility: Offer accurate information about pharmaceuticals.
-- Trust: Build trust with healthcare professionals.
+<ul>
+  <li><b>Sales:</b> Provide medicines to medical institutions.</li>
+  <li><b>Information:</b> Share accurate details about pharmaceuticals.</li>
+  <li><b>Trust:</b> Build relationships with healthcare professionals.</li>
+</ul>
 ---
-{h1#0,h2#0,h3#0,p#0} Summary:  
-Pharma reps share key drug details with healthcare providers.
+{h1-001_h2-001_h3-001_p-001} Latest info on medicines is shared by pharmaceutical sales reps.
 
-- Role: Pharma reps give the latest drug info.
-- Information: Includes uses, dosages, side effects, and interactions.
-- Importance: Helps doctors prescribe the right medicine.
+<ul>
+  <li><b>Role:</b> Share the latest information on medicines.</li>
+  <li><b>Details:</b> Provide info on indications, dosages, side effects, and interactions.</li>
+  <li><b>Importance:</b> Ensure healthcare professionals prescribe the right medication.</li>
+</ul>
 ---
-{h1#0,h2#0,h3#1,p#0} Summary:  
-Building trust in medical sales ensures proper drug use and safety.
+{h1-001_h2-001_h3-002_p-001} Trust with healthcare professionals is key for pharmaceutical sales.
 
-- Trust: Essential for pharmaceutical sales reps with medical professionals.
-- Communication: Responding to questions and concerns is key.
-- Impact: Trust affects drug use and patient safety.
-- Response: Sincere answers are crucial in medical settings.
+<ul>
+  <li><b>Trust:</b> Essential for relationships with healthcare professionals.</li>
+  <li><b>Professionals:</b> Includes doctors, pharmacists, and nurses.</li>
+  <li><b>Responsiveness:</b> Important for addressing questions and concerns.</li>
+  <li><b>Patient Safety:</b> Relies on proper use of pharmaceuticals.</li>
+  <li><b>Sincerity:</b> Required for building and maintaining trust.</li>
+</ul>
 ---
-{h1#0,h2#0,h3#2,p#0} Summary:  
-Ethical sales in pharma focus on patient health over profit.
+{h1-001_h2-001_h3-003_p-001} Pharma reps should prioritize health and ethical sales activities.
 
-- Priority: Patient health and safety come first.  
-- Ethics: Honest sales build trust and credibility.  
-- Relationships: Ethical practices lead to long-term connections.  
-- Advertising: Avoid excessive promotion and exaggeration.  
-- Information: Share honest and objective details.  
+<ul>
+  <li><b>Priority:</b> Patient health and safety over product profit</li>
+  <li><b>Ethics:</b> Enhance credibility through ethical sales</li>
+  <li><b>Relationships:</b> Build long-term connections</li>
+  <li><b>Honesty:</b> Avoid excessive promotion</li>
+  <li><b>Information:</b> Share honest and objective details</li>
+</ul>
 ---
-{h1#0,h2#0,h3#2,p#1} Pharmaceutical reps support patient care and health improvement.
+{h1-001_h2-001_h3-003_p-002} Optimal patient treatment through trust in pharmaceutical sales.
 
-- Role: Pharmaceutical reps support patient treatment.
-- Responsibility: Build trust with healthcare professionals.
-- Outcome: Promote proper use of medicines.
-- Benefit: Improve patients' health and quality of life.
+<ul>
+  <li><b>Role:</b> Pharmaceutical sales reps support patient treatment.</li>
+  <li><b>Responsibility:</b> Build trust with healthcare professionals.</li>
+  <li><b>Outcome:</b> Promote proper use of medicines.</li>
+  <li><b>Impact:</b> Improve patients' health and quality of life.</li>
+</ul>
 ---
-{h1#0,h2#1,p#0} Summary:  
-Pharma reps must follow laws to ensure safe medicine for all.  
+{h1-001_h2-002_h3-000_p-001} Pharmaceutical reps must follow laws for safe and fair sales.
 
-- Responsibility: Follow laws related to pharmaceuticals.
-- Conduct: Act fairly and properly in sales activities.
-- Support: Help provide safe and effective medicines.
-- Obligations: Understand and fulfill legal duties.
+<ul>
+  <li><b>Responsibility:</b> Comply with pharmaceutical laws.</li>
+  <li><b>Conduct:</b> Engage in fair and proper sales activities.</li>
+  <li><b>Support:</b> Ensure safe and effective medicines for healthcare use.</li>
+</ul>
 ---
-{h1#0,h2#1,h3#0,p#0} Pharma reps must follow laws to avoid penalties and ensure trust.
+{h1-001_h2-002_h3-001_p-001} Understanding and following drug laws is crucial for sales reps.
 
-- Obligation: Pharma reps need to understand and follow laws.
-- Regulations: PMDA and Personal Information Protection Act are key.
-- Processes: Laws cover making, selling, and sharing info about drugs.
-- Risks: Breaking rules can lead to penalties like lost trust or suspensions.
-- Importance: Legal compliance is crucial for business success.
+<ul>
+  <li><b>Obligation:</b> Sales reps must know and follow drug laws.</li>
+  <li><b>Key Laws:</b> PMDA and Personal Information Protection Act.</li>
+  <li><b>Processes:</b> Covers making, selling, and sharing drug info.</li>
+  <li><b>Risks:</b> Breaking rules can harm trust and business.</li>
+  <li><b>Penalties:</b> Can lead to severe consequences like business suspension.</li>
+  <li><b>Importance:</b> Legal compliance is essential for safety and trust.</li>
+</ul>
 ---
-{h1#0,h2#1,h3#1,p#0} Summary:  
-Pharma reps must give honest info and follow proper sales practices.
+{h1-001_h2-002_h3-002_p-001} Pharma reps must give true info and follow proper sales conduct.
 
-- Responsibility: Provide accurate details on drug efficacy and side effects.
-- Conduct: Avoid exaggeration or misleading descriptions.
-- Legal Risks: Improper sales activities can break laws.
-- Impact: Incorrect info can harm healthcare professionals or patients.
-- Requirement: Ensure proper information and sales conduct.
+<ul>
+  <li><b>Responsibility:</b> Provide accurate drug info on efficacy and side effects.</li>
+  <li><b>Risk:</b> Misleading info or excessive promotion can break laws.</li>
+  <li><b>Requirement:</b> Ensure proper conduct in sales activities.</li>
+</ul>
 ---
-{h1#0,h2#1,h3#2,p#0} Summary:  
-Handling personal info in pharma sales requires careful attention.  
+{h1-001_h2-002_h3-003_p-001} Pharma reps must protect personal info to avoid legal issues.
 
-- Representatives: Often access personal info from medical institutions and patients.
-- Protection Act: Prohibits using info for unintended purposes or sharing without consent.
-- Legal issues: Leakage or misuse can lead to serious legal consequences.
+<ul>
+  <li><b>Pharma reps:</b> Handle personal info from medical sources.</li>
+  <li><b>Protection law:</b> Limits info use and sharing without consent.</li>
+  <li><b>Legal risk:</b> Misuse can cause serious legal problems.</li>
+</ul>
 ---
-{h1#0,h2#1,h3#2,p#1} Summary:  
-Legal compliance in pharma sales builds trust and company reputation.
+{h1-001_h2-002_h3-003_p-002} Understanding legal duties is key for safe drug sales and trust.
 
-- Legal Responsibilities: Understand and practice legal obligations.
-- Provision: Ensure safe and proper delivery of pharmaceuticals.
-- Compliance: Helps build trust with healthcare professionals and patients.
-- Reputation: Enhances the reliability of drugs and the company's image.
+<ul>
+  <li><b>Legal responsibilities:</b> Important for safe provision of drugs.</li>
+  <li><b>Compliance:</b> Builds trust with doctors and patients.</li>
+  <li><b>Reputation:</b> Improves company reliability and image.</li>
+</ul>
 ---
-{h1#0,h2#2,p#0} Pharma reps must be ethical and prioritize patient health.
+{h1-001_h2-003_h3-000_p-001} Pharma reps must act ethically and prioritize patient health.
 
-- Responsibility: Pharma reps should act with social responsibility.
-- Ethics: High ethical standards are essential for pharma reps.
-- Priority: Patient health and safety come first in their activities.
-- Conduct: Sincerity and reliability are crucial in their behavior.
-- Guidelines: Specific ethical conduct guidelines are explained for reps.
+<ul>
+  <li><b>Social Responsibility:</b> Act with responsibility and ethics.</li>
+  <li><b>Patient Health:</b> Prioritize health and safety in all tasks.</li>
+  <li><b>Sincerity:</b> Work with honesty and dependability.</li>
+  <li><b>Guidelines:</b> Follow ethical standards and conduct rules.</li>
+</ul>
 ---
-{h1#0,h2#2,h3#0,p#0} Summary:  
-Pharma reps must prioritize patient safety and share accurate info.
+{h1-001_h2-003_h3-001_p-001} Patient safety is key for pharmaceutical sales reps.
 
-- Responsibility: Prioritize patient safety and health.
-- Activities: Base all actions on patient safety.
-- Information: Convey side effects and risks accurately.
-- Decisions: Help healthcare professionals make informed choices.
-- Precaution: Avoid actions risking patient health.
+<ul>
+  <li><b>Responsibility:</b> Prioritize patient safety and health.</li>
+  <li><b>Sales Activities:</b> Base all actions on patient safety.</li>
+  <li><b>Information Sharing:</b> Clearly convey side effects and risks.</li>
+  <li><b>Decision Making:</b> Help healthcare professionals make informed choices.</li>
+  <li><b>Risk Avoidance:</b> Avoid actions harmful to patient health or safety.</li>
+</ul>
 ---
-{h1#0,h2#2,h3#1,p#0} Summary:  
-Pharma reps must be fair, transparent, and focus on patient needs.
+{h1-001_h2-003_h3-002_p-001} Pharma reps must be fair and honest for patient-focused choices.
 
-- Fairness: Essential for building trust with healthcare professionals.
-- Transparency: Helps in providing clear information to customers.
-- Patient needs: Should be prioritized over profit or incentives.
-- Trust: Important for fostering long-term business relationships.
+<ul>
+  <li><b>Pharmaceutical sales:</b> Reps provide fair and transparent responses.</li>
+  <li><b>Product focus:</b> Prioritize patient choices over profit.</li>
+  <li><b>Trust building:</b> Fairness fosters relationships with healthcare pros.</li>
+</ul>
 ---
-{h1#0,h2#2,h3#2,p#0} Summary:  
-Share accurate, reliable, and up-to-date pharmaceutical information.
+{h1-001_h2-003_h3-003_p-001} Accurate data is key in sharing pharmaceutical information.
 
-- Information: Share data from accurate, objective sources.
-- Communication: Avoid exaggerated or misleading expressions.
-- Reliability: Base explanations on highly reliable data.
-- Updates: Stay updated with the latest medical knowledge.
-- Advice: Provide appropriate advice to customers.
+<ul>
+  <li><b>Information:</b> Share data from accurate and objective sources.</li>
+  <li><b>Exaggeration:</b> Avoid exaggerated or misleading expressions.</li>
+  <li><b>Reliability:</b> Base explanations on highly reliable data.</li>
+  <li><b>Updates:</b> Stay updated with the latest medical knowledge.</li>
+  <li><b>Advice:</b> Provide appropriate advice to customers.</li>
+</ul>
 ---
-{h1#0,h2#2,h3#3,p#0} Summary:  
-Pharma reps must avoid fraud and uphold ethics for industry trust.
+{h1-001_h2-003_h3-004_p-001} Pharma reps must avoid fraud and stay honest and fair.
 
-- Fraudulent Activities: Avoid actions like bribery and kickbacks.
-- Industry Credibility: Fraud harms the trust in the pharmaceutical industry.
-- Honesty: Essential in all transactions for fairness.
-- Ethics Training: Encouraged to raise awareness and ensure discipline.
+<ul>
+  <li><b>Fraud Avoidance:</b> No bribery or kickbacks allowed.</li>
+  <li><b>Credibility:</b> Fraud harms the industry's trust.</li>
+  <li><b>Honesty:</b> Fairness is crucial in transactions.</li>
+  <li><b>Ethics Training:</b> Regular training improves ethical awareness.</li>
+  <li><b>Self-Discipline:</b> Important for maintaining professional conduct.</li>
+</ul>
 ---
-{h1#0,h2#2,h3#3,p#1} Build trust by following ethical guidelines in pharmaceutical sales.
+{h1-001_h2-003_h3-004_p-002} Building trust improves pharmaceutical use and patient health.
 
-- Ethical Standards: Adhering to rules builds trust.
-- Conduct Guidelines: Proper conduct helps with patient relationships.
-- Trust: Essential for healthcare professionals and patients.
-- Pharmaceuticals: Encourages correct use for health improvement.
-- Patient Health: Ethical conduct leads to better health outcomes.
+<ul>
+  <li><b>Ethical Standards:</b> Following rules helps build trust.</li>
+  <li><b>Trust:</b> Important for relationships with patients and healthcare professionals.</li>
+  <li><b>Proper Use:</b> Trust ensures correct use of medicines.</li>
+  <li><b>Health Improvement:</b> Trust and proper use lead to better health outcomes.</li>
+</ul>
 ---
-{h1#1,h2#0,p#0} Strict laws guide pharmaceutical sales for social impact.
+{h1-002_h2-001_h3-000_p-001} Pharma sales must follow strict legal rules.
 
-- Laws: Pharmaceutical sales are regulated by strict legal rules.
-- Representatives: Must understand and follow these laws.
-- Chapter: Explains key legal regulations for pharmaceutical sales.
+<ul>
+  <li><b>Pharma sales:</b> Must follow strict legal rules.</li>
+  <li><b>Social impact:</b> Significant, so laws are strict.</li>
+  <li><b>Sales reps:</b> Must know and follow these laws.</li>
+  <li><b>Chapter:</b> Explains main legal regulations.</li>
+</ul>
 ---
-{h1#1,h2#0,h3#0,p#0} PMDA ensures safe and effective pharmaceuticals.
+{h1-002_h2-001_h3-001_p-001} Pharmaceuticals and Medical Devices Act ensures safe drugs.
 
-- PMDA: Ensures quality, efficacy, and safety of pharmaceuticals.
-- Standards: Set from manufacturing to sales stages.
-- Sales: Strict regulations on sales activities.
-- Representatives: Must convey accurate information.
-- Prohibition: No inaccurate or exaggerated details allowed.
+<ul>
+  <li><b>Purpose:</b> Ensures quality, efficacy, and safety of pharmaceuticals.</li>
+  <li><b>Standards:</b> Applies at all stages from making to selling drugs.</li>
+  <li><b>Regulations:</b> Strict rules on sales activities.</li>
+  <li><b>Sales Representatives:</b> Must give accurate drug information.</li>
+  <li><b>Prohibition:</b> No false or exaggerated information allowed.</li>
+</ul>
 ---
-{h1#1,h2#0,h3#1,p#0} Pharma ads must be truthful without exaggeration or misleading info.
+{h1-002_h2-001_h3-002_p-001} Pharma ads must be truthful and not exaggerated.
 
-- Regulations: Set by PMDA for pharmaceutical advertising.
-- Prohibitions: No exaggerated claims or excessive emphasis on effects.
-- Accuracy: Ads must not mislead healthcare professionals or consumers.
-- Responsibility: Sales reps should provide accurate and objective info.
-- Promotion: Avoid excessive promotion or misleading statements.
+<ul>
+  <li><b>Regulations:</b> PMDA sets rules for pharmaceutical ads.</li>
+  <li><b>Exaggeration:</b> Ads can't have exaggerated claims.</li>
+  <li><b>Misleading:</b> Ads must not mislead professionals or consumers.</li>
+  <li><b>Responsibility:</b> Sales reps give accurate info and avoid misleading.</li>
+</ul>
 ---
-{h1#1,h2#0,h3#2,p#0} Summary:  
-Pharmaceutical sales must protect patient information and privacy.
+{h1-002_h2-001_h3-003_p-001} Pharmaceutical sales must protect personal data per privacy laws.
 
-- Pharmaceutical sales: Handle patient and healthcare data.
-- Personal Information Protection Act: Sets rules for data privacy.
-- Compliance: Essential to follow data management laws.
-- Data management: Use and share data appropriately.
-- Consent: Must have permission to share information.
+<ul>
+  <li><b>Compliance:</b> Follow Personal Information Protection Act.</li>
+  <li><b>Rules:</b> Manage, use, and share data properly.</li>
+  <li><b>Privacy:</b> Protect individual privacy.</li>
+  <li><b>Responsibility:</b> Handle patient information carefully.</li>
+</ul>
 ---
-{h1#1,h2#0,h3#3,p#0} Fraud harms the pharmaceutical industry's credibility.
+{h1-002_h2-001_h3-004_p-001} Fraud harms pharma; avoid bribery to keep credibility.
 
-- Fraud: Includes bribery and offering benefits.
-- Prohibition: Strictly disallows bribery of officials and healthcare workers.
-- Consequences: Leads to accusations and severe penalties.
-- Self-discipline: Essential for sales representatives to avoid misconduct.
+<ul>
+  <li><b>Fraudulent activities:</b> Prohibited actions like bribery.</li>
+  <li><b>Public officials:</b> Giving benefits can lead to bribery accusations.</li>
+  <li><b>Industry credibility:</b> Fraud damages trust and leads to penalties.</li>
+  <li><b>Sales representatives:</b> Must be disciplined to avoid misconduct.</li>
+</ul>
 ---
-{h1#1,h2#0,h3#3,p#1} Pharma reps ensure drug safety and build trust by following laws.
+{h1-002_h2-001_h3-004_p-002} Safe pharma practices build public trust and support health.
 
-- Understanding: Helps ensure safe drug use.
-- Compliance: Builds industry trust.
-- Public health: Supports community well-being.
+<ul>
+  <li><b>Legal Regulations:</b> Important for safe pharmaceutical use.</li>
+  <li><b>Public Health:</b> Adhering to rules supports community well-being.</li>
+  <li><b>Trust:</b> Compliance builds trust in the pharmaceutical industry.</li>
+</ul>
 ---
-{h1#1,h2#1,p#0} Pharma reps must follow laws to keep patients safe and build trust.
+{h1-002_h2-002_h3-000_p-001} Prevent illegal activities in pharma to ensure trust and safety.
 
-- Compliance: Follow laws to prevent illegal activities.
-- Trust: Illegal acts harm company and industry reputation.
-- Safety: Illegal activities can risk patient health.
-- Measures: Specific steps are shared to prevent illegal acts.
+<ul>
+  <li><b>Prevention:</b> Stop illegal pharma activities.</li>
+  <li><b>Compliance:</b> Follow all laws strictly.</li>
+  <li><b>Trust:</b> Maintain company and industry trust.</li>
+  <li><b>Safety:</b> Protect patient health and safety.</li>
+  <li><b>Measures:</b> Learn specific prevention steps.</li>
+</ul>
 ---
-{h1#1,h2#1,h3#0,p#0} Summary:  
-Compliance training helps sales reps follow the law.
+{h1-002_h2-002_h3-001_p-001} Pharma reps need training to follow laws and prevent illegal acts.
 
-- Importance: Compliance instills legal responsibility in the workforce.
-- Training: Regular sessions teach about regulations and risks.
-- Commitment: Fosters adherence to laws and prevents illegal acts.
+<ul>
+  <li><b>Compliance Importance:</b> Instilling compliance is crucial for all staff.</li>
+  <li><b>Training Sessions:</b> Regular sessions help teach regulations.</li>
+  <li><b>Workshops:</b> Workshops highlight risks of illegal activities.</li>
+  <li><b>Legal Responsibility:</b> Employees learn about legal duties in sales.</li>
+  <li><b>Commitment:</b> Encourages adherence to laws in daily work.</li>
+</ul>
 ---
-{h1#1,h2#1,h3#1,p#0} Summary:  
-Set up audits and hotlines to ensure transparent pharmaceutical sales.
+{h1-002_h2-002_h3-002_p-001} Establish audits and hotlines for safe and transparent pharma sales.
 
-- Transparency: Important for fair pharmaceutical sales activities.
-- Internal Audits: Necessary to monitor and verify sales processes.
-- Reporting Systems: Record sales and allow regular checks by supervisors.
-- Anonymous Hotlines: Enable safe reporting of concerns by employees.
+<ul>
+  <li><b>Transparency</b>: Essential in pharmaceutical sales activities.</li>
+  <li><b>Internal Audits</b>: Set up to monitor and report suspected illegal actions.</li>
+  <li><b>Recording</b>: Document all sales activities for regular checks.</li>
+  <li><b>Anonymous Hotlines</b>: Provide a safe way for staff to report issues.</li>
+  <li><b>Safe Environment</b>: Encourage reporting without fear of retaliation.</li>
+</ul>
 ---
-{h1#1,h2#1,h3#2,p#0} Summary:  
-Control hospitality to avoid bribery in pharmaceutical sales.
+{h1-002_h2-002_h3-003_p-001} Strict controls prevent bribery in pharma hospitality.
 
-- Industry: Pharmaceutical.
-- Problem: Excessive hospitality or benefits.
-- Risk: Likely bribery.
-- Solution: Establish standards for gifts.
-- Guidance: Educate employees on conduct.
-- Benefit: Protects reputation and proper sales conduct.
+<ul>
+  <li><b>Industry Issue:</b> Excessive hospitality to healthcare professionals.</li>
+  <li><b>Concern:</b> Could be seen as bribery, needing strict control.</li>
+  <li><b>Company Action:</b> Set clear standards for gifts and hospitality.</li>
+  <li><b>Guidance:</b> Employees should receive advice on proper conduct.</li>
+  <li><b>Benefit:</b> Protects company reputation and supports proper sales.</li>
+</ul>
 ---
-{h1#1,h2#1,h3#3,p#0} Regular audits prevent illegal activities and ensure compliance.
+{h1-002_h2-002_h3-004_p-001} Conducting audits prevents illegal activities and ensures compliance.
 
-- Audits: Confirm sales activities meet compliance standards.
-- Evaluations: Identify risks and areas needing improvement.
-- Prevention: Implement measures to prevent illegal activities.
-- Objectivity: Use third-party agencies for reliable audits.
+<ul>
+  <li><b>Audits:</b> Confirm sales activities follow rules.</li>
+  <li><b>Compliance:</b> Evaluations find improvements and risks.</li>
+  <li><b>Third-party:</b> External audits ensure objectivity.</li>
+</ul>
 ---
-{h1#1,h2#1,h3#3,p#1} Preventive steps ensure legal compliance and trust in pharma.
+{h1-002_h2-002_h3-004_p-002} Implement measures to avoid illegal acts and boost trust in pharma.
 
-- Measures: Reduce risk of illegal activities.
-- System: Establish compliance system.
-- Trust: Enhance trust in the pharmaceutical industry.
-- Safety: Support proper use and patient safety.
+<ul>
+  <li><b>Measures:</b> Implement preventive steps to stay legal.</li>
+  <li><b>Trust:</b> Builds confidence in the pharmaceutical field.</li>
+  <li><b>Safety:</b> Supports correct medicine use and patient safety.</li>
+</ul>
 ---
-{h1#1,h2#2,p#0} Summary:  
-Data privacy in pharma sales is crucial for trust and legal compliance.
+{h1-002_h2-003_h3-000_p-001} Pharma reps must manage patient info carefully to protect privacy.
 
-- Pharmaceutical sales: Handle sensitive patient and healthcare data.
-- Importance: Data privacy protects trust and prevents legal issues.
-- Protection: Systems must comply with privacy laws.
-- Focus: Key points in data management and privacy protection.
+<ul>
+  <li><b>Pharma Reps:</b> Handle personal info of patients and healthcare professionals.</li>
+  <li><b>Data Management:</b> Essential for sales activities and communications.</li>
+  <li><b>Privacy Protection:</b> Vital to maintain trust in the industry.</li>
+  <li><b>Legal Compliance:</b> Systems needed to prevent legal violations.</li>
+  <li><b>Key Points:</b> Explains privacy protection and data management.</li>
+</ul>
 ---
-{h1#1,h2#2,h3#0,p#0} Pharmaceutical reps must protect personal healthcare data responsibly.
+{h1-002_h2-003_h3-001_p-001} Personal info in pharma sales must be managed carefully and legally.
 
-- Personal information: Includes contact info, health data, prescription details.
-- Compliance: Follow Personal Information Protection Act guidelines.
-- Data management: Use data only for specific, defined purposes.
-- Obligation: Collect necessary info and use it for business needs only.
-- Prohibition: Unauthorized use or sharing with third parties is forbidden.
+<ul>
+  <li><b>Personal Information:</b> Includes healthcare contact info and health data.</li>
+  <li><b>Compliance:</b> Must follow the Personal Information Protection Act.</li>
+  <li><b>Purpose:</b> Use data for clearly defined business purposes only.</li>
+  <li><b>Obligations:</b> Collect necessary info and avoid unauthorized use.</li>
+</ul>
 ---
-{h1#1,h2#2,h3#1,p#0} Summary:  
-Personal data must be stored securely to prevent unauthorized access.
+{h1-002_h2-003_h3-002_p-001} Collected personal information needs secure storage and access controls.
 
-- Storage: Securely store collected personal data.
-- Access: Restrict access to reduce risk of unauthorized access.
-- Measures: Use passwords, encryption, and log file access.
-- External Access: Use secure networks and protect against device loss.
-- Security Checks: Conduct regular checks to enhance data security.
+<ul>
+  <li><b>Storage:</b> Personal data must be stored securely.</li>
+  <li><b>Access:</b> Implement access restrictions to prevent unauthorized access.</li>
+  <li><b>Measures:</b> Use password management, encryption, and access logs.</li>
+  <li><b>External Access:</b> Use secure networks and protect devices from loss.</li>
+  <li><b>Security Checks:</b> Conduct regular checks to enhance data security.</li>
+</ul>
 ---
-{h1#1,h2#2,h3#2,p#0} Summary:  
-Pharmaceutical reps need privacy training and a reporting system.
+{h1-002_h2-003_h3-003_p-001} Privacy education is vital for pharmaceutical representatives.
 
-- Privacy: Educate reps on privacy protection.
-- Training: Teach handling personal information and legal rules.
-- Compliance: Ensure reps follow privacy principles.
-- Reporting: Set up a system for reporting violations.
+<ul>
+  <li><b>Importance:</b> Privacy education is crucial for sales representatives.</li>
+  <li><b>Training:</b> Regular training teaches rules and legal guidelines.</li>
+  <li><b>Compliance:</b> Ensures understanding and adherence to privacy principles.</li>
+  <li><b>Reporting:</b> Establish a system for reporting privacy violations.</li>
+</ul>
 ---
-{h1#1,h2#2,h3#3,p#0} Swift action is crucial in handling data breaches.
+{h1-002_h2-003_h3-004_p-001} Swift response to data breaches is crucial for risk management.
 
-- Response: Act quickly when a data breach happens.
-- Scope: Identify how big the data leak is.
-- Reporting: Inform all important people right away.
-- Prevention: Make plans to stop it from happening again.
-- Preparation: Practice with simulations and have an emergency plan ready.
-
+<ul>
+  <li><b>Response:</b> Swift action is crucial in a data breach.</li>
+  <li><b>Scope:</b> Identify the extent of the leak quickly.</li>
+  <li><b>Reporting:</b> Report promptly to all stakeholders.</li>
+  <li><b>Prevention:</b> Formulate measures to prevent future breaches.</li>
+  <li><b>Preparation:</b> Simulate breaches and have an emergency plan ready.</li>
+</ul>
 ---
-{h1#1,h2#2,h3#3,p#1} Summary:  
-Protecting privacy builds trust and credibility in pharma sales.
+{h1-002_h2-003_h3-004_p-002} Privacy and data protection build trust and credibility in pharma.
 
-- Privacy protection: Essential for safeguarding trust.
-- Data management: Key to maintaining customer confidence.
-- Industry credibility: Enhanced by strict adherence to privacy.
-- Long-term relationships: Built on privacy and compliance.
+<ul>
+  <li><b>Privacy Protection:</b> Essential for customer trust and credibility.</li>
+  <li><b>Data Management:</b> Helps maintain strong business relationships.</li>
+  <li><b>Trust Building:</b> Important for long-term success in the industry.</li>
+</ul>
 ---
-{h1#2,h2#0,p#0} Summary:  
-Pharmaceuticals help treat, prevent, and diagnose diseases.
+{h1-003_h2-001_h3-000_p-001} Understanding pharmaceuticals helps ensure safe patient treatment.
 
-- Pharmaceuticals: Help in treatment, prevention, and diagnosis.
-- Types: Each has unique effects and uses.
-- Importance: Understanding helps sales reps aid healthcare professionals.
-- Goal: Ensure safe and effective patient treatment.
+<ul>
+  <li><b>Types:</b> Different pharmaceuticals support treatment, prevention, and diagnosis.</li>
+  <li><b>Effects:</b> Each type has distinct effects on diseases and symptoms.</li>
+  <li><b>Information:</b> Sales representatives provide info to healthcare professionals.</li>
+  <li><b>Safety:</b> Knowledge helps ensure safe and effective patient treatment.</li>
+</ul>
 ---
-{h1#2,h2#0,h3#0,p#0} Summary:  
-Prescription drugs need a doctor's guidance to treat diseases safely.
+{h1-003_h2-001_h3-001_p-001} Prescription drugs need a doctor's prescription to treat diseases.
 
-- Prescription: Required from doctors or dentists for safety.
-- Potency: Strong effects, strict usage and dosage rules.
-- Types: Includes antibiotics, antivirals, anticancer agents.
-- Effectiveness: Depends on proper prescription and patient adherence.
+<ul>
+  <li><b>Prescription:</b> Needed from a doctor or dentist.</li>
+  <li><b>Potent Effects:</b> Used for specific diseases or symptoms.</li>
+  <li><b>Types:</b> Includes antibiotics, antivirals, and anticancer agents.</li>
+  <li><b>Adherence:</b> Follow usage and dosage instructions carefully.</li>
+  <li><b>Treatment:</b> Healthcare professional prescribes, patient follows.</li>
+</ul>
 ---
-{h1#2,h2#0,h3#1,p#0} OTC drugs are for mild symptoms; use them safely with advice.
+{h1-003_h2-001_h3-002_p-001} OTC drugs treat mild symptoms without prescription.
 
-- OTC Drugs: Can be bought without a prescription for mild issues.
-- Types: Include pain relievers, digestive aids, and allergy meds.
-- Self-Care: Can be managed by individuals themselves.
-- Safety: Sales reps should advise on proper use and dosage.
+<ul>
+  <li><b>Definition:</b> OTC drugs don't need a prescription.</li>
+  <li><b>Types:</b> Include pain relievers, digestive, and allergy drugs.</li>
+  <li><b>Usage:</b> Suitable for mild symptoms and self-care.</li>
+  <li><b>Safety:</b> Sales reps advise on safe use and proper dosage.</li>
+</ul>
 ---
-{h1#2,h2#0,h3#2,p#0} **Summary:**  
-Vaccines help prevent diseases by creating antibodies in the body.
+{h1-003_h2-001_h3-003_p-001} Vaccines help prevent diseases by creating antibodies.
 
-- **Vaccines:** Pharmaceuticals to prevent diseases.
-- **Function:** Create antibodies to reduce illness risk.
-- **Examples:** Includes flu, COVID-19, and measles vaccines.
-- **Importance:** Crucial for public health.
-- **Role:** Sales reps must share accurate vaccine info.
+<ul>
+  <li><b>Vaccines:</b> Pharmaceuticals to prevent diseases.</li>
+  <li><b>Antibodies:</b> Created by vaccines to fight illnesses.</li>
+  <li><b>Examples:</b> Influenza, COVID-19, and measles vaccines.</li>
+  <li><b>Importance:</b> Vital for public health.</li>
+  <li><b>Sales representatives:</b> Must share accurate vaccine info.</li>
+</ul>
 ---
-{h1#2,h2#0,h3#3,p#0} Biological products treat diseases with cell-based pharmaceuticals.
+{h1-003_h2-001_h3-004_p-001} Biological products are strong medicines made from cells or molecules.
 
-- Biological products: Made using cells or biomolecules.
-- Treatments: Used for diseases like rheumatoid arthritis and cancers.
-- Product types: Include gene therapies and monoclonal antibodies.
-- Handling: Require proper storage and knowledge.
-- Representatives: Need specialized knowledge for handling and characteristics.
+<ul>
+  <li><b>Definition:</b> Medicines made using cells or biomolecules.</li>
+  <li><b>Types:</b> Includes gene therapies and monoclonal antibodies.</li>
+  <li><b>Uses:</b> Treats diseases like arthritis, cancers, and immune disorders.</li>
+  <li><b>Handling:</b> Requires careful handling and special knowledge.</li>
+</ul>
 ---
-{h1#2,h2#0,h3#3,p#1} Summary:  
-Pharmaceutical sales reps help doctors with safe patient treatments.
+{h1-003_h2-001_h3-004_p-002} Understanding medicines helps sales reps support safe patient treatments.
 
-- Understanding: Knowledge of drug types and effectiveness.
-- Role: Sales reps provide useful information to healthcare professionals.
-- Goal: Ensure safe treatments for patients.
+<ul>
+  <li><b>Understanding:</b> Learn about different types of medicines.</li>
+  <li><b>Sales Reps:</b> Provide information to healthcare professionals.</li>
+  <li><b>Support:</b> Ensure safe treatment for patients.</li>
+</ul>
 ---
-{h1#2,h2#1,p#0} Summary:  
-Follow guidelines for safe and effective medicine use.
+{h1-003_h2-002_h3-000_p-001} Safe drug use needs following rules to avoid side effects.
 
-- Guidelines: Ensure safe use and avoid side effects.
-- Responsibility: Sales reps must know and share product precautions.
-- Advice: Provide appropriate guidance to healthcare professionals and patients.
-- Precautions: Important for pharmaceutical use.
+<ul>
+  <li><b>Guidelines:</b> Following rules ensures drugs work well and are safe.</li>
+  <li><b>Sales Representatives:</b> Must know about drug precautions.</li>
+  <li><b>Advice:</b> Offer good tips to doctors and patients.</li>
+  <li><b>Precautions:</b> Important safety steps for using drugs.</li>
+</ul>
 ---
-{h1#2,h2#1,h3#0,p#0} Summary:  
-Follow prescribed dosage and method for safe medicine use.
+{h1-003_h2-002_h3-001_p-001} Safe medicine use needs correct dosage and schedule.
 
-- Pharmaceuticals: Safe use depends on following dosage and method.
-- Dosage: Incorrect amounts can cause bad effects or overdose.
-- Treatment: Essential for antibiotics and anticancer drugs.
-- Importance: Sales reps should stress strict adherence to healthcare professionals and patients.
+<ul>
+  <li><b>Pharmaceuticals:</b> Follow the prescribed method and dosage.</li>
+  <li><b>Incorrect Dosages:</b> Can cause inadequate effects or side effects.</li>
+  <li><b>Antibiotics and Anticancer Drugs:</b> Need strict schedule adherence.</li>
+  <li><b>Sales Representatives:</b> Must stress importance to doctors and patients.</li>
+</ul>
 ---
-{h1#2,h2#1,h3#1,p#0} Medicine timing and duration are crucial for effectiveness.
+{h1-003_h2-002_h3-002_p-001} Taking meds on time is crucial for effectiveness and safety.
 
-- Pharmaceuticals: Timing and duration are vital.
-- Antibiotics: Must complete prescribed duration to avoid resistant bacteria.
-- Medications: Sleeping pills and diabetes meds need specific timing.
-- Instructions: Important for patients to follow accurately.
+<ul>
+  <li><b>Antibiotics:</b> Finish full course to avoid resistant bacteria.</li>
+  <li><b>Timing:</b> Some meds need to be taken at specific times.</li>
+  <li><b>Importance:</b> Proper use ensures meds work correctly.</li>
+</ul>
 ---
-{h1#2,h2#1,h3#2,p#0} Drugs have side effects; reps inform about risks to patients and doctors.
+{h1-003_h2-002_h3-003_p-001} Pharmaceuticals have specific side effects and usage warnings.
 
-- Pharmaceuticals: Each drug has possible side effects and restrictions.
-- Pregnancy: Some medicines should not be used during pregnancy.
-- Health conditions: Certain drugs may not be safe for high blood pressure or diabetes.
-- Representatives: Sales reps give information about risks to patients and doctors.
+<ul>
+  <li><b>Pharmaceuticals:</b> Each has potential side effects.</li>
+  <li><b>Contraindications:</b> Some drugs must be avoided in certain conditions.</li>
+  <li><b>Pregnancy:</b> Some drugs are unsafe during pregnancy.</li>
+  <li><b>High-risk Patients:</b> Need detailed drug information.</li>
+  <li><b>Sales Representatives:</b> Must inform about side effects and warnings.</li>
+</ul>
 ---
-{h1#2,h2#1,h3#3,p#0} Be cautious with drug interactions for patient safety.
+{h1-003_h2-002_h3-004_p-001} Drug interactions can affect effectiveness and cause side effects.
 
-- Interactions: Drugs together can change effectiveness or cause side effects.
-- Caution: Important to be careful to protect patient health.
-- Sales Representatives: Should guide healthcare professionals on drug checks.
-- Information: Provide details on potential interactions for proper use.
+<ul>
+  <li><b>Interactions:</b> Drugs together can change how well they work.</li>
+  <li><b>Side effects:</b> Unexpected effects can harm patient health.</li>
+  <li><b>Caution:</b> Care is needed when using multiple drugs.</li>
+  <li><b>Role of sales representatives:</b> Encourage checking drug combinations.</li>
+  <li><b>Support:</b> Provide info on potential interactions to healthcare workers.</li>
+</ul>
 ---
-{h1#2,h2#1,h3#3,p#1} Summary: Pharmaceutical reps help ensure safe medicine use.
+{h1-003_h2-002_h3-004_p-002} Comprehensive knowledge ensures pharmaceutical safety and effectiveness.
 
-- Understanding: Know product precautions well.
-- Advising: Guide healthcare professionals and patients.
-- Promoting: Encourage safe and effective pharmaceutical use.
-- Protecting: Maintain patient health through informed advice.
+<ul>
+  <li><b>Comprehensive:</b> Full understanding of product precautions.</li>
+  <li><b>Advise:</b> Helps healthcare professionals and patients.</li>
+  <li><b>Promote:</b> Ensures safe and effective use of medicines.</li>
+  <li><b>Protect:</b> Safeguards patient health.</li>
+</ul>
 ---
-{h1#2,h2#2,p#0} Summary:  
-Pharmaceuticals have side effects, so risk management is crucial.
+{h1-003_h2-003_h3-000_p-001} Understanding side effects and managing risks is vital in pharmaceuticals.
 
-- Pharmaceuticals: Designed to be effective but may have side effects.
-- Side Effects: Unexpected effects different from intended ones.
-- Risk Management: Essential to ensure patient safety and health.
-- Representatives: Must understand side effects and manage risks.
+<ul>
+  <li><b>Pharmaceuticals:</b> Designed to be effective but may have side effects.</li>
+  <li><b>Side Effects:</b> Unexpected effects that differ from intended benefits.</li>
+  <li><b>Risks:</b> Important to manage to ensure patient safety.</li>
+  <li><b>Sales Representatives:</b> Must understand side effects and share information.</li>
+</ul>
 ---
-{h1#2,h2#2,h3#0,p#0} Summary:  
-Sales reps must know and explain product side effects clearly.
+{h1-003_h2-003_h3-001_p-001} Side effects vary; some need urgent attention.  
 
-- Side effects: Range from mild, like headaches, to severe, like liver issues.
-- Severe cases: Need quick medical attention, e.g., anaphylactic shock.
-- Sales reps: Should know side effects and inform healthcare and patients.
+<ul>
+  <li><b>Mild effects:</b> Headaches, nausea, and rashes.</li>
+  <li><b>Severe effects:</b> Anaphylactic shock, liver issues.</li>
+  <li><b>Sales reps:</b> Know side effects, inform healthcare and patients.</li>
+</ul>
 ---
-{h1#2,h2#2,h3#1,p#0} Side effects risk varies by age, health, and medications.
+{h1-003_h2-003_h3-002_p-001} Risk of side effects varies by age, health, and medications.
 
-- Age: Older adults and children may have higher side effect risks.
-- Health: Pre-existing conditions can increase side effect risks.
-- Medications: Taking multiple drugs may lead to more side effects.
-- Advice: Sales representatives should inform healthcare professionals.
+<ul>
+  <li><b>Age:</b> Older adults and children face higher risk of side effects.</li>
+  <li><b>Health:</b> Pre-existing conditions can increase side effect risks.</li>
+  <li><b>Medications:</b> Taking multiple drugs may lead to interactions.</li>
+  <li><b>Advice:</b> Sales reps should guide healthcare professionals.</li>
+</ul>
 ---
-{h1#2,h2#2,h3#2,p#0} Summary:   
-Patients must follow prescriptions to avoid side effects.
+{h1-003_h2-003_h3-003_p-001} Minimize side effects by following instructions and regular check-ups.
 
-- Adherence: Patients should stick to prescribed usage and dosage.
-- Support: Sales reps help healthcare professionals instruct patients.
-- Monitoring: Encourage tests to catch side effects early in high-risk cases.
+<ul>
+  <li><b>Adherence:</b> Follow prescribed usage and dosage strictly.</li>
+  <li><b>Guidelines:</b> "Safety Management Guidelines" help give proper instructions.</li>
+  <li><b>Support:</b> Sales representatives assist healthcare professionals.</li>
+  <li><b>Tests:</b> Regular tests help detect side effects early.</li>
+</ul>
 ---
-{h1#2,h2#2,h3#3,p#0} Prompt response to side effects is crucial for safety.
+{h1-003_h2-003_h3-004_p-001} Prompt response to side effects is crucial for safety.
 
-- Side effects: Quick action is needed if they occur.
-- Sales representatives: Must guide healthcare professionals on responses.
-- Patients: Should seek immediate medical help if unwell.
-- Systems: Necessary for recording and reporting side effects.
-- Data gathering: Helps improve product safety and risk management.
+<ul>
+  <li><b>Side Effects:</b> Quick action is needed if they occur.</li>
+  <li><b>Sales Reps:</b> Explain response steps to healthcare professionals.</li>
+  <li><b>Patients:</b> Seek immediate help if feeling unwell.</li>
+  <li><b>Systems:</b> Record and report side effects for safety and improvement.</li>
+</ul>
 ---
-{h1#2,h2#2,h3#3,p#1} Safety in pharma relies on risk management and teamwork.
+{h1-003_h2-003_h3-004_p-002} Understanding side effects ensures patient safety and drug credibility.
 
-- Side Effects: Understanding them is crucial for safety.
-- Risk Management: Essential responsibility in pharmaceuticals.
-- Teamwork: Collaboration with healthcare professionals is important.
-- Credibility: Ensures trust in pharmaceuticals.
-- Awareness: Representatives must be alert and responsive.
+<ul>
+  <li><b>Understanding:</b> Knowing side effects helps ensure patient safety.</li>
+  <li><b>Collaboration:</b> Sales reps work with healthcare professionals.</li>
+  <li><b>Credibility:</b> Proper risk management improves trust in drugs.</li>
+  <li><b>Responsibility:</b> Reps must be aware and responsive to risks.</li>
+</ul>
 ---

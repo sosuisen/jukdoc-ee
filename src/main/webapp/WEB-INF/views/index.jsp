@@ -32,7 +32,7 @@
         <div x-data="{ markAsRead(tag) { (paragraphs.find(para => para.positionTag === tag)).read = true; } }">
             <template x-for="para in paragraphs">
                 <div :class="(para.read ? 'read' : 'unread') + ' ' + (para.header ? 'header' : 'paragraph')"
-                     :id="para.positionTag.replaceAll(/#/g, '-').replaceAll(/,/g, '_')">
+                     :id="para.positionTag">
                     <button @click="markAsRead(para.positionTag)">MarkAsRead</button>
                     <span x-text="para.paragraph"></span>(<span x-text="para.positionTag"></span>)
                 </div>
@@ -55,7 +55,7 @@
                     <template x-for="refStr in msg.refs">
                         <span class="ref"
                              x-data="{ refArr: refStr.split(':') }"
-                             @click="const hash = refArr[1].replaceAll(/#/g, '-').replaceAll(/,/g, '_'); location.href='#'+ hash; highlightElement('#' + hash);"
+                             @click="location.href='#'+ refArr[1]; highlightElement('#' + refArr[1]);"
                              x-text="'[*' + refArr[0] + '] ' + refArr[2]">
                         </span>
                     </template>
@@ -75,6 +75,10 @@
                     const ref = refStr.split(':');
                     paragraphs.find(para => para.positionTag === ref[1]).read = true;
                   });
+                  setTimeout(() => {
+                    const chatHistory = document.querySelector('.chat-history');
+                    chatHistory.scrollTop = chatHistory.scrollHeight;
+                  }, 10);
                 }
               });
               param.message = '';"

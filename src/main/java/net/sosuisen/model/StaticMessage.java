@@ -16,6 +16,10 @@ import java.util.Objects;
 public class StaticMessage {
     private final String openingWords;
 
+    private final String proceedCurrentTopicStartHeader = "<p>I will read from the beginning.</p>";
+    private final String proceedCurrentTopicHeader = "<p>I will continue reading.</p>";
+    private final String isFinalTopic = "<p>I have finished reading all the topics.</p>";
+
     public StaticMessage() throws IOException {
         var openingWordsPath = "opening_words.txt";
         var openingWordsBuilder = new StringBuilder();
@@ -23,7 +27,7 @@ public class StaticMessage {
              var reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(inputStream)))) {
             var line = "";
             while ((line = reader.readLine()) != null) {
-                openingWordsBuilder.append(line + "<br/>");
+                openingWordsBuilder.append(line);
             }
         } catch (IOException e) {
             log.error("Failed to read opening words from {}", openingWordsPath);

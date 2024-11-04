@@ -31,7 +31,6 @@ public class DatabaseSetup {
         // Initialize a Payara Micro built-in H2 database
 
         update(ds, "DROP TABLE IF EXISTS paragraph");
-        update(ds, "DROP TABLE IF EXISTS summary");
         update(ds, "DROP TABLE IF EXISTS reading_record");
 
         update(ds, """
@@ -40,14 +39,8 @@ public class DatabaseSetup {
                 	position_name VARCHAR(30) NOT NULL,
                 	section_title VARCHAR(100) NOT NULL,
                 	is_header BOOLEAN NOT NULL DEFAULT FALSE,
-                	paragraph TEXT NOT NULL
-                	)
-                """);
-
-        update(ds, """
-                CREATE TABLE IF NOT EXISTS summary (
-                    position_tag VARCHAR(30) PRIMARY KEY,
-                	summary TEXT NOT NULL
+                	paragraph TEXT NOT NULL,
+                	summary TEXT
                 	)
                 """);
 
@@ -76,9 +69,9 @@ public class DatabaseSetup {
 
                 if (positionTag.isEmpty() || paragraph.isEmpty()) continue;
 
-                boolean isHeader = !positionTag.contains("p#");
+                boolean isHeader = positionTag.contains("_p-000");
 
-                var sql = "INSERT INTO paragraph VALUES (?, ?, ?, ?, ?)";
+                var sql = "INSERT INTO paragraph(position_tag, position_name, section_title, is_header, paragraph) VALUES (?, ?, ?, ?, ?)";
                 try (
                         Connection con = ds.getConnection();
                         PreparedStatement pstmt = con.prepareStatement(sql)) {
@@ -106,7 +99,7 @@ public class DatabaseSetup {
             while ((line = reader.readLine()) != null) {
                 if (!line.equals("---")) {
                     summaryBlock.append(line);
-                    break;
+                    continue;
                 }
                 var matcher = SUMMARY_PATTERN.matcher(summaryBlock.toString());
                 summaryBlock.delete(0, summaryBlock.length());
@@ -118,13 +111,13 @@ public class DatabaseSetup {
 
                 if (positionTag.isEmpty() || summary.isEmpty()) continue;
 
-                var sql = "INSERT INTO summary (position_tag, summary) VALUES (?, ?)";
+                var sql = "UPDATE paragraph SET summary = ? WHERE position_tag = ?";
 
                 try (
                         Connection con = ds.getConnection();
                         PreparedStatement pstmt = con.prepareStatement(sql)) {
-                    pstmt.setString(1, positionTag);
-                    pstmt.setString(2, summary);
+                    pstmt.setString(1, summary);
+                    pstmt.setString(2, positionTag);
                     pstmt.executeUpdate();
                 } catch (SQLException e) {
                     throw new IllegalStateException(e);
@@ -140,7 +133,6 @@ public class DatabaseSetup {
     public void onApplicationScopedDestroyed(@Observes @BeforeDestroyed(ApplicationScoped.class) Object event) {
         try {
             update(ds, "DROP TABLE IF EXISTS paragraph");
-            update(ds, "DROP TABLE IF EXISTS summary");
             update(ds, "DROP TABLE IF EXISTS reading_record");
         } catch (Exception e) {
             log.warn("Exception on drop tables: {}", e.getMessage());

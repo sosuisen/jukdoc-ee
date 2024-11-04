@@ -70,7 +70,7 @@ public class CreateQAStore {
 
                     if (positionTag.isEmpty() || paragraph.isEmpty()) continue;
 
-                    if (!positionTag.contains("p#")) {
+                    if (positionTag.contains("_p-000")) {
                         continue;
                     }
 

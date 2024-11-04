@@ -41,7 +41,7 @@ public class CreateParagraphStore {
                 var paragraph = matcher.group(4);
                 if (positionTag.isEmpty() || paragraph.isEmpty()) continue;
 
-                if (!positionTag.contains("p#")) {
+                if (positionTag.contains("_p-000")) {
                     continue;
                 }
                 // is paragraph

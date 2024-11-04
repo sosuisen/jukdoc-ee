@@ -24,9 +24,6 @@ import java.util.stream.Collectors;
 public class ChatService {
     @SuppressWarnings("FieldCanBeLocal")
     private final int HISTORY_SIZE = 3;
-    private final String PROCEED_CURRENT_TOPIC_START_HEADER = "I will read from the beginning.\n\n";
-    private final String PROCEED_CURRENT_TOPIC_HEADER = "I will continue reading.\n\n";
-
     // Pattern that matches anaphoric expressions
     private final Pattern RE_ANAPHORA = Pattern.compile("\\b(that|this|those|these|such|it|its|he|his|she|her|they|their)(?=[\\s?!.,]|$)", Pattern.CASE_INSENSITIVE);
 
@@ -34,13 +31,13 @@ public class ChatService {
     private final QAService qaService;
     private final UserStatus userStatus;
     private final ReadingRecordDAO readingRecordDAO;
+    private final ParagraphDAO paragraphDAO;
+    private final StaticMessage staticMessage;
 
     @Inject
     @SystemMessage("You are a skilled assistant.")
     @Temperature(0.0)
     private AssistantService assistantService;
-    @Inject
-    private SummaryDAO summaryDAO;
 
     private String getPrompt(List<Document> retrievalDocs, String query) {
         var chatHistory = userStatus.getHistory().stream()
@@ -106,7 +103,7 @@ public class ChatService {
                 [My Question] %s
                 """.formatted(chatHistory, contextBuilder.toString(), refsBuilder.toString(), refsHintBuilder.toString(), query);
 
-        log.debug("prompt: {}", prompt);
+        log.debug("## prompt: {}", prompt);
         return prompt;
     }
 
@@ -118,25 +115,47 @@ public class ChatService {
     }
 
     private ChatMessage proceedCurrentTopic(String query) throws SQLException {
+        ParagraphDTO nextParagraph;
+        log.debug("## current position tag: {}", userStatus.getCurrentPositionTag());
         var answer = "";
         if (userStatus.getCurrentPositionTag().isEmpty()) {
-            var nextSummary = summaryDAO.getFirst();
-            if (nextSummary != null) {
-                userStatus.setCurrentPositionTag(nextSummary.getPositionTag());
-                answer = PROCEED_CURRENT_TOPIC_START_HEADER + nextSummary.getSummary();
-                answer.replaceAll("\n", "<br>");
-            }
+            answer = staticMessage.getProceedCurrentTopicStartHeader();
+            nextParagraph = paragraphDAO.getFirstParagraph();
         }
         else {
-            var nextSummary = summaryDAO.getNext(userStatus.getCurrentPositionTag());
-            if (nextSummary != null) {
-
-            }
+            answer = staticMessage.getProceedCurrentTopicHeader();
+            nextParagraph = paragraphDAO.getNextParagraph(userStatus.getCurrentPositionTag());
         }
-        return new ChatMessage("AI", "I'm sorry, but I don't have any information on that topic.", new ArrayList<>());
+        log.debug("## next position tag: {}", nextParagraph.getPositionTag());
+
+        if (nextParagraph != null) {
+            userStatus.setCurrentPositionTag(nextParagraph.getPositionTag());
+            answer += nextParagraph.getSummary();
+
+            if (userStatus.getHistory().size() >= HISTORY_SIZE) {
+                userStatus.getHistory().removeFirst();
+            }
+            var doc = new Document(
+                    "paragraph",
+                    nextParagraph.getPositionTag(),
+                    nextParagraph.getPositionName(),
+                    nextParagraph.getSectionTitle(),
+                    nextParagraph.getParagraph(),
+                    1.0);
+            userStatus.getHistory().add(new HistoryDocument(query, answer, List.of(doc)));
+            readingRecordDAO.create(userStatus.getUserName(), nextParagraph.getPositionTag());
+
+            var refs = List.of(":" + nextParagraph.getPositionTag() + ":" + nextParagraph.getPositionName());
+            return new ChatMessage("AI", answer, refs);
+        }
+        else {
+            answer = staticMessage.getIsFinalTopic();
+            return new ChatMessage("AI", answer, List.of());
+        }
     }
 
     public ChatMessage proceedByCommand(ChatCommand.Command command, String query) throws SQLException {
+        log.debug("## command: {}", command.name());
         return switch (command) {
             case PROCEED_CURRENT_TOPIC -> proceedCurrentTopic(query);
             case REPEAT_ONLY_CURRENT_TOPIC -> promptToAI(getDocumentFromLatestHistory(), query);
@@ -164,7 +183,7 @@ public class ChatService {
         // Call API
         var prompt = getPrompt(retrievalDocs, query);
         var answer = assistantService.generate(prompt);
-        log.debug("response: {}", answer);
+        log.debug("## response: {}", answer);
 
         // Process references
         var reEachRef = Pattern.compile("\\[*(\\d+)]", Pattern.DOTALL);
