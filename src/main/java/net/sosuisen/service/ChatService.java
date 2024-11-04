@@ -107,6 +107,18 @@ public class ChatService {
     }
 
     private ChatMessage proceedCurrentTopic(String query) {
+        if (userStatus.getCurrentPositionTag().isEmpty()) {
+            var nextParagraph = paragraphService.getFirstParagraph();
+            if (nextParagraph != null) {
+
+            }
+        }
+        else {
+            var nextParagraph = paragraphService.getNextParagraph(userStatus.getCurrentPositionTag());
+            if (nextParagraph != null) {
+
+            }
+        }
         return new ChatMessage("AI", "I'm sorry, but I don't have any information on that topic.", new ArrayList<>());
     }
 
@@ -163,6 +175,9 @@ public class ChatService {
                 .toList();
 
         // Save history
+        if (!referredDocs.isEmpty()) {
+            userStatus.setCurrentPositionTag(referredDocs.getFirst().getPositionTag());
+        }
         if (userStatus.getHistory().size() >= HISTORY_SIZE) {
             userStatus.getHistory().removeFirst();
         }
