@@ -27,7 +27,7 @@ public class CreateQAStore {
                 Condition 7: Do not rewrite idioms or set phrases.
                 Condition 8: Use polite expressions.
                 
-                If the first pair is question 1 and answer 1, and the next pair is question 2 and answer 2, please respond as follows:
+                For example, if the first pair is question 1 and answer 1, and the next pair is question 2 and answer 2, please respond as follows:
                 
                 [Q] Question 1
                 [A] Answer 1
@@ -35,6 +35,9 @@ public class CreateQAStore {
                 [Q] Question 2
                 [A] Answer 2
                 
+                As a note, always write the question on the [Q] line and the corresponding answer on the [A] line.
+                You must not include terms like "Question 1" or "Answer 1" directly in the response.
+
                 Input sentence:
                 %s
                 """.formatted(paragraph);
