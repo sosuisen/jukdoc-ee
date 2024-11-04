@@ -32,4 +32,41 @@ public class SummaryDAO {
             return null;
         }
     }
+
+
+    public SummaryDTO getFirst() throws SQLException {
+        try (
+                Connection conn = ds.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(
+                        "SELECT * FROM summary LIMIT 1")
+        ) {
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return new SummaryDTO(
+                        rs.getString("position_tag"),
+                        rs.getString("summary")
+                );
+            }
+        }
+        return null;
+    }
+
+    public SummaryDTO getNext(String positionTag) throws SQLException {
+        try (
+                Connection conn = ds.getConnection();
+                PreparedStatement pstmt = conn.prepareStatement(
+                        "SELECT * FROM summary " +
+                        "WHERE position_tag > ? ORDER BY position_tag ASC LIMIT 1")
+        ) {
+            pstmt.setString(1, positionTag);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return new SummaryDTO(
+                        rs.getString("position_tag"),
+                        rs.getString("summary")
+                );
+            }
+        }
+        return null;
+    }
 }

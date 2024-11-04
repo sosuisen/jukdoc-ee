@@ -24,6 +24,9 @@ import java.util.stream.Collectors;
 public class ChatService {
     @SuppressWarnings("FieldCanBeLocal")
     private final int HISTORY_SIZE = 3;
+    private final String PROCEED_CURRENT_TOPIC_START_HEADER = "I will read from the beginning.\n\n";
+    private final String PROCEED_CURRENT_TOPIC_HEADER = "I will continue reading.\n\n";
+
     // Pattern that matches anaphoric expressions
     private final Pattern RE_ANAPHORA = Pattern.compile("\\b(that|this|those|these|such|it|its|he|his|she|her|they|their)(?=[\\s?!.,]|$)", Pattern.CASE_INSENSITIVE);
 
@@ -36,6 +39,8 @@ public class ChatService {
     @SystemMessage("You are a skilled assistant.")
     @Temperature(0.0)
     private AssistantService assistantService;
+    @Inject
+    private SummaryDAO summaryDAO;
 
     private String getPrompt(List<Document> retrievalDocs, String query) {
         var chatHistory = userStatus.getHistory().stream()
@@ -112,16 +117,19 @@ public class ChatService {
         return new ArrayList<>();
     }
 
-    private ChatMessage proceedCurrentTopic(String query) {
+    private ChatMessage proceedCurrentTopic(String query) throws SQLException {
+        var answer = "";
         if (userStatus.getCurrentPositionTag().isEmpty()) {
-            var nextParagraph = paragraphService.getFirstParagraph();
-            if (nextParagraph != null) {
-
+            var nextSummary = summaryDAO.getFirst();
+            if (nextSummary != null) {
+                userStatus.setCurrentPositionTag(nextSummary.getPositionTag());
+                answer = PROCEED_CURRENT_TOPIC_START_HEADER + nextSummary.getSummary();
+                answer.replaceAll("\n", "<br>");
             }
         }
         else {
-            var nextParagraph = paragraphService.getNextParagraph(userStatus.getCurrentPositionTag());
-            if (nextParagraph != null) {
+            var nextSummary = summaryDAO.getNext(userStatus.getCurrentPositionTag());
+            if (nextSummary != null) {
 
             }
         }

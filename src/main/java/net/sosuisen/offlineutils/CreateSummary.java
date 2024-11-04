@@ -24,6 +24,8 @@ public class CreateSummary {
                 - First, write a concise summary within 70 characters.
                 - Then, under the summary, use bullet points starting with "-" for each topic.
                 - Begin each bullet with a keyword representing the content, followed by ":" and then the details.
+                - Use simple HTML to format the response.
+                - You may only use <ul>, <li>, and <b> tags.
                 
                 Input sentence:
                 %s
