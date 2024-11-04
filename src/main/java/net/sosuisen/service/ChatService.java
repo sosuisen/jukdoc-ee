@@ -87,8 +87,14 @@ public class ChatService {
                 * Ensure the response is easy for elementary-level readers to understand.
                 * Do not omit any important keywords.
                 * Keep idioms intact.
-                * Begin with a concise summary, followed by a detailed explanation.
-                * Add a line break at the end of each sentence.
+                * Use a polite tone.
+                * First, write a concise summary within 70 characters.
+                * It is not necessary to write "Summary:" before the summary.
+                * Then, under the summary, use bullet points starting with "-" for each topic.
+                * Begin each bullet with a keyword representing the content, followed by ":" and then the details.
+                * Use simple HTML to format the response.
+                * You may only use <ul>, <li>, and <b> tags.
+                
                 %s
                 * If you place a reference mark, it must be immediately after each sentence. Placing all reference marks at the end of all your answers is not a good method.
                 
