@@ -7,6 +7,7 @@ import net.sosuisen.ai.annotation.ChatModelName;
 import net.sosuisen.ai.annotation.SystemMessage;
 import net.sosuisen.ai.annotation.Temperature;
 import net.sosuisen.ai.service.AssistantService;
+
 import static dev.langchain4j.model.openai.OpenAiChatModelName.GPT_4_O_MINI;
 
 public class AssistantServiceProducer {

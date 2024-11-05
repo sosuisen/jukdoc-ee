@@ -1,690 +1,621 @@
 {h1-001_h2-001_h3-000_p-001:Section 1.1:Basic Role of Pharmaceutical Sales} [Q] Who provides medicines to medical institutions, pharmacies, and hospitals?  
 [A] Pharmaceutical sales representatives provide medicines to medical institutions, pharmacies, and hospitals.
 
-[Q] What is the role of pharmaceutical sales representatives beyond just selling?  
-[A] Their role involves providing accurate information on pharmaceuticals and building trust with healthcare professionals.
+[Q] What do pharmaceutical sales representatives need to do besides selling?  
+[A] They need to provide accurate information on pharmaceuticals and build trust with healthcare professionals.
 
-[Q] What is explained below in the text?  
+[Q] What is explained regarding pharmaceutical sales representatives?  
 [A] The basic roles and responsibilities of pharmaceutical sales representatives are explained.
 ---
 {h1-001_h2-001_h3-001_p-001:Section 1.1.1:Information Provision and Education} [Q] What role do pharmaceutical sales representatives play?
 [A] Pharmaceutical sales representatives play a role in providing the latest information on pharmaceuticals.
 
-[Q] What are pharmaceutical sales representatives expected to convey?
+[Q] What information are pharmaceutical sales representatives expected to convey accurately?
 [A] They are expected to accurately convey information on product indications, dosages, side effects, and interactions.
 
-[Q] Why is it important to provide specialized and objective information?
+[Q] Why is it crucial to provide specialized and objective information about pharmaceuticals?
 [A] It is crucial to ensure that healthcare professionals can prescribe appropriate medication to patients.
 ---
-{h1-001_h2-001_h3-002_p-001:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] Who do pharmaceutical sales representatives need to build trust with?  
-[A] Pharmaceutical sales representatives need to build trust with healthcare professionals such as doctors, pharmacists, and nurses.
+{h1-001_h2-001_h3-002_p-001:Section 1.1.2:Building Trust with Healthcare Professionals} [Q] What do pharmaceutical sales representatives need to build with healthcare professionals like doctors, pharmacists, and nurses?  
+[A] Pharmaceutical sales representatives need to build trust with healthcare professionals like doctors, pharmacists, and nurses.
 
-[Q] How is trust fostered by pharmaceutical sales representatives?  
+[Q] How is trust fostered in addition to sales activities?  
 [A] Trust is fostered not only through sales activities but also by being responsive to questions and concerns regarding products.
 
-[Q] Why is trust important in medical settings?  
+[Q] What does trust in medical settings directly impact?  
 [A] Trust in medical settings directly impacts the proper use of pharmaceuticals and patient safety.
 
-[Q] What is required for trust in medical settings?  
-[A] Trust in medical settings requires sincere responses.
+[Q] What is required to ensure trust in medical settings?  
+[A] Sincere responses are required to ensure trust in medical settings.
 ---
-{h1-001_h2-001_h3-003_p-001:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What are pharmaceutical sales representatives expected to prioritize?  
-[A] They are expected to prioritize patient health and safety over product profit.
+{h1-001_h2-001_h3-003_p-001:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What are pharmaceutical sales representatives expected to prioritize over product profit?  
+[A] Pharmaceutical sales representatives are expected to prioritize patient health and safety over product profit.
 
-[Q] What enhances the credibility of pharmaceutical sales representatives?  
-[A] Practicing ethical sales activities enhances their credibility and helps build long-term relationships.
+[Q] What enhances the credibility of pharmaceutical sales representatives and contributes to building long-term relationships?  
+[A] Practicing ethical sales activities enhances the credibility of pharmaceutical sales representatives and contributes to building long-term relationships.
 
-[Q] What should be avoided in sales promotion?  
-[A] Excessive sales promotion or exaggerated advertising should be avoided.
-
-[Q] What should pharmaceutical sales representatives strive for in information sharing?  
-[A] They should strive for honest and objective information sharing.
+[Q] What is important to avoid while striving for honest and objective information sharing?  
+[A] It is important to avoid excessive sales promotion or exaggerated advertising while striving for honest and objective information sharing.
 ---
-{h1-001_h2-001_h3-003_p-002:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What significant responsibility do pharmaceutical sales representatives have?  
-[A] They have the responsibility of supporting optimal treatment for patients by building trust with healthcare professionals.
+{h1-001_h2-001_h3-003_p-002:Section 1.1.3:Practicing Ethical Sales Activities} [Q] What comes with the significant responsibility of supporting optimal treatment for patients through trust with healthcare professionals?  
+[A] The role of pharmaceutical sales representatives comes with this responsibility.
 
-[Q] What happens when pharmaceutical sales representatives fulfill their responsibility?  
-[A] The appropriate use of pharmaceuticals is promoted, which helps improve patients' health and quality of life.
+[Q] What is promoted by fulfilling the responsibility of supporting optimal treatment for patients?  
+[A] The appropriate use of pharmaceuticals is promoted.
+
+[Q] What is the result of promoting the appropriate use of pharmaceuticals?  
+[A] It contributes to the improvement of patients' health and quality of life.
 ---
-{h1-001_h2-002_h3-000_p-001:Section 1.2:Legal Responsibilities and Obligations} [Q] What is the legal responsibility of pharmaceutical sales representatives?
+{h1-001_h2-002_h3-000_p-001:Section 1.2:Legal Responsibilities and Obligations} [Q] What legal responsibility do pharmaceutical sales representatives have regarding laws related to pharmaceuticals?
+[A] Pharmaceutical sales representatives have a legal responsibility to comply with laws related to pharmaceuticals.
 
-[A] They have a legal responsibility to comply with laws related to pharmaceuticals and to conduct sales activities in a fair and proper manner.
+[Q] How should pharmaceutical sales representatives conduct their sales activities?
+[A] Pharmaceutical sales representatives should conduct their sales activities in a fair and proper manner.
 
-[Q] How can pharmaceutical sales representatives support healthcare professionals and patients?
+[Q] What can pharmaceutical sales representatives support by fulfilling their responsibilities?
+[A] By fulfilling their responsibilities, pharmaceutical sales representatives can support the provision of safe and effective pharmaceuticals for healthcare professionals and patients.
 
-[A] By fulfilling their responsibilities, they can support the provision of safe and effective pharmaceuticals for healthcare professionals and patients.
-
-[Q] What is explained below the sentence about pharmaceutical sales representatives?
-
+[Q] What is explained about pharmaceutical sales representatives?
 [A] The main legal responsibilities and obligations of pharmaceutical sales representatives are explained.
 ---
-{h1-001_h2-002_h3-001_p-001:Section 1.2.1:Importance of Legal Compliance} [Q] What must pharmaceutical sales representatives understand and comply with?  
-[A] Pharmaceutical sales representatives must understand and comply with laws related to pharmaceuticals.
+{h1-001_h2-002_h3-001_p-001:Section 1.2.1:Importance of Legal Compliance} [Q] What obligation do pharmaceutical sales representatives have regarding laws?
+[A] Pharmaceutical sales representatives have an obligation to understand and comply with laws related to pharmaceuticals.
 
-[Q] What are some major regulations related to pharmaceuticals?  
-[A] Major regulations include the Pharmaceuticals and Medical Devices Act (PMDA) and the Personal Information Protection Act.
+[Q] What are two major regulations that pharmaceutical sales representatives must comply with?
+[A] The two major regulations are the Pharmaceuticals and Medical Devices Act (PMDA) and the Personal Information Protection Act.
 
-[Q] What do these regulations oversee?  
-[A] These regulations oversee processes from the manufacture, sale, and information provision to the handling of personal information for pharmaceuticals.
+[Q] What processes are regulated by the Pharmaceuticals and Medical Devices Act and the Personal Information Protection Act?
+[A] These regulations cover the processes from manufacture, sale, and information provision to the handling of personal information for pharmaceuticals.
 
-[Q] What risks do companies face if they do not follow these rules?  
-[A] Companies face significant risks such as loss of trust or business suspension if they do not follow these rules.
+[Q] What risks does a company face if there is non-compliance or rule violations?
+[A] Non-compliance or rule violations pose significant risks to the company, potentially resulting in severe penalties such as loss of trust or business suspension.
 
-[Q] Why is legal compliance important for companies?  
-[A] Legal compliance is important because it helps avoid severe penalties and maintains trust.
+[Q] Why is legal compliance important for pharmaceutical companies?
+[A] Legal compliance is important because it is essential to avoid severe penalties such as loss of trust or business suspension.
 ---
-{h1-001_h2-002_h3-002_p-001:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What are pharmaceutical sales representatives responsible for providing?  
-[A] They are responsible for providing accurate information on pharmaceutical efficacy, side effects, and usage.  
+{h1-001_h2-002_h3-002_p-001:Section 1.2.2:Proper Information Provision and Sales Conduct} [Q] What are pharmaceutical sales representatives responsible for providing?
+[A] Pharmaceutical sales representatives are responsible for providing accurate information on pharmaceutical efficacy, side effects, and usage.
 
-[Q] What should pharmaceutical sales representatives avoid in their descriptions?  
-[A] They should avoid exaggerating or giving misleading descriptions.  
+[Q] What should pharmaceutical sales representatives avoid in their descriptions?
+[A] Pharmaceutical sales representatives should avoid exaggerating or misleading descriptions.
 
-[Q] What might excessive sales promotion or improper sales activities do?  
-[A] They may violate laws and pose risks of disadvantaging healthcare professionals or patients.  
+[Q] What risks are associated with excessive sales promotion or improper sales activities?
+[A] Excessive sales promotion or improper sales activities may violate laws, posing risks of disadvantaging healthcare professionals or patients.
 
-[Q] What is required of pharmaceutical sales representatives?  
-[A] Proper information provision and sales conduct are required.  
+[Q] What is required of pharmaceutical sales representatives in terms of information and sales conduct?
+[A] Proper information provision and sales conduct are required of pharmaceutical sales representatives.
 ---
-{h1-001_h2-002_h3-003_p-001:Section 1.2.3:Duty to Protect Personal Information} [Q] What are pharmaceutical sales representatives often exposed to during sales activities?  
-[A] They are often exposed to personal information from medical institutions and patients.
+{h1-001_h2-002_h3-003_p-001:Section 1.2.3:Duty to Protect Personal Information} [Q] What type of information are pharmaceutical sales representatives often exposed to during sales activities?
+[A] Pharmaceutical sales representatives are often exposed to personal information from medical institutions and patients.
 
-[Q] What do pharmaceutical sales representatives need to do with the personal information they handle?  
-[A] They need to handle this information appropriately.
+[Q] What does the Personal Information Protection Act prohibit regarding the use of acquired information?
+[A] The Personal Information Protection Act prohibits the use of acquired information for purposes other than intended and providing it to third parties without consent.
 
-[Q] What does the Personal Information Protection Act prohibit regarding acquired information?  
-[A] It prohibits the use of acquired information for purposes other than intended and providing it to third parties without consent.
-
-[Q] What can happen if there is leakage or improper use of information?  
-[A] It can lead to serious legal issues.
-
-[Q] What is required when handling personal information to avoid legal issues?  
-[A] Careful attention and consideration are required.
+[Q] What can happen if information is leaked or improperly used?
+[A] Leakage or improper use of information can lead to serious legal issues.
 ---
-{h1-001_h2-002_h3-003_p-002:Section 1.2.3:Duty to Protect Personal Information} [Q] Why is understanding and practicing legal responsibilities important for pharmaceutical sales representatives?  
-[A] It is important to understand and practice legal responsibilities to ensure the safe and proper provision of medicines.
+{h1-001_h2-002_h3-003_p-002:Section 1.2.3:Duty to Protect Personal Information} [Q] What is important for pharmaceutical sales representatives to realize the safe and proper provision of pharmaceuticals?  
+[A] Understanding and practicing the legal responsibilities and obligations imposed on pharmaceutical sales representatives is important.
 
-[Q] What does a stance of legal compliance help establish with healthcare professionals and patients?  
-[A] A stance of legal compliance helps establish trust with healthcare professionals and patients.
+[Q] What contributes to establishing trust with healthcare professionals and patients?  
+[A] A stance of legal compliance contributes to establishing trust with healthcare professionals and patients.
 
-[Q] What does enhancing the reliability of pharmaceuticals and the reputation of the company depend on?  
-[A] It depends on legal compliance and establishing trust with healthcare professionals and patients.
+[Q] What does legal compliance enhance?  
+[A] Legal compliance enhances both the reliability of pharmaceuticals and the reputation of the company.
 ---
-{h1-001_h2-003_h3-000_p-001:Section 1.3:Ethical Standards and Conduct Guidelines} [Q] What are pharmaceutical sales representatives expected to do with social responsibility and high ethical standards?  
-[A] They are expected to prioritize patient health and safety in all activities.
+{h1-001_h2-003_h3-000_p-001:Section 1.3:Ethical Standards and Conduct Guidelines} [Q] What are pharmaceutical sales representatives expected to act with?
+[A] Pharmaceutical sales representatives are expected to act with social responsibility and high ethical standards.
 
-[Q] Why must pharmaceutical sales representatives conduct themselves with sincerity and reliability?  
-[A] Because work in the medical field is directly related to human life and health.
+[Q] What should pharmaceutical sales representatives prioritize in all activities?
+[A] Pharmaceutical sales representatives should prioritize patient health and safety in all activities.
 
-[Q] What is explained about pharmaceutical sales representatives in the text?  
-[A] The ethical standards and specific conduct guidelines they should adhere to are explained.
+[Q] Why must pharmaceutical sales representatives conduct themselves with sincerity and reliability?
+[A] Pharmaceutical sales representatives must conduct themselves with sincerity and reliability because work in the medical field is directly related to human life and health.
+
+[Q] What is explained regarding pharmaceutical sales representatives?
+[A] The ethical standards and specific conduct guidelines that pharmaceutical sales representatives should adhere to are explained.
 ---
 {h1-001_h2-003_h3-001_p-001:Section 1.3.1:Prioritizing Patient Safety and Health} [Q] What is the most important responsibility of a pharmaceutical sales representative?  
-[A] To prioritize patient safety and health.
+[A] The most important responsibility is to prioritize patient safety and health.
 
 [Q] What should all sales activities and information sharing be based on?  
 [A] They should be based on the fundamental principle of prioritizing patient safety and health.
 
-[Q] Why is it essential to accurately convey information on side effects and risks associated with pharmaceuticals?  
-[A] It is essential so that healthcare professionals can make informed decisions.
+[Q] What is essential for healthcare professionals to make informed decisions?  
+[A] Accurately conveying information on side effects and risks associated with pharmaceuticals is essential.
 
-[Q] What actions should be carefully avoided by a pharmaceutical sales representative?  
+[Q] What actions should always be carefully avoided by pharmaceutical sales representatives?  
 [A] Actions that may pose risks to patient health or safety should always be carefully avoided.
 ---
-{h1-001_h2-003_h3-002_p-001:Section 1.3.2:Fair and Transparent Sales Activities} [Q] What must pharmaceutical sales representatives provide to all customers?  
-[A] Pharmaceutical sales representatives must provide fair and transparent responses to all customers.
+{h1-001_h2-003_h3-002_p-001:Section 1.3.2:Fair and Transparent Sales Activities} [Q] What are pharmaceutical sales representatives required to provide to all customers?  
+[A] Pharmaceutical sales representatives are required to provide fair and transparent responses to all customers.
 
-[Q] What should be prioritized when offering products or services to customers?  
-[A] When offering products or services, the focus should be on offering the best choices for the patient.
+[Q] What should the focus be on when prioritizing specific products or services?  
+[A] The focus should be on offering the best choices for the patient rather than basing decisions on profit or incentives.
 
-[Q] What should not be the basis for decisions made by pharmaceutical sales representatives?  
-[A] Decisions should not be based on profit or incentives.
+[Q] What do fairness and transparency build with healthcare professionals?  
+[A] Fairness and transparency build trust with healthcare professionals.
 
-[Q] What do fairness and transparency help build with healthcare professionals?  
-[A] Fairness and transparency help build trust with healthcare professionals.
-
-[Q] What do trust and fairness foster in business relationships?  
-[A] Trust and fairness foster long-term business relationships.
+[Q] What do fairness and transparency foster in business relationships?  
+[A] Fairness and transparency foster long-term business relationships.
 ---
-{h1-001_h2-003_h3-003_p-001:Section 1.3.3:Maintaining Accuracy and Objectivity in Information} [Q] What is essential when providing information on pharmaceuticals?  
+{h1-001_h2-003_h3-003_p-001:Section 1.3.3:Maintaining Accuracy and Objectivity in Information} [Q] What is essential when sharing information about pharmaceuticals?
 [A] It is essential to share data based on accurate and objective sources.
 
-[Q] What should be avoided in pharmaceutical explanations?  
-[A] Avoid exaggerated or misleading expressions.
+[Q] What should be avoided in explanations about pharmaceuticals?
+[A] Exaggerated or misleading expressions should be avoided.
 
-[Q] On what should explanations about pharmaceuticals be based?  
-[A] Explanations should always be based on highly reliable data.
+[Q] What should explanations about pharmaceuticals be based on?
+[A] Explanations should be based on highly reliable data.
 
-[Q] What is crucial to stay updated with in the pharmaceutical field?  
+[Q] What is crucial in staying informed about medical knowledge?
 [A] It is crucial to stay updated with the latest medical knowledge.
 
-[Q] What kind of advice should be given to customers in the pharmaceutical field?  
-[A] Provide appropriate advice to customers.
+[Q] What should be provided to customers regarding pharmaceuticals?
+[A] Appropriate advice should be provided to customers.
 ---
-{h1-001_h2-003_h3-004_p-001:Section 1.3.4:Preventing Fraudulent Activities and Self-Discipline} [Q] What are pharmaceutical sales representatives expected to strictly avoid?  
+{h1-001_h2-003_h3-004_p-001:Section 1.3.4:Preventing Fraudulent Activities and Self-Discipline} [Q] What are pharmaceutical sales representatives expected to strictly avoid?
 [A] Pharmaceutical sales representatives are expected to strictly avoid fraudulent activities such as bribery and kickbacks.
 
-[Q] Why is it important for pharmaceutical sales representatives to maintain self-discipline?  
+[Q] Why is it important for pharmaceutical sales representatives to maintain honesty and fairness in all transactions?
 [A] It is important because fraudulent actions undermine the credibility of the pharmaceutical industry as a whole.
 
-[Q] What is essential in all transactions in the pharmaceutical industry?  
-[A] It is essential to maintain honesty and fairness in all transactions.
-
-[Q] What is encouraged to heighten awareness of professional ethics among pharmaceutical sales representatives?  
-[A] Regular ethics training is encouraged to heighten awareness of professional ethics.
+[Q] What is encouraged to heighten awareness of professional ethics and ensure strict self-discipline among pharmaceutical sales representatives?
+[A] Regular ethics training is encouraged to heighten awareness of professional ethics and ensure strict self-discipline.
 ---
-{h1-001_h2-003_h3-004_p-002:Section 1.3.4:Preventing Fraudulent Activities and Self-Discipline} [Q] What can pharmaceutical sales representatives build by adhering to ethical standards and conduct guidelines?  
-[A] They can build trust with patients and healthcare professionals.
+{h1-001_h2-003_h3-004_p-002:Section 1.3.4:Preventing Fraudulent Activities and Self-Discipline} [Q] How can pharmaceutical sales representatives build trust with patients and healthcare professionals?
+[A] By adhering to ethical standards and conduct guidelines.
 
-[Q] Who benefits from the trust built by pharmaceutical sales representatives?  
-[A] Patients and healthcare professionals benefit from the trust.
-
-[Q] What does building trust contribute to in the context of pharmaceuticals?  
+[Q] What does following ethical standards and conduct guidelines contribute to in the pharmaceutical industry?
 [A] It contributes to the proper use of pharmaceuticals and improvement of patient health.
 ---
 {h1-002_h2-001_h3-000_p-001:Section 2.1:Legal Regulations on Pharmaceutical Sales} [Q] What are pharmaceutical sales subject to due to their significant social impact?  
-[A] Pharmaceutical sales are subject to strict legal regulations due to their significant social impact.
+[A] Pharmaceutical sales are subject to strict legal regulations.
 
-[Q] What are pharmaceutical sales representatives required to understand and comply with?  
+[Q] What must pharmaceutical sales representatives do in relation to legal regulations?  
 [A] Pharmaceutical sales representatives are required to understand and comply with these laws.
 
 [Q] What does this chapter explain about pharmaceutical sales?  
 [A] This chapter explains the main legal regulations that must be followed in pharmaceutical sales.
 ---
-{h1-002_h2-001_h3-001_p-001:Section 2.1.1:Pharmaceuticals and Medical Devices Act (PMDA)} [Q] What is the PMDA?  
-[A] The PMDA is a law aimed at ensuring the quality, efficacy, and safety of pharmaceuticals to protect public health.
+{h1-002_h2-001_h3-001_p-001:Section 2.1.1:Pharmaceuticals and Medical Devices Act (PMDA)} [Q] What is the purpose of the Pharmaceuticals and Medical Devices Act (PMDA)?  
+[A] The purpose of the Pharmaceuticals and Medical Devices Act (PMDA) is to ensure the quality, efficacy, and safety of pharmaceuticals to protect public health.
 
-[Q] What does the PMDA establish?  
+[Q] What does the PMDA establish standards for?  
 [A] The PMDA establishes standards at every stage from manufacturing to sales of pharmaceuticals.
 
-[Q] What regulations apply to pharmaceutical sales activities under the PMDA?  
-[A] Strict regulations apply to sales activities under the PMDA.
+[Q] What is prohibited in the sales activities of pharmaceuticals according to the PMDA?  
+[A] It is prohibited to provide inaccurate or exaggerated information in the sales activities of pharmaceuticals.
 
-[Q] What is the duty of pharmaceutical sales representatives according to the PMDA?  
+[Q] What duty do pharmaceutical sales representatives have under the PMDA?  
 [A] Pharmaceutical sales representatives have a duty to accurately convey information on indications, efficacy, dosage, and side effects of pharmaceuticals.
-
-[Q] What is prohibited for pharmaceutical sales representatives under the PMDA?  
-[A] It is prohibited for pharmaceutical sales representatives to provide inaccurate or exaggerated information.
 ---
-{h1-002_h2-001_h3-002_p-001:Section 2.1.2:Regulations on Pharmaceutical Advertising} [Q] What is established as part of the PMDA regarding pharmaceutical advertising?
-[A] Regulations on pharmaceutical advertising are established.
+{h1-002_h2-001_h3-002_p-001:Section 2.1.2:Regulations on Pharmaceutical Advertising} [Q] What are regulations on pharmaceutical advertising established as part of?  
+[A] Regulations on pharmaceutical advertising are established as part of the PMDA.  
 
-[Q] What is prohibited in pharmaceutical advertising?
-[A] Exaggerated claims or emphasizing effects excessively are prohibited.
+[Q] What is prohibited from containing exaggerated claims or emphasizing effects excessively?  
+[A] Pharmaceutical advertising is prohibited from containing exaggerated claims or emphasizing effects excessively.  
 
-[Q] What must advertising content not do to healthcare professionals or consumers?
-[A] Advertising content must not mislead healthcare professionals or consumers.
+[Q] Who must not be misled by advertising content?  
+[A] Healthcare professionals or consumers must not be misled by advertising content.  
 
-[Q] What are sales representatives responsible for providing about pharmaceuticals?
-[A] Sales representatives are responsible for providing objective and accurate information about the efficacy and safety of pharmaceuticals.
+[Q] Who is responsible for providing objective and accurate information about pharmaceuticals?  
+[A] Sales representatives are responsible for providing objective and accurate information about the efficacy and safety of pharmaceuticals.  
 
-[Q] What should sales representatives avoid in their promotion?
+[Q] What should sales representatives avoid in their promotion?  
 [A] Sales representatives should avoid excessive promotion or misleading expressions.
 ---
-{h1-002_h2-001_h3-003_p-001:Section 2.1.3:Personal Information Protection Act and Privacy Protection} [Q] What is often handled in pharmaceutical sales activities?
+{h1-002_h2-001_h3-003_p-001:Section 2.1.3:Personal Information Protection Act and Privacy Protection} [Q] What kind of information is often handled in pharmaceutical sales activities?  
 [A] Personal information from healthcare institutions or patients is often handled.
 
-[Q] Why is compliance with the Personal Information Protection Act essential in pharmaceutical sales?
-[A] Compliance is essential because personal information from healthcare institutions or patients is handled.
+[Q] Why is compliance with the Personal Information Protection Act essential in pharmaceutical sales activities?  
+[A] Compliance is essential because personal information is handled, and the act protects individual privacy.
 
-[Q] What does the Personal Information Protection Act set rules about?
-[A] It sets rules regarding the collection, management, use, and provision of information to protect individual privacy.
+[Q] What does the Personal Information Protection Act set rules for?  
+[A] The act sets rules for the collection, management, use, and provision of information.
 
-[Q] What must pharmaceutical sales representatives do with customer and patient information?
-[A] They must manage it appropriately and ensure that data is neither used for unauthorized purposes nor shared without consent.
+[Q] What must pharmaceutical sales representatives do with customer and patient information?  
+[A] They must manage the information appropriately and ensure it is not used for unauthorized purposes or shared without consent.
 ---
-{h1-002_h2-001_h3-004_p-001:Section 2.1.4:Legal Standards to Prevent Fraudulent Activities} [Q] What activities are strictly prohibited in the pharmaceutical industry?
-
+{h1-002_h2-001_h3-004_p-001:Section 2.1.4:Legal Standards to Prevent Fraudulent Activities} [Q] What activities are strictly prohibited in the pharmaceutical industry?  
 [A] Fraudulent activities such as bribery or offering benefits are strictly prohibited.
 
-[Q] Who should sales representatives avoid providing benefits to?
+[Q] What can providing benefits to public officials or healthcare professionals lead to in the pharmaceutical industry?  
+[A] Providing benefits to public officials or healthcare professionals can easily lead to accusations of bribery.
 
-[A] Sales representatives should avoid providing benefits to public officials or healthcare professionals.
-
-[Q] What can happen if benefits are given to public officials or healthcare professionals?
-
-[A] Providing benefits to them can easily lead to accusations of bribery, which must be avoided.
-
-[Q] What do fraudulent actions do to the credibility of the pharmaceutical industry?
-
+[Q] What happens to the credibility of the pharmaceutical industry due to fraudulent actions?  
 [A] Fraudulent actions damage the credibility of the pharmaceutical industry.
 
-[Q] What might happen as a result of fraudulent actions in the pharmaceutical industry?
-
+[Q] What may result from fraudulent actions in the pharmaceutical industry?  
 [A] Fraudulent actions may result in severe penalties.
 
-[Q] What must sales representatives do to avoid misconduct?
-
+[Q] What must sales representatives maintain to avoid fraudulent actions in the pharmaceutical industry?  
 [A] Sales representatives must maintain self-discipline to avoid fraudulent actions or behaviors that could appear to be misconduct.
 ---
-{h1-002_h2-001_h3-004_p-002:Section 2.1.4:Legal Standards to Prevent Fraudulent Activities} [Q] How can pharmaceutical sales representatives support the safe and proper use of pharmaceuticals?  
-[A] By understanding and following legal regulations.
+{h1-002_h2-001_h3-004_p-002:Section 2.1.4:Legal Standards to Prevent Fraudulent Activities} [Q] How can pharmaceutical sales representatives support the safe and proper use of pharmaceuticals?
+[A] By understanding and adhering to legal regulations.
 
-[Q] What does following legal regulations contribute to?  
-[A] It contributes to public health.
+[Q] What do pharmaceutical sales representatives contribute to by following legal regulations?
+[A] They contribute to public health.
 
-[Q] How does a stance of legal compliance benefit the pharmaceutical industry?  
-[A] It helps in building trust within the industry.
+[Q] What benefit does a stance of legal compliance offer within the industry?
+[A] It helps in building trust within the industry as a whole.
 ---
-{h1-002_h2-002_h3-000_p-001:Section 2.2:Measures to Prevent Illegal Activities} [Q] What do pharmaceutical sales representatives need to prevent?  
-[A] They need to prevent illegal activities related to pharmaceuticals.
+{h1-002_h2-002_h3-000_p-001:Section 2.2:Measures to Prevent Illegal Activities} [Q] What do pharmaceutical sales representatives need to prevent regarding pharmaceuticals?  
+[A] Pharmaceutical sales representatives need to prevent illegal activities related to pharmaceuticals.
 
-[Q] What must pharmaceutical sales representatives ensure?  
-[A] They must ensure full compliance with laws.
+[Q] What must pharmaceutical sales representatives ensure in their work?  
+[A] Pharmaceutical sales representatives must ensure full compliance with laws.
 
-[Q] What can illegal activities in the pharmaceutical industry do to trust?  
-[A] Illegal activities can erode trust in the company and industry as a whole.
+[Q] What can illegal activities in the pharmaceutical industry erode?  
+[A] Illegal activities in the pharmaceutical industry can erode trust in the company and industry as a whole.
 
-[Q] What risks can illegal activities pose in the pharmaceutical industry?  
-[A] They may pose risks to patient health and safety.
+[Q] What risks may illegal activities in the pharmaceutical industry pose?  
+[A] Illegal activities in the pharmaceutical industry may pose risks to patient health and safety.
 
-[Q] What is explained in the text regarding illegal activities?  
+[Q] What is explained in relation to preventing illegal activities?  
 [A] Specific measures to prevent illegal activities are explained.
 ---
-{h1-002_h2-002_h3-001_p-001:Section 2.2.1:Raising Awareness of Legal Compliance} [Q] What is necessary for pharmaceutical sales representatives to comply with laws?  
+{h1-002_h2-002_h3-001_p-001:Section 2.2.1:Raising Awareness of Legal Compliance} [Q] What is necessary for pharmaceutical sales representatives to comply with laws?
 [A] It is necessary to instill the importance of compliance throughout the entire workforce.
 
-[Q] What are effective methods for instilling the importance of compliance?  
+[Q] What are effective methods for instilling the importance of compliance in the workforce?
 [A] Regular training sessions and compliance workshops are effective for this purpose.
 
-[Q] What do employees learn during these sessions?  
+[Q] What do employees learn during these sessions?
 [A] Employees learn about the latest regulations and the risks associated with illegal activities.
 
-[Q] What is reinforced through these training sessions?  
+[Q] What do these sessions reinforce in employees regarding their responsibilities?
 [A] These sessions reinforce employees' legal responsibilities in sales activities.
 
-[Q] What does this commitment to compliance help prevent?  
+[Q] What does fostering a commitment to compliance help prevent in daily operations?
 [A] It helps prevent illegal acts in daily operations.
 ---
-{h1-002_h2-002_h3-002_p-001:Section 2.2.2:Ensuring Transparency and Setting Up Reporting Systems} [Q] What is crucial for maintaining transparency in pharmaceutical sales activities?  
-[A] Establishing internal audits and reporting systems for suspected illegal activities is crucial.  
+{h1-002_h2-002_h3-002_p-001:Section 2.2.2:Ensuring Transparency and Setting Up Reporting Systems} [Q] What is important for maintaining transparency in pharmaceutical sales activities?  
+[A] It is important to establish internal audits and reporting systems for suspected illegal activities.
 
-[Q] What does maintaining transparency include in terms of sales activities?  
-[A] It includes recording all sales activities and setting up a mechanism for regular checks by supervisors or audit departments.  
+[Q] What does maintaining transparency in pharmaceutical sales activities include?  
+[A] It includes recording all sales activities and setting up a mechanism where supervisors or audit departments can regularly check them.
 
-[Q] How can a safe environment for employees to report concerns be created?  
-[A] By establishing anonymous hotlines or internal reporting systems, a safe environment can be created for employees to report concerns.  
+[Q] What can help create a safe environment for employees to report concerns without fear?  
+[A] Establishing anonymous hotlines or internal reporting systems can help create a safe environment for employees to report concerns without fear of retaliation.
 ---
-{h1-002_h2-002_h3-003_p-001:Section 2.2.3:Prohibition of Excessive Hospitality and Provision of Benefits} [Q] What is often problematic in the pharmaceutical industry?  
-[A] Excessive hospitality or provision of benefits to healthcare professionals is often problematic.  
+{h1-002_h2-002_h3-003_p-001:Section 2.2.3:Prohibition of Excessive Hospitality and Provision of Benefits} [Q] What is often problematic in the pharmaceutical industry regarding hospitality or benefits to healthcare professionals?  
+[A] Excessive hospitality or provision of benefits to healthcare professionals is often problematic.
 
-[Q] What are such acts likely to constitute?  
-[A] Such acts are likely to constitute bribery.  
+[Q] What are such acts likely to constitute in the pharmaceutical industry?  
+[A] Such acts are likely to constitute bribery.
 
 [Q] Why is strict control necessary in the pharmaceutical industry?  
-[A] Strict control is necessary to prevent bribery.  
+[A] Strict control is necessary to prevent bribery.
 
 [Q] What should companies establish to avoid inappropriate conduct?  
-[A] Companies should establish concrete standards for hospitality and gifts.  
+[A] Companies should establish concrete standards for hospitality and gifts and provide guidance to employees.
 
-[Q] How can companies help employees avoid inappropriate conduct?  
-[A] Companies can provide guidance to employees.  
-
-[Q] What does preventing the provision of excessive benefits safeguard?  
-[A] It safeguards the company’s reputation.  
-
-[Q] What does preventing excessive benefits support in pharmaceutical sales activities?  
-[A] It supports the proper conduct of pharmaceutical sales activities.  
+[Q] How does preventing excessive benefits help a company in the pharmaceutical industry?  
+[A] Preventing excessive benefits safeguards the company’s reputation and supports proper conduct of pharmaceutical sales activities.
 ---
 {h1-002_h2-002_h3-004_p-001:Section 2.2.4:Regular Internal Audits and Compliance Evaluations} [Q] What is an effective measure to prevent illegal activities?  
 [A] Conducting regular internal audits is an effective measure to prevent illegal activities.
 
-[Q] What do audits help confirm about sales activities?  
+[Q] What do audits help confirm about each sales activity?  
 [A] Audits help confirm whether each sales activity is conducted properly and meets compliance standards.
 
-[Q] What do regular compliance evaluations help identify?  
+[Q] What can regular compliance evaluations help identify?  
 [A] Regular compliance evaluations help identify areas that need improvement or potential illegal risks.
 
-[Q] What is the benefit of using external third-party agencies for audits?  
+[Q] What benefit does utilizing external third-party agencies for audits provide?  
 [A] Utilizing external third-party agencies for audits can ensure objectivity and reliability.
 ---
-{h1-002_h2-002_h3-004_p-002:Section 2.2.4:Regular Internal Audits and Compliance Evaluations} [Q] What can pharmaceutical sales representatives do by implementing these preventive measures?  
+{h1-002_h2-002_h3-004_p-002:Section 2.2.4:Regular Internal Audits and Compliance Evaluations} [Q] What can pharmaceutical sales representatives achieve by implementing preventive measures?
 [A] Pharmaceutical sales representatives can reduce the risk of involvement in illegal activities and establish a system that ensures compliance.
 
-[Q] How do efforts to prevent illegal activities help the pharmaceutical industry?  
-[A] Efforts to prevent illegal activities enhance trust in the pharmaceutical industry, support the proper use of pharmaceuticals, and ensure patient safety.
+[Q] How do efforts to prevent illegal activities help the pharmaceutical industry?
+[A] Efforts to prevent illegal activities contribute to enhancing trust in the pharmaceutical industry, supporting the proper use of pharmaceuticals, and ensuring patient safety.
 ---
-{h1-002_h2-003_h3-000_p-001:Section 2.3:Privacy Protection and Data Management} [Q] What do pharmaceutical sales representatives often handle in their activities and communications?
+{h1-002_h2-003_h3-000_p-001:Section 2.3:Privacy Protection and Data Management} [Q] What do pharmaceutical sales representatives often handle during sales activities and communications with medical institutions?  
 [A] Pharmaceutical sales representatives often handle personal information of patients and healthcare professionals.
 
-[Q] Why is data management and privacy protection important in pharmaceutical sales?
-[A] Data management and privacy protection are important to prevent damage to trust in the pharmaceutical industry and to avoid legal violations.
+[Q] Why is data management and privacy protection essential for pharmaceutical sales representatives?  
+[A] Data management and privacy protection are essential because they deal with personal information, and breaches could damage trust and lead to legal violations.
 
-[Q] What could happen if there is a breach of personal information in the pharmaceutical industry?
+[Q] What could happen if there is a breach of personal information in the pharmaceutical industry?  
 [A] A breach of personal information could damage trust in the pharmaceutical industry and may lead to legal violations.
 
-[Q] What does this section explain?
+[Q] What is necessary to prevent breaches of personal information in the pharmaceutical industry?  
+[A] Management and protection systems in line with laws are necessary to prevent breaches of personal information.
+
+[Q] What does this section explain regarding data management and privacy protection?  
 [A] This section explains key points in privacy protection and data management.
 ---
-{h1-002_h2-003_h3-001_p-001:Section 2.3.1:Compliance with the Personal Information Protection Act} [Q] What types of personal information might pharmaceutical sales representatives handle?
+{h1-002_h2-003_h3-001_p-001:Section 2.3.1:Compliance with the Personal Information Protection Act} [Q] What kind of personal information might pharmaceutical sales representatives handle?  
+[A] Pharmaceutical sales representatives might handle contact information of healthcare institutions or patients, health data, and prescription details.
 
-[A] They might handle contact information of healthcare institutions or patients, health data, and prescription details.
+[Q] Under what act must pharmaceutical sales representatives manage personal information appropriately?  
+[A] Pharmaceutical sales representatives must manage personal information appropriately under the Personal Information Protection Act.
 
-[Q] According to the Personal Information Protection Act, how should sales representatives manage personal data?
+[Q] For what purposes are pharmaceutical sales representatives allowed to use personal information?  
+[A] Pharmaceutical sales representatives are allowed to use personal information only for clearly defined purposes.
 
-[A] They must manage such data appropriately and use it only for clearly defined purposes.
+[Q] What are pharmaceutical sales representatives obligated to do regarding the collection and use of information?  
+[A] Pharmaceutical sales representatives are obligated to collect only necessary information and use it strictly within the scope of business needs.
 
-[Q] What are sales representatives obligated to do regarding the collection and use of information?
-
-[A] They are obligated to collect only necessary information and use it strictly within the scope of business needs.
-
-[Q] What is strictly prohibited for sales representatives regarding personal data?
-
-[A] Any unauthorized use or provision to third parties is strictly prohibited.
+[Q] Is it allowed for pharmaceutical sales representatives to use or provide personal information to third parties without permission?  
+[A] No, any unauthorized use or provision of personal information to third parties is strictly prohibited.
 ---
-{h1-002_h2-003_h3-002_p-001:Section 2.3.2:Secure Storage and Management of Data} [Q] What must be done with collected personal information to keep it safe?  
-[A] Collected personal information must be stored securely, with access restrictions to reduce the risk of unauthorized access or data leakage.
+{h1-002_h2-003_h3-002_p-001:Section 2.3.2:Secure Storage and Management of Data} [Q] What must be done with collected personal information to ensure security?  
+[A] Collected personal information must be stored securely with access restrictions to reduce the risk of unauthorized access or data leakage.  
 
-[Q] What are some effective measures to protect data?  
-[A] Effective measures include password management, data encryption, and recording file access logs.
+[Q] What are some effective measures to protect personal information?  
+[A] Effective measures include password management, data encryption, and recording file access logs.  
 
-[Q] What should representatives do when accessing data from outside?  
-[A] When accessing data externally, representatives must use secure networks and take precautions against loss or theft of devices to prevent leakage.
+[Q] What must representatives do when accessing data from outside?  
+[A] Representatives must use secure networks and take precautions against loss or theft of devices to prevent leakage.  
 
-[Q] How can regular checks help with data security?  
-[A] Regular security checks also enhance data security.
+[Q] How can data security be further improved?  
+[A] Regular security checks also enhance data security.  
 ---
-{h1-002_h2-003_h3-003_p-001:Section 2.3.3:Education and Awareness in Privacy Protection} [Q] What is important for all pharmaceutical sales representatives?  
-[A] It is crucial to provide thorough privacy protection education for all pharmaceutical sales representatives.  
+{h1-002_h2-003_h3-003_p-001:Section 2.3.3:Education and Awareness in Privacy Protection} [Q] What is essential for all pharmaceutical sales representatives regarding privacy protection?  
+[A] It is crucial to provide thorough privacy protection education for all pharmaceutical sales representatives.
 
-[Q] What do representatives learn during regular training?  
-[A] Through regular training, they learn the rules for handling personal information and legal guidelines for compliance.  
+[Q] What do pharmaceutical sales representatives learn through regular training?  
+[A] They learn the rules for handling personal information and legal guidelines for compliance.
 
-[Q] Why is this training important for representatives?  
-[A] This training ensures that each representative understands and adheres to privacy protection principles, practicing appropriate behavior.  
+[Q] What does the training ensure for each representative?  
+[A] The training ensures that each representative understands and adheres to privacy protection principles, practicing appropriate behavior.
 
-[Q] What system should be established to handle privacy violations?  
-[A] It is important to establish a reporting system for any privacy violations to ensure prompt response.  
+[Q] What is important to establish to ensure a prompt response to privacy violations?  
+[A] It is important to establish a reporting system for any privacy violations to ensure a prompt response.
 ---
-{h1-002_h2-003_h3-004_p-001:Section 2.3.4:Response to Information Leaks and Risk Management} [Q] What is essential in the event of a data breach?
-
+{h1-002_h2-003_h3-004_p-001:Section 2.3.4:Response to Information Leaks and Risk Management} [Q] What is essential in the event of a data breach?  
 [A] Swift response is essential in the event of a data breach.
 
-[Q] What should be done to identify the scope of the leak?
+[Q] What should be identified during a data breach?  
+[A] The scope of the leak should be identified during a data breach.
 
-[A] Identifying the scope of the leak should be done to understand how much data is affected.
+[Q] Who should be promptly reported to in the event of a data breach?  
+[A] Stakeholders should be promptly reported to in the event of a data breach.
 
-[Q] Who should be promptly informed about a data breach?
-
-[A] Stakeholders should be promptly informed about a data breach.
-
-[Q] What measures should be formulated to prevent future data breaches?
-
+[Q] What should be formulated to prevent recurrence of a data breach?  
 [A] Measures to prevent recurrence should be formulated.
 
-[Q] What helps ensure readiness for swift action in case of a data breach?
-
+[Q] What helps ensure readiness for swift action in a data breach incident?  
 [A] Preparing a simulation of data breaches and an emergency response plan helps ensure readiness for swift action.
 ---
-{h1-002_h2-003_h3-004_p-002:Section 2.3.4:Response to Information Leaks and Risk Management} [Q] What can pharmaceutical sales representatives safeguard by adhering to privacy protection and data management?  
-[A] They can safeguard the trust of customers and patients.
+{h1-002_h2-003_h3-004_p-002:Section 2.3.4:Response to Information Leaks and Risk Management} [Q] What can pharmaceutical sales representatives safeguard by strictly adhering to privacy protection and data management?
+[A] Pharmaceutical sales representatives can safeguard the trust of customers and patients.
 
-[Q] How does privacy protection contribute to the industry?  
-[A] It contributes to enhancing the industry’s credibility.
+[Q] How do pharmaceutical sales representatives contribute to the industry's credibility?
+[A] Pharmaceutical sales representatives contribute to the industry's credibility by safeguarding the trust of customers and patients.
 
-[Q] What is privacy protection not only about?  
-[A] It is not only about compliance.
-
-[Q] What is privacy protection also a foundation for?  
-[A] It is a foundation for building long-term business relationships.
+[Q] What is privacy protection considered beyond just compliance?
+[A] Privacy protection is considered a foundation for building long-term business relationships.
 ---
-{h1-003_h2-001_h3-000_p-001:Section 3.1:Types of Pharmaceuticals and Efficacy} [Q] What are pharmaceuticals designed to do?  
-[A] Pharmaceuticals are designed to support the treatment, prevention, and diagnosis of diseases and symptoms, each with distinct effects.  
+{h1-003_h2-001_h3-000_p-001:Section 3.1:Types of Pharmaceuticals and Efficacy} [Q] What are pharmaceuticals designed to do?
+[A] Pharmaceuticals are designed to support the treatment, prevention, and diagnosis of diseases and symptoms.
 
-[Q] Who needs to understand the types and efficacy of pharmaceuticals?  
-[A] Pharmaceutical sales representatives need to understand the types and efficacy of pharmaceuticals.  
+[Q] Who benefits from understanding the types and efficacy of pharmaceuticals?
+[A] Pharmaceutical sales representatives benefit from understanding the types and efficacy of pharmaceuticals.
 
-[Q] Why do pharmaceutical sales representatives need to understand pharmaceuticals?  
-[A] They need to understand them to provide appropriate information to healthcare professionals and support safe and effective treatment for patients.  
+[Q] How can pharmaceutical sales representatives help healthcare professionals?
+[A] Pharmaceutical sales representatives can provide appropriate information to healthcare professionals.
 
-[Q] What does this section explain?  
-[A] This section explains the main types of pharmaceuticals and their efficacy.  
----
-{h1-003_h2-001_h3-001_p-001:Section 3.1.1:Prescription Drugs (Rx Pharmaceuticals)} [Q] What do prescription drugs require from a healthcare professional?  
-[A] Prescription drugs require a prescription from a healthcare professional such as a doctor or dentist.
-
-[Q] Why do prescription drugs need strict adherence to usage and dosage guidelines?  
-[A] Prescription drugs have potent effects for specific diseases or symptoms, requiring strict adherence to usage and dosage guidelines.
-
-[Q] What types of drugs are included under prescription drugs?  
-[A] Prescription drugs include antibiotics (for bacterial infections), antiviral drugs (for viral infections), and anticancer agents (for cancer treatment).
-
-[Q] How is effective treatment with prescription drugs ensured?  
-[A] Effective treatment is ensured by healthcare professionals’ appropriate prescription and patients’ adherence to instructions.
----
-{h1-003_h2-001_h3-002_p-001:Section 3.1.2:Over-the-Counter Drugs (OTC Pharmaceuticals)} [Q] What are OTC drugs, and how can they be bought?  
-[A] OTC drugs are medicines that can be purchased without a prescription.
-
-[Q] What symptoms are OTC drugs effective for?  
-[A] OTC drugs are effective for mild symptoms or discomfort.
-
-[Q] What categories of drugs are included in OTC drugs?  
-[A] OTC drugs include analgesics, gastrointestinal drugs, and anti-allergy drugs.
-
-[Q] How should OTC drugs be managed?  
-[A] OTC drugs can be managed by self-care.
-
-[Q] What is the role of sales representatives regarding OTC drugs?  
-[A] Sales representatives must encourage safe use by advising on proper usage and dosage.
----
-{h1-003_h2-001_h3-003_p-001:Section 3.1.3:Vaccines} [Q] What are vaccines used for?  
-[A] Vaccines are used to prevent specific infectious diseases.  
-
-[Q] What do vaccines aim to create in the body?  
-[A] Vaccines aim to create antibodies within the body.  
-
-[Q] What effect do vaccines have on susceptibility to illnesses?  
-[A] Vaccines reduce susceptibility to illnesses.  
-
-[Q] What are some common types of vaccines?  
-[A] Common vaccines include influenza vaccines, COVID-19 vaccines, and measles vaccines.  
-
-[Q] Why are vaccines important from a public health perspective?  
-[A] Vaccines are important because they help prevent the spread of diseases.  
-
-[Q] What do sales representatives need to provide about vaccines?  
-[A] Sales representatives need to provide accurate knowledge about the benefits and importance of vaccination.  
----
-{h1-003_h2-001_h3-004_p-001:Section 3.1.4:Biological Products (Biopharmaceuticals)} [Q] What are biological products made using?  
-[A] Biological products are made using cells or biomolecules.
-
-[Q] What are biological products known for?  
-[A] They are characterized by their potent effects for specific diseases or symptoms.
-
-[Q] What are some examples of biological products?  
-[A] Examples include gene therapies and monoclonal antibody products.
-
-[Q] What conditions can biological products help treat?  
-[A] They can treat conditions like rheumatoid arthritis, certain cancers, and immune-related disorders.
-
-[Q] What is required for handling biopharmaceuticals?  
-[A] Proper handling is required for biopharmaceuticals.
-
-[Q] What do representatives need to know about biopharmaceuticals?  
-[A] Representatives need specialized knowledge about the product’s characteristics and storage methods.
----
-{h1-003_h2-001_h3-004_p-002:Section 3.1.4:Biological Products (Biopharmaceuticals)} [Q] What helps pharmaceutical sales representatives provide appropriate information to healthcare professionals?  
-[A] Understanding the types and efficacy of pharmaceuticals helps them.
-
-[Q] Who do pharmaceutical sales representatives give information to?  
-[A] They give information to healthcare professionals.
-
-[Q] What is supported by providing appropriate information to healthcare professionals?  
-[A] Safe treatment for patients is supported.
----
-{h1-003_h2-002_h3-000_p-001:Section 3.2:Precautions for Product Use} [Q] What is necessary for the safe and effective use of pharmaceuticals?  
-[A] Strict adherence to guidelines is necessary.
-
-[Q] Why is it important to follow guidelines when using pharmaceuticals?  
-[A] It is important to follow guidelines to obtain the desired efficacy and to avoid side effects and risks.
-
-[Q] Who should be knowledgeable about product precautions in pharmaceuticals?  
-[A] Pharmaceutical sales representatives should be knowledgeable about product precautions.
-
-[Q] What should pharmaceutical sales representatives provide to healthcare professionals and patients?  
-[A] They should provide appropriate advice.
-
-[Q] What does this section explain about pharmaceuticals?  
-[A] This section explains important precautions in the use of pharmaceuticals.
----
-{h1-003_h2-002_h3-001_p-001:Section 3.2.1:Adherence to Usage and Dosage} [Q] What does safe and effective use of pharmaceuticals depend on?  
-[A] It depends on following the prescribed method (how to take) and dosage (amount to take).
-
-[Q] What can happen if you take the wrong dosage of medicine?  
-[A] Incorrect dosages can lead to inadequate drug effects or potential side effects from overdose.
-
-[Q] Why is it important to follow the schedule for antibiotics or anticancer drugs?  
-[A] Adhering to the specified schedule is essential for effective treatment.
-
-[Q] Who should sales representatives emphasize the importance of strict adherence to the usage and dosage to?  
-[A] Sales representatives should emphasize it to healthcare professionals and patients.
----
-{h1-003_h2-002_h3-002_p-001:Section 3.2.2:Duration and Timing of Administration} [Q] Why is the duration and timing of administration important for some medicines?  
-[A] Because it is crucial to ensure the medicine works properly.
-
-[Q] What can happen if you stop antibiotics too soon?  
-[A] It may increase the risk of developing resistant bacteria.
-
-[Q] Why is it important to complete the prescribed duration of antibiotics?  
-[A] To make sure the antibiotics work effectively and prevent resistant bacteria.
-
-[Q] What types of medicines need to be taken at specific times?  
-[A] Medicines like sleeping pills or diabetes medications.
-
-[Q] Why should representatives make sure patients follow instructions for taking medicines?  
-[A] To ensure that patients use the medicines correctly and safely.
----
-{h1-003_h2-002_h3-003_p-001:Section 3.2.3:Understanding Side Effects and Contraindications} [Q] What does each pharmaceutical have that needs careful attention?
-
-[A] Each pharmaceutical has its own set of potential side effects and contraindications.
-
-[Q] When should some drugs be avoided according to the example given?
-
-[A] Some drugs should be avoided during pregnancy or breastfeeding.
-
-[Q] For which patients might certain drugs be contraindicated?
-
-[A] Certain drugs may be contraindicated for patients with high blood pressure or diabetes.
-
-[Q] Who is expected to provide information on side effects and contraindications?
-
-[A] Pharmaceutical sales representatives are expected to provide this information.
-
-[Q] To whom should pharmaceutical sales representatives particularly provide information?
-
-[A] They should provide information particularly to high-risk patients and healthcare professionals who need to be informed.
----
-{h1-003_h2-002_h3-004_p-001:Section 3.2.4:Verification of Co-administered Drugs and Drug Interactions} [Q] What can happen when using multiple pharmaceuticals at the same time?  
-[A] Their interactions can enhance or reduce effectiveness or cause unexpected side effects.
-
-[Q] How can drug interactions affect patient health?  
-[A] Drug interactions can negatively impact patient health, so particular caution is required.
-
-[Q] What should pharmaceutical sales representatives encourage healthcare professionals to do?  
-[A] They should encourage healthcare professionals to verify co-administered drugs and support proper administration by providing information on potential interactions.
----
-{h1-003_h2-002_h3-004_p-002:Section 3.2.4:Verification of Co-administered Drugs and Drug Interactions} [Q] What can pharmaceutical sales representatives do by maintaining a comprehensive understanding of precautions related to product use?
-
-[A] They can advise healthcare professionals and patients.
-
-[Q] What does advising healthcare professionals and patients help promote?
-
-[A] It helps promote the safe and effective use of pharmaceuticals.
-
-[Q] What is protected by promoting the safe and effective use of pharmaceuticals?
-
-[A] Patient health is protected.
----
-{h1-003_h2-003_h3-000_p-001:Section 3.3:Side Effects and Risk Management} [Q] What are pharmaceuticals designed to be?
-[A] Pharmaceuticals are designed to be effective.
-
-[Q] What can pharmaceuticals also pose?
-[A] Pharmaceuticals can pose potential side effects.
-
-[Q] Why is risk management essential for pharmaceuticals?
-[A] Risk management is essential because of the potential side effects of pharmaceuticals.
-
-[Q] What are side effects?
-[A] Side effects are unexpected effects on the human body different from the intended therapeutic effects.
-
-[Q] How can side effects affect patient health or safety?
-[A] Side effects can threaten patient health or safety in severe cases.
-
-[Q] Who is responsible for understanding side effects?
-[A] Pharmaceutical sales representatives are responsible for understanding side effects.
-
-[Q] What must pharmaceutical sales representatives do besides understanding side effects?
-[A] They must conduct risk management through appropriate information sharing.
+[Q] What is the goal of providing information about pharmaceuticals to healthcare professionals?
+[A] The goal is to support safe and effective treatment for patients.
 
 [Q] What does this section explain?
-[A] This section explains the understanding of side effects and risk management.
+[A] This section explains the main types of pharmaceuticals and their efficacy.
+---
+{h1-003_h2-001_h3-001_p-001:Section 3.1.1:Prescription Drugs (Rx Pharmaceuticals)} [Q] What is needed to obtain prescription drugs from a healthcare professional like a doctor or dentist?
+[A] A prescription is needed to obtain prescription drugs from a healthcare professional like a doctor or dentist.
+
+[Q] Why do prescription drugs require strict adherence to usage and dosage guidelines?
+[A] Prescription drugs require strict adherence to usage and dosage guidelines because they have potent effects for specific diseases or symptoms.
+
+[Q] What types of drugs are included in prescription drugs?
+[A] Prescription drugs include antibiotics for bacterial infections, antiviral drugs for viral infections, and anticancer agents for cancer treatment.
+
+[Q] How is effective treatment ensured when using prescription drugs?
+[A] Effective treatment is ensured by healthcare professionals’ appropriate prescription and patients’ adherence to instructions.
+---
+{h1-003_h2-001_h3-002_p-001:Section 3.1.2:Over-the-Counter Drugs (OTC Pharmaceuticals)} [Q] What can be bought without a prescription and help with mild symptoms or discomfort?  
+[A] Over-the-counter (OTC) drugs can be purchased without a prescription and are effective for mild symptoms or discomfort.
+
+[Q] What types of drugs are included in OTC drugs?  
+[A] OTC drugs include analgesics for pain and fever relief, gastrointestinal drugs for digestive issues, and anti-allergy drugs for allergy relief.
+
+[Q] How can OTC drugs be managed?  
+[A] OTC drugs can be managed by self-care.
+
+[Q] What should sales representatives do to ensure safe use of OTC drugs?  
+[A] Sales representatives must encourage safe use by advising on proper usage and dosage, supporting purchasers’ safe use.
+---
+{h1-003_h2-001_h3-003_p-001:Section 3.1.3:Vaccines} [Q] What are vaccines used for?
+[A] Vaccines are used to prevent specific infectious diseases.
+
+[Q] What do vaccines aim to create in the body?
+[A] Vaccines aim to create antibodies within the body.
+
+[Q] What is reduced by having antibodies in the body?
+[A] Susceptibility to illnesses is reduced by having antibodies in the body.
+
+[Q] Can you name some common vaccines?
+[A] Common vaccines include influenza vaccines, COVID-19 vaccines, and measles vaccines.
+
+[Q] Why are vaccines important from a public health perspective?
+[A] Vaccines are important because they help prevent infectious diseases and protect public health.
+
+[Q] What do sales representatives need to provide about vaccination?
+[A] Sales representatives need to provide accurate knowledge about the benefits and importance of vaccination.
+---
+{h1-003_h2-001_h3-004_p-001:Section 3.1.4:Biological Products (Biopharmaceuticals)} [Q] What are biological products and how are they made?
+[A] Biological products are pharmaceuticals made using cells or biomolecules and are known for their potent effects on specific diseases or symptoms.
+
+[Q] What are some examples of biological products and what conditions do they treat?
+[A] Examples of biological products include gene therapies and monoclonal antibody products, which are used to treat conditions like rheumatoid arthritis, certain cancers, and immune-related disorders.
+
+[Q] What is necessary for handling biopharmaceuticals and what should representatives know?
+[A] Proper handling is required for biopharmaceuticals, and representatives need specialized knowledge about the product’s characteristics and storage methods.
+---
+{h1-003_h2-001_h3-004_p-002:Section 3.1.4:Biological Products (Biopharmaceuticals)} [Q] What does understanding the types and efficacy of pharmaceuticals enable pharmaceutical sales representatives to do?  
+[A] Understanding the types and efficacy of pharmaceuticals enables pharmaceutical sales representatives to provide appropriate information to healthcare professionals.
+
+[Q] Who benefits from the appropriate information provided by pharmaceutical sales representatives to healthcare professionals?  
+[A] Patients benefit from the appropriate information because it supports safe treatment.
+---
+{h1-003_h2-002_h3-000_p-001:Section 3.2:Precautions for Product Use} [Q] What is required for the safe and effective use of pharmaceuticals?
+[A] Strict adherence to guidelines is required for the safe and effective use of pharmaceuticals.
+
+[Q] Why is it important to follow the guidelines when using pharmaceuticals?
+[A] It is important to follow the guidelines to obtain the desired efficacy and avoid side effects and risks.
+
+[Q] Who is responsible for knowing about product precautions in pharmaceuticals?
+[A] Pharmaceutical sales representatives are responsible for knowing about product precautions.
+
+[Q] What should pharmaceutical sales representatives provide to healthcare professionals and patients?
+[A] Pharmaceutical sales representatives should provide appropriate advice to healthcare professionals and patients.
+
+[Q] What does this section explain about pharmaceuticals?
+[A] This section explains important precautions in the use of pharmaceuticals.
+---
+{h1-003_h2-002_h3-001_p-001:Section 3.2.1:Adherence to Usage and Dosage} [Q] What is important for the safe and effective use of pharmaceuticals?
+[A] Following the prescribed method and dosage is important for the safe and effective use of pharmaceuticals.
+
+[Q] What can happen if incorrect dosages of pharmaceuticals are taken?
+[A] Incorrect dosages can lead to inadequate drug effects or potential side effects from overdose.
+
+[Q] For which types of drugs is it especially important to adhere to the specified schedule?
+[A] It is especially important to adhere to the specified schedule for antibiotics or anticancer drugs.
+
+[Q] Who should emphasize the importance of strict adherence to usage and dosage to healthcare professionals and patients?
+[A] Sales representatives should emphasize the importance of strict adherence to usage and dosage to healthcare professionals and patients.
+---
+{h1-003_h2-002_h3-002_p-001:Section 3.2.2:Duration and Timing of Administration} [Q] What is important for some pharmaceuticals regarding their administration?  
+[A] The duration and timing of administration are crucial.  
+
+[Q] What might happen if antibiotics are stopped too early?  
+[A] Stopping antibiotics prematurely may increase the risk of developing resistant bacteria.  
+
+[Q] Why is it important to finish the prescribed duration of antibiotics?  
+[A] It is essential to complete the prescribed duration to prevent the development of resistant bacteria.  
+
+[Q] Which types of medications require administration at specific times?  
+[A] Specific medications like sleeping pills or diabetes medications require administration at particular times.  
+
+[Q] What should representatives ensure about patients and medication instructions?  
+[A] Representatives should ensure that patients follow these instructions accurately.
+---
+{h1-003_h2-002_h3-003_p-001:Section 3.2.3:Understanding Side Effects and Contraindications} [Q] What does each pharmaceutical have that is specific to it?  
+[A] Each pharmaceutical has its own set of potential side effects and contraindications.
+
+[Q] When should some drugs be avoided according to their contraindications?  
+[A] Some drugs should be avoided during pregnancy or breastfeeding.
+
+[Q] For which health conditions might some drugs be contraindicated?  
+[A] Some drugs may be contraindicated for patients with high blood pressure or diabetes.
+
+[Q] Who is expected to provide information on side effects and contraindications?  
+[A] Pharmaceutical sales representatives are expected to provide this information.
+
+[Q] To whom should pharmaceutical sales representatives provide information about side effects and contraindications?  
+[A] They should provide this information to high-risk patients and healthcare professionals who need to be informed.
+---
+{h1-003_h2-002_h3-004_p-001:Section 3.2.4:Verification of Co-administered Drugs and Drug Interactions} [Q] What can happen to the effectiveness of pharmaceuticals when using multiple ones at the same time?
+[A] The interactions can enhance or reduce effectiveness or cause unexpected side effects.
+
+[Q] Why is it important to be cautious with drug interactions?
+[A] Such drug interactions can negatively impact patient health.
+
+[Q] What should pharmaceutical sales representatives do to help with drug interactions?
+[A] They should encourage healthcare professionals to verify co-administered drugs and support proper administration by providing information on potential interactions.
+---
+{h1-003_h2-002_h3-004_p-002:Section 3.2.4:Verification of Co-administered Drugs and Drug Interactions} [Q] Who can pharmaceutical sales representatives advise by understanding precautions related to product use?
+[A] Pharmaceutical sales representatives can advise healthcare professionals and patients.
+
+[Q] What do pharmaceutical sales representatives promote by maintaining a comprehensive understanding of precautions?
+[A] They promote the safe and effective use of pharmaceuticals.
+
+[Q] What is protected when pharmaceutical sales representatives understand and advise on precautions?
+[A] Patient health is protected.
+---
+{h1-003_h2-003_h3-000_p-001:Section 3.3:Side Effects and Risk Management} [Q] What are pharmaceuticals designed to be, and what can they also pose?  
+[A] Pharmaceuticals are designed to be effective, but they can also pose potential side effects.  
+
+[Q] Why is risk management important in pharmaceuticals?  
+[A] Risk management is essential because side effects can threaten patient health or safety in severe cases.  
+
+[Q] What are side effects and how do they differ from therapeutic effects?  
+[A] Side effects are unexpected effects on the human body that are different from the intended therapeutic effects.  
+
+[Q] Who is responsible for understanding side effects and conducting risk management in pharmaceuticals?  
+[A] Pharmaceutical sales representatives are responsible for understanding side effects and conducting risk management.  
+
+[Q] How do pharmaceutical sales representatives conduct risk management?  
+[A] They conduct risk management through appropriate information sharing.
 ---
 {h1-003_h2-003_h3-001_p-001:Section 3.3.1:Types and Symptoms of Side Effects} [Q] What can side effects range from?  
-[A] Side effects can range from mild to severe.  
+[A] Side effects can range from mild to severe.
 
-[Q] What are some common side effects?  
-[A] Common side effects may include headaches, nausea, or rashes.  
+[Q] What are some examples of common side effects?  
+[A] Some examples of common side effects are headaches, nausea, or rashes.
 
-[Q] What are examples of severe side effects?  
-[A] Severe side effects such as anaphylactic shock or liver dysfunction require prompt action.  
+[Q] What are some examples of severe side effects that need quick attention?  
+[A] Severe side effects that need quick attention include anaphylactic shock or liver dysfunction.
 
-[Q] Who should be familiar with the types and symptoms of side effects?  
-[A] Sales representatives should be familiar with the types and symptoms of side effects.  
+[Q] Who should be familiar with the types and symptoms of side effects for the products they manage?  
+[A] Sales representatives should be familiar with the types and symptoms of side effects for the products they manage.
 
-[Q] What should sales representatives provide to healthcare professionals and patients?  
-[A] Sales representatives should provide necessary information about side effects to healthcare professionals and patients.  
+[Q] To whom should sales representatives provide necessary information about side effects?  
+[A] Sales representatives should provide necessary information about side effects to healthcare professionals and patients.
 ---
-{h1-003_h2-003_h3-002_p-001:Section 3.3.2:Risk Factors for Side Effects} [Q] What factors can affect the risk of side effects?  
-[A] The risk of side effects can vary depending on age, physical condition, other medications being taken, and medical history.
+{h1-003_h2-003_h3-002_p-001:Section 3.3.2:Risk Factors for Side Effects} [Q] What factors can affect the risk of side effects?
+[A] The factors that can affect the risk of side effects include age, physical condition, other medications being taken, and medical history.
 
-[Q] Who might have a higher risk of side effects compared to general adults?  
-[A] Older adults or children may have a higher risk of side effects compared to general adults.
+[Q] Who might have a higher risk of side effects compared to general adults?
+[A] Older adults or children might have a higher risk of side effects compared to general adults.
 
-[Q] Why might patients taking multiple drugs face increased risks of side effects?  
-[A] Patients taking multiple drugs might face increased risks of side effects due to drug interactions.
+[Q] Why might patients with certain pre-existing conditions face increased risks of side effects?
+[A] Patients with certain pre-existing conditions may face increased risks of side effects due to drug interactions.
 
-[Q] Who needs to understand these risk factors and give advice?  
-[A] Sales representatives need to understand these risk factors and provide appropriate advice to healthcare professionals.
+[Q] What should sales representatives understand to provide appropriate advice to healthcare professionals?
+[A] Sales representatives need to understand the risk factors of side effects to provide appropriate advice to healthcare professionals.
 ---
-{h1-003_h2-003_h3-003_p-001:Section 3.3.3:Management Methods to Minimize Risks} [Q] What is needed to minimize the risk of side effects?
+{h1-003_h2-003_h3-003_p-001:Section 3.3.3:Management Methods to Minimize Risks} [Q] What is necessary to minimize the risk of side effects?  
+[A] Several measures are necessary to minimize the risk of side effects.  
 
-[A] Several measures are necessary to minimize the risk of side effects.
+[Q] What should patients be reminded of to avoid self-determined changes in use?  
+[A] Patients should be reminded of the importance of adhering to the prescribed usage and dosage.  
 
-[Q] What should patients be reminded of to avoid side effects?
+[Q] Who supports healthcare professionals in providing appropriate instructions to patients?  
+[A] Sales representatives support healthcare professionals in providing appropriate instructions to patients.  
 
-[A] Patients should be reminded of the importance of adhering to the prescribed usage and dosage, avoiding self-determined changes in use.
-
-[Q] Who supports healthcare professionals in giving instructions to patients?
-
-[A] Sales representatives support healthcare professionals in providing appropriate instructions to patients.
-
-[Q] When is it encouraged to conduct regular blood or clinical tests?
-
-[A] It is encouraged to conduct regular blood or clinical tests in cases with higher risk to detect side effects early.
+[Q] What should be encouraged in cases with higher risk to detect side effects early?  
+[A] Regular blood or clinical tests should be encouraged to detect side effects early.
 ---
-{h1-003_h2-003_h3-004_p-001:Section 3.3.4:Response and Reporting System for Side Effects} [Q] What is necessary in the event of side effects?  
+{h1-003_h2-003_h3-004_p-001:Section 3.3.4:Response and Reporting System for Side Effects} [Q] What should be done in the event of side effects?
 [A] A prompt response is necessary.
 
-[Q] Who should explain how to respond to side effects?  
+[Q] Who should explain how to respond to side effects to healthcare professionals?
 [A] Sales representatives should explain to healthcare professionals.
 
-[Q] What should patients do if they feel unwell?  
+[Q] What should patients do if they feel unwell?
 [A] Patients should seek immediate medical attention.
 
-[Q] What systems should be in place regarding side effects?  
+[Q] What systems should be in place regarding side effects?
 [A] Systems for recording and reporting side effects should be in place.
 
-[Q] Why should systems for recording and reporting side effects be in place?  
+[Q] Why is it important to have systems for recording and reporting side effects?
 [A] To gather data, improve product safety, and enhance future risk management.
 ---
-{h1-003_h2-003_h3-004_p-002:Section 3.3.4:Response and Reporting System for Side Effects} [Q] What can pharmaceutical sales representatives ensure by understanding side effects and risk management?  
-[A] They can ensure patient safety and enhance the credibility of pharmaceuticals.
+{h1-003_h2-003_h3-004_p-002:Section 3.3.4:Response and Reporting System for Side Effects} [Q] What can pharmaceutical sales representatives do by understanding side effects and risk management?
+[A] Pharmaceutical sales representatives can ensure patient safety and enhance the credibility of pharmaceuticals.
 
-[Q] Who do pharmaceutical sales representatives collaborate with to ensure patient safety?  
-[A] They collaborate with healthcare professionals.
+[Q] Who collaborates with pharmaceutical sales representatives to ensure patient safety?
+[A] Healthcare professionals collaborate with pharmaceutical sales representatives to ensure patient safety.
 
-[Q] What is considered a critical responsibility in the pharmaceutical industry?  
-[A] Risk management is a critical responsibility.
+[Q] What is considered a critical responsibility in the pharmaceutical industry?
+[A] Risk management is considered a critical responsibility in the pharmaceutical industry.
 
-[Q] What plays a key role in the pharmaceutical industry according to the sentence?  
-[A] Each representative’s awareness and response play a key role.
+[Q] What plays a key role in the pharmaceutical industry regarding risk management?
+[A] Each representative’s awareness and response play a key role in risk management in the pharmaceutical industry.
 ---

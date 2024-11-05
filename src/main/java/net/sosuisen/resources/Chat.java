@@ -13,9 +13,10 @@ import net.sosuisen.model.QueryDTO;
 import net.sosuisen.model.StaticMessage;
 import net.sosuisen.security.CsrfValidator;
 import net.sosuisen.service.ChatService;
+import net.sosuisen.service.SuggestService;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
+import java.util.List;
 
 @RequestScoped
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,13 +28,14 @@ public class Chat {
     private final StaticMessage staticMessage;
     private final ChatCommand chatCommand;
     private final ChatService chatService;
+    private final SuggestService suggestService;
     private final CsrfValidator csrfValidator;
 
     @GET
     @Path("opening-words")
     public ChatMessage getOpeningWords() {
         csrfValidator.validateCsrfToken();
-        return new ChatMessage("AI", staticMessage.getOpeningWords(), new ArrayList<>());
+        return new ChatMessage("AI", staticMessage.getOpeningWords(), List.of(), suggestService.suggestFirst());
     }
 
     @POST

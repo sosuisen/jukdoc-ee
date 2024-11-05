@@ -14,6 +14,8 @@ import java.util.Map;
 @ApplicationScoped
 public class ChatCommand {
     public enum Command {
+        PROCEED_FROM_BEGINNING,
+        PROCEED_FROM_UNREAD,
         PROCEED_CURRENT_TOPIC,
         REPEAT_ONLY_CURRENT_TOPIC
     }
@@ -34,6 +36,12 @@ public class ChatCommand {
                     }
                     String value = parts[1].trim();
                     switch (value) {
+                        case "proceed_from_beginning":
+                            commandMap.put(key, Command.PROCEED_FROM_BEGINNING);
+                            break;
+                        case "proceed_from_unread":
+                            commandMap.put(key, Command.PROCEED_FROM_UNREAD);
+                            break;
                         case "proceed_current_topic":
                             commandMap.put(key, Command.PROCEED_CURRENT_TOPIC);
                             break;

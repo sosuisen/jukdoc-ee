@@ -15,7 +15,6 @@ import java.io.InputStreamReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.Objects;
 
 import static net.sosuisen.Constants.PARAGRAPH_PATTERN;
 import static net.sosuisen.Constants.SUMMARY_PATTERN;

@@ -26,7 +26,6 @@ import java.util.ArrayList;
 @Path("/api/paragraphs")
 public class Paragraphs {
     private final ParagraphDAO paragraphDAO;
-    private final ReadingRecordDAO readingRecordDAO;
     private final UserStatus userStatus;
     private final CsrfValidator csrfValidator;
 
@@ -34,14 +33,7 @@ public class Paragraphs {
     public ArrayList<ParagraphDTO> getParagraphs() throws SQLException {
         csrfValidator.validateCsrfToken();
 
-        var paragraphs = paragraphDAO.getAll();
-        var positionTags = readingRecordDAO.getAll(userStatus.getUserName());
-
-        for(var paragraph : paragraphs) {
-            if (positionTags.contains(paragraph.getPositionTag())) {
-                paragraph.setRead(true);
-            }
-        }
+        var paragraphs = paragraphDAO.getAll(userStatus.getUserName());
         return paragraphs;
     }
 }

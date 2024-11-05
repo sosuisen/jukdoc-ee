@@ -1,14 +1,14 @@
 package net.sosuisen.ai.producer;
 
-import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModelName;
 import jakarta.enterprise.inject.Produces;
 import jakarta.enterprise.inject.spi.InjectionPoint;
-import net.sosuisen.ai.annotation.MaxResults;
 import net.sosuisen.ai.annotation.EmbeddingModelName;
+import net.sosuisen.ai.annotation.MaxResults;
 import net.sosuisen.ai.annotation.StoreJsonPath;
 import net.sosuisen.ai.annotation.Threshold;
 import net.sosuisen.ai.service.EmbeddingSearchService;
+
 import static dev.langchain4j.model.openai.OpenAiEmbeddingModelName.TEXT_EMBEDDING_3_SMALL;
 
 public class EmbeddingSearchServiceProducer {

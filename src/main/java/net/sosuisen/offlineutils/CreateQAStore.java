@@ -5,10 +5,12 @@ import dev.langchain4j.data.segment.TextSegment;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import dev.langchain4j.model.openai.OpenAiEmbeddingModel;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
+import net.sosuisen.Constants;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.regex.Pattern;
 
 import static net.sosuisen.Constants.PARAGRAPH_PATTERN;
 import static net.sosuisen.Constants.QA_PATTERN;
@@ -26,6 +28,9 @@ public class CreateQAStore {
                 Condition 6: Ensure no essential keywords are omitted.
                 Condition 7: Do not rewrite idioms or set phrases.
                 Condition 8: Use polite expressions.
+                Condition 9: Please do not include anaphoric expressions, such as demonstrative pronouns, in the questions.
+                Condition 10: Do not include 'the following', 'below' or 'above' in the questions.
+                Condition 11: Do not include 'sentence', 'paragraph', 'section' or 'chapter' in the questions.
                 
                 For example, if the first pair is question 1 and answer 1, and the next pair is question 2 and answer 2, please respond as follows:
                 
@@ -37,7 +42,7 @@ public class CreateQAStore {
                 
                 As a note, always write the question on the [Q] line and the corresponding answer on the [A] line.
                 You must not include terms like "Question 1" or "Answer 1" directly in the response.
-
+                
                 Input sentence:
                 %s
                 """.formatted(paragraph);
@@ -90,6 +95,8 @@ public class CreateQAStore {
                             .modelName("gpt-4o")
                             .build();
                     String qaPair = qaModel.generate(prompt);
+
+                    qaPair = qaPair.replaceAll("\\[Q]([^\n]*)\\n+\\[A]", "[Q]$1\n[A]");
                     System.out.println("QA Pair: " + qaPair);
 
                     qaResultsStr.append("""
@@ -133,12 +140,21 @@ public class CreateQAStore {
 
                 var qaPairsStr = matcher.group(4);
                 var qaPairs = qaPairsStr.split("\n\n");
+                var chapterPattern = Pattern.compile("\\b(the|this)(sentence|section|chapter)(?=[\\s?!.,]|$)", Pattern.CASE_INSENSITIVE);
                 for (var qaPair : qaPairs) {
                     var qaMatcher = QA_PATTERN.matcher(qaPair);
                     if (!qaMatcher.find()) {
                         continue;
                     }
                     var question = qaMatcher.group(1);
+                    // Skip anaphoric expressions
+                    if (Constants.RE_ANAPHORA.matcher(question).find()) {
+                        continue;
+                    }
+                    if (chapterPattern.matcher(question).find()) {
+                        continue;
+                    }
+
                     var answer = qaMatcher.group(2);
 
                     System.out.println("Get Embeddings..");

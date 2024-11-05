@@ -13,4 +13,5 @@ public class ChatMessage {
     private String speaker;
     private String message;
     private List<String> refs;
+    private List<String> suggestions;
 }

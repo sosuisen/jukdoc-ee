@@ -8,11 +8,11 @@
     <title>Jukdoc</title>
 </head>
 <body class="container"
-      x-data="{ paragraphs: [], history: [] }"
+      x-data="{ paragraphs: [], history: [], suggestions: [] }"
       x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' })
                  .then(res => res.status==200 ? paragraphs = res.data : null);
               $get('/chat/opening-words', { error: 'Cannot get opening words' })
-                 .then(res => res.status == 200 ? history.push(res.data) : null);
+                 .then(res => res.status == 200 ? (history.push(res.data), suggestions = res.data.suggestions) : null);
 ">
 
 <div class="title-area">
@@ -77,6 +77,7 @@
                         if(res.status == 200){
                             history.pop();
                             history.push(res.data);
+                            suggestions = res.data.suggestions;
                             res.data.refs.forEach(refStr =>
                                 paragraphs.find(para => para.positionTag === refStr.split(':')[1]).read = true
                             );
@@ -91,11 +92,11 @@
                 <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
                 <button class="send-button">Send</button>
             </form>
+
             <div class="suggestions">
-                <button class="suggestion-button" @click="param.message = $el.innerText; request();">What is JavaScript?</button>
-                <button class="suggestion-button" @click="param.message = $el.innerText; request();">How does Flexbox work?</button>
-                <button class="suggestion-button" @click="param.message = $el.innerText; request();">Explain async and await</button>
-                <button class="suggestion-button" @click="param.message = $el.innerText; request();">What is the purpose of CSS?</button>
+                <template x-for="suggest in suggestions">
+                    <button class="suggestion-button" x-text="suggest" @click="param.message = $el.innerText; request();">What is JavaScript?</button>
+                </template>
             </div>
         </div>
     </div>

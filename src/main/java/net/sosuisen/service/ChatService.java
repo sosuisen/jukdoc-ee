@@ -5,8 +5,7 @@ import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import net.sosuisen.ai.annotation.SystemMessage;
-import net.sosuisen.ai.annotation.Temperature;
+import net.sosuisen.Constants;
 import net.sosuisen.ai.service.AssistantService;
 import net.sosuisen.model.*;
 
@@ -24,20 +23,16 @@ import java.util.stream.Collectors;
 public class ChatService {
     @SuppressWarnings("FieldCanBeLocal")
     private final int HISTORY_SIZE = 3;
-    // Pattern that matches anaphoric expressions
-    private final Pattern RE_ANAPHORA = Pattern.compile("\\b(that|this|those|these|such|it|its|he|his|she|her|they|their)(?=[\\s?!.,]|$)", Pattern.CASE_INSENSITIVE);
 
     private final ParagraphService paragraphService;
     private final QAService qaService;
+    private final AssistantService assistantService;
+    private final SuggestService suggestService;
+
     private final UserStatus userStatus;
     private final ReadingRecordDAO readingRecordDAO;
     private final ParagraphDAO paragraphDAO;
     private final StaticMessage staticMessage;
-
-    @Inject
-    @SystemMessage("You are a skilled assistant.")
-    @Temperature(0.0)
-    private AssistantService assistantService;
 
     private String getPrompt(List<Document> retrievalDocs, String query) {
         var chatHistory = userStatus.getHistory().stream()
@@ -114,20 +109,7 @@ public class ChatService {
         return new ArrayList<>();
     }
 
-    private ChatMessage proceedCurrentTopic(String query) throws SQLException {
-        ParagraphDTO nextParagraph;
-        log.debug("## current position tag: {}", userStatus.getCurrentPositionTag());
-        var answer = "";
-        if (userStatus.getCurrentPositionTag().isEmpty()) {
-            answer = staticMessage.getProceedCurrentTopicStartHeader();
-            nextParagraph = paragraphDAO.getFirstParagraph();
-        }
-        else {
-            answer = staticMessage.getProceedCurrentTopicHeader();
-            nextParagraph = paragraphDAO.getNextParagraph(userStatus.getCurrentPositionTag());
-        }
-        log.debug("## next position tag: {}", nextParagraph.getPositionTag());
-
+    private ChatMessage proceedCurrentTopic(String query, String answer, ParagraphDTO nextParagraph) throws SQLException {
         if (nextParagraph != null) {
             userStatus.setCurrentPositionTag(nextParagraph.getPositionTag());
             answer += nextParagraph.getSummary();
@@ -143,26 +125,51 @@ public class ChatService {
                     nextParagraph.getParagraph(),
                     1.0);
             userStatus.getHistory().add(new HistoryDocument(query, answer, List.of(doc)));
-            readingRecordDAO.create(userStatus.getUserName(), nextParagraph.getPositionTag());
+            if (!nextParagraph.isRead()) {
+                log.debug("## create reading record: {}", nextParagraph.getPositionTag());
+                readingRecordDAO.create(userStatus.getUserName(), nextParagraph.getPositionTag());
+            }
 
             var refs = List.of(":" + nextParagraph.getPositionTag() + ":" + nextParagraph.getPositionName());
-            return new ChatMessage("AI", answer, refs);
-        }
-        else {
+            return new ChatMessage("AI", answer, refs, suggestService.suggest(answer));
+        } else {
             answer = staticMessage.getIsFinalTopic();
-            return new ChatMessage("AI", answer, List.of());
+            return new ChatMessage("AI", answer, List.of(), suggestService.suggestFirst());
         }
     }
 
     public ChatMessage proceedByCommand(ChatCommand.Command command, String query) throws SQLException {
         log.debug("## command: {}", command.name());
+        String answer = "";
+        ParagraphDTO nextParagraph = null;
         return switch (command) {
-            case PROCEED_CURRENT_TOPIC -> proceedCurrentTopic(query);
+            case PROCEED_FROM_BEGINNING -> {
+                userStatus.setCurrentPositionTag("");
+                answer = staticMessage.getProceedCurrentTopicStartHeader();
+                nextParagraph = paragraphDAO.getFirstParagraph(userStatus.getUserName());
+                yield proceedCurrentTopic(query, answer, nextParagraph);
+            }
+            case PROCEED_FROM_UNREAD -> {
+                var unreadParagraph = paragraphDAO.getFirstUnreadParagraph(userStatus.getUserName());
+                userStatus.setCurrentPositionTag(unreadParagraph.getPositionTag());
+                yield proceedCurrentTopic(query, staticMessage.getProceedFromUnreadParts(), unreadParagraph);
+            }
+            case PROCEED_CURRENT_TOPIC -> {
+                if (userStatus.getCurrentPositionTag().isEmpty()) {
+                    answer = staticMessage.getProceedCurrentTopicStartHeader();
+                    nextParagraph = paragraphDAO.getFirstParagraph(userStatus.getUserName());
+                } else {
+                    answer = staticMessage.getProceedCurrentTopicHeader();
+                    nextParagraph = paragraphDAO.getNextParagraph(userStatus.getCurrentPositionTag(), userStatus.getUserName());
+                }
+                yield proceedCurrentTopic(query, answer, nextParagraph);
+            }
             case REPEAT_ONLY_CURRENT_TOPIC -> promptToAI(getDocumentFromLatestHistory(), query);
         };
     }
 
     public ChatMessage proceedByPrompt(String query) throws SQLException {
+        log.debug("## proceed by prompt, query: {}", query);
         List<Document> retrievalDocs;
         // If the query is three characters or fewer, a search won't yield meaningful paragraphs.
         if (query.length() <= 3) {
@@ -171,7 +178,7 @@ public class ChatService {
         // If the question contains anaphora (e.g., "What is that?"),
         // an appropriate search result will not be achieved.
         // Providing the previous conversation to GPT will automatically resolve the anaphora.
-        else if (RE_ANAPHORA.matcher(query).find()) {
+        else if (Constants.RE_ANAPHORA.matcher(query).find()) {
             retrievalDocs = getDocumentFromLatestHistory();
         } else {
             retrievalDocs = retrieveDocuments(query);
@@ -221,7 +228,7 @@ public class ChatService {
             readingRecordDAO.create(userStatus.getUserName(), doc.getPositionTag());
         }
 
-        return new ChatMessage("AI", answer, uniqueRefs);
+        return new ChatMessage("AI", answer, uniqueRefs, suggestService.suggest(answer));
     }
 
     /**
