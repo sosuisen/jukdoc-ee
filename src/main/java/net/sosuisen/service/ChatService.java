@@ -91,7 +91,8 @@ public class ChatService {
                 * Begin each bullet with a keyword representing the content, followed by ":" and then the details.
                 * Use simple HTML to format the response.
                 * You may only use <ul>, <li>, <b> tags and [*1] [*2] [*3] .. tags for references.
-                
+                * Do not respond in Markdown format.
+
                 %s
                 * If you place a reference mark, it must be immediately after each sentence. Placing all reference marks at the end of all your answers is not a good method.
                 
@@ -152,7 +153,9 @@ public class ChatService {
             }
             case PROCEED_FROM_UNREAD -> {
                 var unreadParagraph = paragraphDAO.getFirstUnreadParagraph(userStatus.getUserName());
-                userStatus.setCurrentPositionTag(unreadParagraph.getPositionTag());
+                if (unreadParagraph != null) {
+                    userStatus.setCurrentPositionTag(unreadParagraph.getPositionTag());
+                }
                 yield proceedCurrentTopic(query, staticMessage.getProceedFromUnreadParts(), unreadParagraph);
             }
             case PROCEED_FROM_INDICATED_POSITION -> {

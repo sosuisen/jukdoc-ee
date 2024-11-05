@@ -166,6 +166,6 @@ public class ParagraphDAO {
                 );
             }
         }
-        return getFirstParagraph(userName);
+        return null;
     }
 }
