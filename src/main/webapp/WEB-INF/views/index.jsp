@@ -66,6 +66,7 @@
         <form class="chat-input-container"
               x-data="{ param: { message: '' } }"
               @submit.prevent="
+              if(param.message.trim() === '') return;
               history.push({ speaker: 'User', message: param.message, refs: [] });
               $post('/chat/query', { param, error: 'Cannot send message' })
               .then(res => {
