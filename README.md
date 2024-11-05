@@ -78,9 +78,9 @@ mvnw clean package payara-micro:start
 Opening http://localhost:8080/ will display the application.
 (This URL will redirect to http://localhost:8080/jukdoc/)
 
-### Running in Development Mode
+### Running in Dev Mode
 
-Payara Starter provides a development mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
+Payara Starter provides the Dev Mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
 
 To run in development mode, use the following command:
 
@@ -191,7 +191,7 @@ On the right side is the chat area, which you’ll use the most.
 - Logback
   - For logging.
 
-# AI concepts integrated with Jakarta EE
+# AI concepts integrated with Java and Jakarta EE
 
 # Code Structure
 
