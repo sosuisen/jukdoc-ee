@@ -152,3 +152,49 @@ On the right side is the chat area, which you’ll use the most.
 - The jukdoc-ee repository includes offline tools for training the AI with your document data.
 - These tools are located in the net.sosuisen.offlineutils package (src/main/java/net/sosuisen/offlineutils/). Although offline tools are typically in separate repositories, they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
 - Utility scripts to start the offline tools are in the root directory of the jukdoc-ee repository, named run_*.sh. Change the line endings of these .sh files to LF.
+
+# Technology Details
+
+## Used Jakarta EE Stack
+
+- Jakarta EE 10
+- Jakarta Contexts and Dependency Injection (CDI)
+  - Utilizes a CDI producer to make the AI service available across multiple modules in the app.
+  - CDI is also employed for dependency injection in various parts of the app.
+- Jakarta MVC
+  - This application is a single-page application (SPA). A skeleton HTML layout is created using MVC and JSP.
+  - Jakarta MVC is also used to generate CSRF tokens.
+  - Although Jukdoc currently does not have a login feature, adding a login form or user management panel in the future can be easily accomplished with Jakarta MVC.
+- Jakarta REST
+  - Communication between the front-end and back-end is handled via a REST API implemented with Jakarta REST.
+- Jakarta Bean Validation
+  - Used for input validation on the back end.
+
+## Used Payara Stack
+- Payara Micro 6
+  - Embedded H2 Database: Payara Micro has a built-in H2 database enabled by default. Since Jukdoc is a proof-of-concept app, this setup allows for simple execution and deployment without the need for an external database.
+- Payara Starter 
+  - Supports development with hot reload and Docker image building.
+
+## Third-party Libraries
+
+- WebJars
+  - Used to manage front-end libraries with Maven.
+    - Axios: An HTTP client for the browser.
+    - Alpine.js: A lightweight front-end framework for creating Single Page Application(SPA) combined with JSP.
+- LangChain4j
+  - For low-level AI API processing.
+  - Embedding Stores for RAG.
+  - Chat API for RAG.
+- Lombok
+  - For writing concise code.
+- Logback
+  - For logging.
+
+# AI concepts integrated with Jakarta EE
+
+# Code Structure
+
+# Use Cases
+
+# Future Work
