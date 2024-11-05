@@ -95,7 +95,7 @@ public class ChatService {
                 * Then, under the summary, use bullet points starting with "-" for each topic.
                 * Begin each bullet with a keyword representing the content, followed by ":" and then the details.
                 * Use simple HTML to format the response.
-                * You may only use <ul>, <li>, and <b> tags.
+                * You may only use <ul>, <li>, <b> tags and [*1] [*2] [*3] .. tags for references.
                 
                 %s
                 * If you place a reference mark, it must be immediately after each sentence. Placing all reference marks at the end of all your answers is not a good method.
