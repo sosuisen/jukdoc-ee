@@ -41,7 +41,7 @@
     </div>
 
     <div class="chat-column">
-        <div class="chat-history">
+        <div class="chat-history" x-ref="chatHistory">
             <div style="color: red" x-show="$store.errors.length > 0">
                 <template x-for="error in $store.errors">
                     <div x-text="error"></div>
@@ -63,30 +63,41 @@
                 </div>
             </template>
         </div>
-        <form class="chat-input-container"
-              x-data="{ param: { message: '' } }"
-              @submit.prevent="
-              if(param.message.trim() === '') return;
-              history.push({ speaker: 'User', message: param.message, refs: [] });
-              $post('/chat/query', { param, error: 'Cannot send message' })
-              .then(res => {
-                if(res.status == 200){
-                  history.push(res.data);
-                  res.data.refs.forEach(refStr => {
-                    const ref = refStr.split(':');
-                    paragraphs.find(para => para.positionTag === ref[1]).read = true;
-                  });
-                  setTimeout(() => {
-                    const chatHistory = document.querySelector('.chat-history');
-                    chatHistory.scrollTop = chatHistory.scrollHeight;
-                  }, 10);
-                }
-              });
-              param.message = '';"
-        >
-            <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
-            <button class="send-button">Send</button>
-        </form>
+        <div class="chat-input-container"
+             x-data="{
+             param: { message: '' },
+             scrollToBottom() { setTimeout(() => $refs.chatHistory.scrollTop = $refs.chatHistory.scrollHeight, 10) },
+             request() {
+                    if (this.param.message.trim() === '') return;
+                    history.push({ speaker: 'User', message: this.param.message, refs: [] });
+                    history.push({ speaker: 'AI', message: '...', refs: [] });
+                    this.scrollToBottom();
+                    $post('/chat/query', { param: this.param, error: 'Cannot send message' })
+                    .then(res => {
+                        if(res.status == 200){
+                            history.pop();
+                            history.push(res.data);
+                            res.data.refs.forEach(refStr =>
+                                paragraphs.find(para => para.positionTag === refStr.split(':')[1]).read = true
+                            );
+                            this.scrollToBottom();
+                        }
+                    });
+                    this.param.message = '';
+                 }
+             }"
+             >
+            <form class="chat-form" @submit.prevent="request()">
+                <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
+                <button class="send-button">Send</button>
+            </form>
+            <div class="suggestions">
+                <button class="suggestion-button" @click="param.message = $el.innerText; request();">What is JavaScript?</button>
+                <button class="suggestion-button" @click="param.message = $el.innerText; request();">How does Flexbox work?</button>
+                <button class="suggestion-button" @click="param.message = $el.innerText; request();">Explain async and await</button>
+                <button class="suggestion-button" @click="param.message = $el.innerText; request();">What is the purpose of CSS?</button>
+            </div>
+        </div>
     </div>
 
 </div>

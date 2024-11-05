@@ -89,6 +89,9 @@ body {
     padding: 10px;
     border-top: 1px solid #ddd;
     background-color: #fafafa;
+}
+
+.chat-form{
     display: flex;
     align-items: center;
     flex-shrink: 0;
@@ -112,6 +115,30 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+}
+
+.suggestions {
+    padding: 10px;
+    background-color: #fafafa;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.suggestion-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #007bff;
+    background-color: #e0f7fa;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.suggestion-button:hover {
+    background-color: #b2ebf2;
 }
 
 .header {
