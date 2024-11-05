@@ -19,3 +19,5 @@ A unique feature of Jukudoc is that it visually indicates which parts of the doc
 
 You can think of Jukudoc as an AI chat app that helps you read a document from start to finish. It’s not a general-purpose AI for answering any question, nor is it a support desk app. It’s also not meant for skimming or reading only portions of a document. When your completion rate reaches 100%, you can confidently say you have read the entire document.
 
+<img src="./docs/jukdoc_completed.png" alt="Reading completion rate is 100%" width="300px">
+
