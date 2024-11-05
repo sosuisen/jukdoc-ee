@@ -25,7 +25,7 @@
                    });
           }
        }"
-      x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' })
+      x-init="$get('/document', { error: 'Cannot get paragraphs' })
                  .then(res => res.status==200 ? paragraphs = res.data : null);
               $get('/chat/opening-words', { error: 'Cannot get opening words' })
                  .then(res => res.status == 200 ? (history.push(res.data), suggestions = res.data.suggestions) : null);
@@ -39,7 +39,15 @@
         <span class="rate-title">Reading completion rate:</span>
         <span class="rate-value" x-text="rate + '%'"></span>
     </div>
-    <div class="username">User: ${userName}</div>
+    <div class="user-controls">
+        <div class="username">User: ${userName}</div>
+        <div class="delete-all-record">
+            <button @click="$delete('/document/reading-record', { error: 'Cannot delete all records' })
+                            .then(res => res.status == 200 ? paragraphs.forEach(para => para.read = false) : null)">
+                Delete All Records
+            </button>
+        </div>
+    </div>
 </div>
 <div class="main-content">
     <div class="document-column">

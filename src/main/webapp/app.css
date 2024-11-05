@@ -27,6 +27,12 @@ body {
     border-bottom: 2px solid #555;
 }
 
+.title-area .user-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .title-area .title {
     font-size: 28px;
     font-weight: bold;
@@ -50,6 +56,30 @@ body {
 
 .title-area .reading-completion-rate .rate-value{
     color: #76ff03;
+}
+
+.title-area .delete-all-record {
+    margin-left: 15px;
+}
+
+.title-area .delete-all-record button {
+    background-color: #ff5252;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.title-area .delete-all-record button:hover {
+    background-color: #ff1744;
+}
+
+.title-area .delete-all-record button:active {
+    background-color: #d50000;
 }
 
 .main-content {
@@ -118,7 +148,7 @@ body {
 }
 
 .suggestions {
-    padding: 10px;
+    padding: 7px;
     background-color: #fafafa;
     border-top: 1px solid #ddd;
     display: flex;
@@ -127,14 +157,15 @@ body {
 }
 
 .suggestion-button {
-    padding: 8px 12px;
-    font-size: 14px;
+    text-align: left;
+    padding: 4px 8px;
+    font-size: 12px;
     color: #007bff;
     background-color: #e0f7fa;
     border: 1px solid #007bff;
     border-radius: 5px;
     cursor: pointer;
-    margin: 5px;
+    margin: 3px;
 }
 
 .suggestion-button:hover {
@@ -165,7 +196,7 @@ body {
     flex-direction: column;
     margin: 10px 0;
     max-width: 70%;
-    padding: 12px;
+    padding: 3px 12px 3px 12px;
     border-radius: 8px;
     font-size: 16px;
     line-height: 1.5;
@@ -187,8 +218,11 @@ body {
 }
 
 .chat-message {
-    white-space: pre-line;
     text-align: left;
+}
+
+.chat-message p {
+    margin: 7px 0px 0px 0px;
 }
 
 .message-container {

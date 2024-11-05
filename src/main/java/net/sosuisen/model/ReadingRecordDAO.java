@@ -14,19 +14,14 @@ public class ReadingRecordDAO {
     @Resource
     private DataSource ds;
 
-    public List<String> getAll(String userName) throws SQLException {
-        List<String> positionTags = new ArrayList<>();
+    public void clearAll(String userName) throws SQLException {
         try (
                 Connection conn = ds.getConnection();
-                PreparedStatement pstmt = conn.prepareStatement("SELECT * FROM reading_record WHERE user_name = ?")
+                PreparedStatement pstmt = conn.prepareStatement("DELETE FROM reading_record WHERE user_name = ?")
         ) {
             pstmt.setString(1, userName);
-            ResultSet rs = pstmt.executeQuery();
-            while (rs.next()) {
-                positionTags.add(rs.getString("position_tag"));
-            }
+            pstmt.executeUpdate();
         }
-        return positionTags;
     }
 
     public void create(String userName, String positionTag) throws SQLException {
