@@ -61,13 +61,13 @@ mvnw clean package
 ```
 
 
-#### Run
+### Run
 
 First, set your OpenAI API key as an environment variable named OPENAI_API_KEY.
 
 For Windows, remember to restart the terminal to apply the environment variables.
 
-##### Running in Production Mode
+#### Running in Production Mode
 
 ```shell
 mvnw clean package payara-micro:start
@@ -75,7 +75,7 @@ mvnw clean package payara-micro:start
 Opening http://localhost:8080/ will display the application.
 (This URL will redirect to http://localhost:8080/jukdoc/)
 
-##### Running in Development Mode
+#### Running in Development Mode
 
 Payara Starter provides a development mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
 
@@ -85,3 +85,15 @@ To run in development mode, use the following command:
 mvnw clean package payara-micro:dev
 ```
 As a result, the browser will automatically open, displaying the application.
+
+### Deployment
+
+You can easily deploy Jukdoc application using Docker in the AWS cloud.
+How to deploy Jukdoc on AWS Elastic Beanstalk is described in the following article:
+https://www.payara.fish/resource/using-payara-platform-with-docker-on-amazon-aws/
+
+Additional Notes for This Document:
+- Starting in October 2024, to set up Auto Scaling on Elastic Beanstalk, you need to use a Launch Template. This requires adding settings in the .config files under the .ebextensions directory. In the jukdoc-ee repository, a configuration file (`.ebextensions/launch-template.config`) is already set up, so no additional changes are necessary.
+- For instances supporting jukdoc-ee, the t3.micro instance type is too small. It is recommended to use t3.small, t3.medium, or a larger instance type to ensure adequate performance.
+
+## How to Use
