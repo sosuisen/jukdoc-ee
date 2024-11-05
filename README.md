@@ -1,8 +1,8 @@
 # Jukdoc
 
-## Project Overview
-
 Jukdoc is an onboarding training app supported by AI.
+
+# Project Overview
 
 In the onboarding training, you typically need to study job-related documents, such as:
 
@@ -23,9 +23,9 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 
 <img src="./docs/jukdoc_completed.png" alt="Reading completion rate is 100%" width="300px">
 
-## Setup and Run Instructions
+# Setup and Run Instructions
 
-### Technology Stack Overview
+## Technology Stack Overview
 
 - Jakarta EE 10
 - Payara Micro 6 with [Payara Starter](https://start.payara.fish/)
@@ -34,7 +34,7 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 - Maven
 - Docker
 
-### Prerequisites
+## Prerequisites
 
 - Java SE 21
 - Docker
@@ -43,15 +43,15 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 - The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome on Windows and Firefox on Linux.
 - I am testing the build of this project in Windows and WSL environments.
 
-### Build
+## Build
 
-#### Clone the repository
+### Clone the repository
 
 ```shell
 git clone https://github.com/sosuisen/jukdoc-ee.git
 ```
 
-#### Build .war and Docker image
+### Build .war and Docker image
 
 Start Docker before running the following command.
 On Linux and Mac systems, please change the line endings of the mvnw file to LF.
@@ -62,7 +62,7 @@ mvnw clean package
 ```
 
 
-### Run
+## Run
 
 When you run the application, a chat app using sample data will start.
 
@@ -70,7 +70,7 @@ First, set your OpenAI API key as an environment variable named OPENAI_API_KEY.
 
 For Windows, remember to restart the terminal to apply the environment variables.
 
-#### Running in Production Mode
+### Running in Production Mode
 
 ```shell
 mvnw clean package payara-micro:start
@@ -78,7 +78,7 @@ mvnw clean package payara-micro:start
 Opening http://localhost:8080/ will display the application.
 (This URL will redirect to http://localhost:8080/jukdoc/)
 
-#### Running in Development Mode
+### Running in Development Mode
 
 Payara Starter provides a development mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
 
@@ -89,7 +89,7 @@ mvnw clean package payara-micro:dev
 ```
 As a result, the browser will automatically open, displaying the application.
 
-### Deployment
+## Deployment
 
 You can easily deploy Jukdoc application using Docker in the AWS cloud.
 How to deploy Jukdoc on AWS Elastic Beanstalk is described in the following article:
@@ -99,5 +99,6 @@ Additional Notes for This Document:
 - Starting in October 2024, to set up Auto Scaling on Elastic Beanstalk, you need to use a Launch Template. This requires adding settings in the .config files under the .ebextensions directory. In the jukdoc-ee repository, a configuration file (`.ebextensions/launch-template.config`) is already set up, so no additional changes are necessary.
 - For instances supporting jukdoc-ee, the t3.micro instance type is too small. It is recommended to use t3.small, t3.medium, or a larger instance type to ensure adequate performance.
 
-## How to Use
+# How to Use
 
+# How to Train an AI Model with Your Data
