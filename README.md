@@ -23,3 +23,25 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 
 <img src="./docs/jukdoc_completed.png" alt="Reading completion rate is 100%" width="300px">
 
+## Setup and Run Instructions
+
+### Technology Stack Overview
+
+- Jakarta EE 10
+- Payara Micro 6 with [Payara Starter](https://start.payara.fish/)
+- Maven
+- Docker
+- [LangChain4J](https://github.com/langchain4j/langchain4j) with OpenAI API
+
+### Prerequisites
+
+- Java SE 21 for building
+- Docker for deployment
+- OpenAI API key for running the AI chat
+- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome for Windows and Firefox for Linux. I primarily test in a Windows environment.
+
+### Build
+
+```shell
+git clone https://github.com/sosuisen/jukdoc-ee.git
+```
