@@ -29,19 +29,59 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 
 - Jakarta EE 10
 - Payara Micro 6 with [Payara Starter](https://start.payara.fish/)
+- [LangChain4j](https://github.com/langchain4j/langchain4j) with OpenAI API
+- Built-in H2 database
 - Maven
 - Docker
-- [LangChain4J](https://github.com/langchain4j/langchain4j) with OpenAI API
 
 ### Prerequisites
 
-- Java SE 21 for building
-- Docker for deployment
-- OpenAI API key for running the AI chat
-- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome for Windows and Firefox for Linux. I primarily test in a Windows environment.
+- Java SE 21
+- Docker
+  - Install Docker Desktop if your OS is Windows.
+- OpenAI API key
+- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome on Windows and Firefox on Linux. I primarily test in a Windows environment.
 
 ### Build
+
+#### Clone the repository
 
 ```shell
 git clone https://github.com/sosuisen/jukdoc-ee.git
 ```
+
+#### Build .war and Docker image
+
+Start Docker before running the following command.
+On Linux and Mac systems, please change the line endings of the mvnw file to LF.
+
+```shell
+cd path-to-your-jukdoc-ee-repo
+mvnw clean package
+```
+
+
+#### Run
+
+First, set your OpenAI API key as an environment variable named OPENAI_API_KEY.
+
+For Windows, remember to restart the terminal to apply the environment variables.
+
+##### Running in Production Mode
+
+```shell
+mvnw clean package payara-micro:start
+```
+Opening http://localhost:8080/ will display the application.
+(This URL will redirect to http://localhost:8080/jukdoc/)
+
+##### Running in Development Mode
+
+Payara Starter provides a development mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
+
+To run in development mode, use the following command:
+
+```shell
+mvnw clean package payara-micro:dev
+```
+As a result, the browser will automatically open, displaying the application.
