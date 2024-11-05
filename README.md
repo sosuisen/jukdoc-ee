@@ -40,7 +40,8 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 - Docker
   - Install Docker Desktop if your OS is Windows.
 - OpenAI API key
-- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome on Windows and Firefox on Linux. I primarily test in a Windows environment.
+- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome on Windows and Firefox on Linux.
+- I am testing the build of this project in Windows and WSL environments.
 
 ### Build
 
@@ -62,6 +63,8 @@ mvnw clean package
 
 
 ### Run
+
+When you run the application, a chat app using sample data will start.
 
 First, set your OpenAI API key as an environment variable named OPENAI_API_KEY.
 
@@ -97,3 +100,4 @@ Additional Notes for This Document:
 - For instances supporting jukdoc-ee, the t3.micro instance type is too small. It is recommended to use t3.small, t3.medium, or a larger instance type to ensure adequate performance.
 
 ## How to Use
+
