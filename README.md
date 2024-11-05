@@ -101,4 +101,11 @@ Additional Notes for This Document:
 
 # How to Use
 
+This app lets you explore a document through conversations with AI.
+The jukdoc-ee repository includes sample data that has already been trained for onboarding training documents for pharmaceutical sales representatives. To train the AI model with your own data, refer to [How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data).
+
 # How to Train an AI Model with Your Data
+
+- The jukdoc-ee repository includes offline tools for training the AI with your document data.
+- These tools are located in the net.sosuisen.offlineutils package (src/main/java/net/sosuisen/offlineutils/). Although offline tools are typically in separate repositories, they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
+- Utility scripts to start the offline tools are in the root directory of the jukdoc-ee repository, named run_*.sh. Change the line endings of these .sh files to LF.
