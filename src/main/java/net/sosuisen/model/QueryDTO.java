@@ -13,4 +13,6 @@ import lombok.Setter;
 public class QueryDTO {
     @NotBlank
     private String message;
+
+    private String positionTag;
 }

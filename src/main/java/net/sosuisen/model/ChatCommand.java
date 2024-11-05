@@ -16,6 +16,7 @@ public class ChatCommand {
     public enum Command {
         PROCEED_FROM_BEGINNING,
         PROCEED_FROM_UNREAD,
+        PROCEED_FROM_INDICATED_POSITION,
         PROCEED_CURRENT_TOPIC,
         REPEAT_ONLY_CURRENT_TOPIC
     }
@@ -41,6 +42,9 @@ public class ChatCommand {
                             break;
                         case "proceed_from_unread":
                             commandMap.put(key, Command.PROCEED_FROM_UNREAD);
+                            break;
+                        case "proceed_from_indicated_position":
+                            commandMap.put(key, Command.PROCEED_FROM_INDICATED_POSITION);
                             break;
                         case "proceed_current_topic":
                             commandMap.put(key, Command.PROCEED_CURRENT_TOPIC);

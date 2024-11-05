@@ -8,7 +8,23 @@
     <title>Jukdoc</title>
 </head>
 <body class="container"
-      x-data="{ paragraphs: [], history: [], suggestions: [] }"
+      x-data="{ paragraphs: [], history: [], suggestions: [],
+          scrollToBottom() { setTimeout(() => $refs.chatHistory.scrollTop = $refs.chatHistory.scrollHeight, 10) },
+          post(param) {
+              $post('/chat/query', { param, error: 'Cannot send message' })
+                   .then(res => {
+                        if(res.status == 200){
+                            this.history.pop();
+                            this.history.push(res.data);
+                            this.suggestions = res.data.suggestions;
+                            res.data.refs.forEach(refStr =>
+                                this.paragraphs.find(para => para.positionTag === refStr.split(':')[1]).read = true
+                            );
+                            this.scrollToBottom();
+                        }
+                   });
+          }
+       }"
       x-init="$get('/paragraphs', { error: 'Cannot get paragraphs' })
                  .then(res => res.status==200 ? paragraphs = res.data : null);
               $get('/chat/opening-words', { error: 'Cannot get opening words' })
@@ -29,12 +45,19 @@
     <div class="document-column">
         <h1>Original Document</h1>
 
-        <div x-data="{ markAsRead(tag) { (paragraphs.find(para => para.positionTag === tag)).read = true; } }">
+        <div x-data="{ readParagraph(tag) {
+          const param = { message: 'Read this paragraph.', positionTag: tag };
+          history.push({ speaker: 'User', message: param.message, refs: [] });
+          history.push({ speaker: 'AI', message: '...', refs: [] });
+          scrollToBottom();
+          post(param);
+         }
+        }">
             <template x-for="para in paragraphs">
                 <div :class="(para.read ? 'read' : 'unread') + ' ' + (para.header ? 'header' : 'paragraph')"
                      :id="para.positionTag">
-                    <button @click="markAsRead(para.positionTag)">MarkAsRead</button>
-                    <span x-text="para.paragraph"></span>(<span x-text="para.positionTag"></span>)
+                    <span x-text="para.paragraph"></span>
+                    <button x-show="!para.header" @click="readParagraph(para.positionTag)">Read</button>
                 </div>
             </template>
         </div>
@@ -52,13 +75,13 @@
                 <div :class="'message-rect ' + (msg.speaker === 'AI' ? 'from-ai' : 'from-user')">
                     <div class="chat-message" x-html="msg.message"></div>
                     <div class="chat-refs" x-show="msg.speaker === 'AI'">
-                    <template x-for="refStr in msg.refs">
+                        <template x-for="refStr in msg.refs">
                         <span class="ref"
-                             x-data="{ refArr: refStr.split(':') }"
-                             @click="location.href='#'+ refArr[1]; highlightElement('#' + refArr[1]);"
-                             x-text="'[*' + refArr[0] + '] ' + refArr[2]">
+                              x-data="{ refArr: refStr.split(':') }"
+                              @click="location.href='#'+ refArr[1]; highlightElement('#' + refArr[1]);"
+                              x-text="'[*' + refArr[0] + '] ' + refArr[2]">
                         </span>
-                    </template>
+                        </template>
                     </div>
                 </div>
             </template>
@@ -66,28 +89,16 @@
         <div class="chat-input-container"
              x-data="{
              param: { message: '' },
-             scrollToBottom() { setTimeout(() => $refs.chatHistory.scrollTop = $refs.chatHistory.scrollHeight, 10) },
              request() {
                     if (this.param.message.trim() === '') return;
                     history.push({ speaker: 'User', message: this.param.message, refs: [] });
                     history.push({ speaker: 'AI', message: '...', refs: [] });
-                    this.scrollToBottom();
-                    $post('/chat/query', { param: this.param, error: 'Cannot send message' })
-                    .then(res => {
-                        if(res.status == 200){
-                            history.pop();
-                            history.push(res.data);
-                            suggestions = res.data.suggestions;
-                            res.data.refs.forEach(refStr =>
-                                paragraphs.find(para => para.positionTag === refStr.split(':')[1]).read = true
-                            );
-                            this.scrollToBottom();
-                        }
-                    });
+                    scrollToBottom();
+                    post(this.param);
                     this.param.message = '';
                  }
              }"
-             >
+        >
             <form class="chat-form" @submit.prevent="request()">
                 <input type="text" x-model="param.message" class="chat-input" placeholder="Enter your message..."/>
                 <button class="send-button">Send</button>
@@ -95,7 +106,9 @@
 
             <div class="suggestions">
                 <template x-for="suggest in suggestions">
-                    <button class="suggestion-button" x-text="suggest" @click="param.message = $el.innerText; request();">What is JavaScript?</button>
+                    <button class="suggestion-button" x-text="suggest"
+                            @click="param.message = $el.innerText; request();">What is JavaScript?
+                    </button>
                 </template>
             </div>
         </div>
@@ -105,10 +118,12 @@
 
 <script type="module">
     import rest from '${mvc.basePath}/../rest.js';
+
     rest.start('${mvc.basePath}/api', '${mvc.csrf.token}');
 </script>
 <script>
     let currentHighlightHash = null;
+
     function highlightElement(hash) {
         const element = document.querySelector(hash);
         if (element) {

@@ -44,9 +44,15 @@ public class Chat {
         csrfValidator.validateCsrfToken();
 
         var query = queryObj.getMessage();
-        ChatCommand.Command command = chatCommand.get(query);
+        ChatCommand.Command command;
+        if (queryObj.getPositionTag() != null){
+            command = ChatCommand.Command.PROCEED_FROM_INDICATED_POSITION;
+        }
+        else {
+            command = chatCommand.get(query);
+        }
         if (command != null) {
-            return chatService.proceedByCommand(command, query);
+            return chatService.proceedByCommand(command, queryObj);
         }
         return chatService.proceedByPrompt(query);
     }

@@ -138,8 +138,9 @@ public class ChatService {
         }
     }
 
-    public ChatMessage proceedByCommand(ChatCommand.Command command, String query) throws SQLException {
+    public ChatMessage proceedByCommand(ChatCommand.Command command, QueryDTO queryObj) throws SQLException {
         log.debug("## command: {}", command.name());
+        var query = queryObj.getMessage();
         String answer = "";
         ParagraphDTO nextParagraph = null;
         return switch (command) {
@@ -153,6 +154,12 @@ public class ChatService {
                 var unreadParagraph = paragraphDAO.getFirstUnreadParagraph(userStatus.getUserName());
                 userStatus.setCurrentPositionTag(unreadParagraph.getPositionTag());
                 yield proceedCurrentTopic(query, staticMessage.getProceedFromUnreadParts(), unreadParagraph);
+            }
+            case PROCEED_FROM_INDICATED_POSITION -> {
+                var currentPositionTag = queryObj.getPositionTag();
+                var currentParagraph = paragraphDAO.get(currentPositionTag, userStatus.getUserName());
+                userStatus.setCurrentPositionTag(queryObj.getPositionTag());
+                yield  proceedCurrentTopic(query, "", currentParagraph);
             }
             case PROCEED_CURRENT_TOPIC -> {
                 if (userStatus.getCurrentPositionTag().isEmpty()) {
