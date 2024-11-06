@@ -8,7 +8,6 @@ import dev.langchain4j.store.embedding.EmbeddingSearchResult;
 import dev.langchain4j.store.embedding.inmemory.InMemoryEmbeddingStore;
 import jakarta.enterprise.inject.Vetoed;
 import lombok.NoArgsConstructor;
-import net.sosuisen.service.VectorStoreLoader;
 
 @Vetoed
 @NoArgsConstructor(force = true)
