@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @Getter
 @Setter
 public class UserStatus implements Serializable {
-    private ArrayList<HistoryDocument> History = new ArrayList<>();
+    private ArrayList<HistoryDocument> history = new ArrayList<>();
     private String currentPositionTag = "";
     private String userName = "";
 }

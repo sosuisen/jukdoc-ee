@@ -13,8 +13,6 @@ public class ConstraintViolationExceptionMapper implements ExceptionMapper<Const
     public record ErrorResponse(String type, List<String> errors) {
     }
 
-    ;
-
     @Override
     public Response toResponse(ConstraintViolationException exception) {
         var response = new ErrorResponse("constraint_error",

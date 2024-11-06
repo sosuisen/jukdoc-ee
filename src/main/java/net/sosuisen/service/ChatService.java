@@ -92,7 +92,7 @@ public class ChatService {
                 * Use simple HTML to format the response.
                 * You may only use <ul>, <li>, <b> tags and [*1] [*2] [*3] .. tags for references.
                 * Do not respond in Markdown format.
-
+                
                 %s
                 * If you place a reference mark, it must be immediately after each sentence. Placing all reference marks at the end of all your answers is not a good method.
                 
@@ -162,7 +162,7 @@ public class ChatService {
                 var currentPositionTag = queryObj.getPositionTag();
                 var currentParagraph = paragraphDAO.get(currentPositionTag, userStatus.getUserName());
                 userStatus.setCurrentPositionTag(queryObj.getPositionTag());
-                yield  proceedCurrentTopic(query, "", currentParagraph);
+                yield proceedCurrentTopic(query, "", currentParagraph);
             }
             case PROCEED_CURRENT_TOPIC -> {
                 if (userStatus.getCurrentPositionTag().isEmpty()) {

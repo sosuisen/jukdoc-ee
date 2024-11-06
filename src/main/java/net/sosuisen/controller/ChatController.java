@@ -8,7 +8,6 @@ import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import net.sosuisen.model.ReadingRecordDAO;
 import net.sosuisen.model.UserStatus;
 
 import java.util.UUID;
@@ -21,7 +20,6 @@ import java.util.UUID;
 public class ChatController {
     private final Models models;
     private final UserStatus userStatus;
-    private final ReadingRecordDAO readingRecordDAO;
 
     @GET
     public String home() {

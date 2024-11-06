@@ -45,10 +45,9 @@ public class Chat {
 
         var query = queryObj.getMessage();
         ChatCommand.Command command;
-        if (queryObj.getPositionTag() != null){
+        if (queryObj.getPositionTag() != null) {
             command = ChatCommand.Command.PROCEED_FROM_INDICATED_POSITION;
-        }
-        else {
+        } else {
             command = chatCommand.get(query);
         }
         if (command != null) {

@@ -46,15 +46,15 @@ body {
     margin-left: 15px;
 }
 
-.title-area .reading-completion-rate{
+.title-area .reading-completion-rate {
     font-size: 18px;
     font-weight: normal;
 }
 
-.title-area .reading-completion-rate .rate-title{
+.title-area .reading-completion-rate .rate-title {
 }
 
-.title-area .reading-completion-rate .rate-value{
+.title-area .reading-completion-rate .rate-value {
     color: #76ff03;
 }
 
@@ -88,7 +88,7 @@ body {
     overflow: hidden;
 }
 
-.document-column{
+.document-column {
     width: 50%;
     background-color: #f5f5f5;
     padding: 20px;
@@ -121,7 +121,7 @@ body {
     background-color: #fafafa;
 }
 
-.chat-form{
+.chat-form {
     display: flex;
     align-items: center;
     flex-shrink: 0;
