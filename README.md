@@ -211,7 +211,7 @@ Below are two examples of blocks. A block consists of a metadata section enclose
 ```
 The metadata section is divided into three parts by colons (`:`). 
 - The first part is the ID of this block, called the **position_tag**. 
-- The second part is a human-readable name indicating where this basic block belongs, called the **position_name**.
+- The second part is a human-readable name indicating where this block belongs, called the **position_name**.
 - The third part is the title of that section, called the **section_title**.
 
 The **position_tag** (or positionTag) is frequently used in Jukdoc to reference blocks. It is made up of four parts separated by _, labeled as h1, h2, h3, and p. Each label is followed by a three-digit number starting from 000; a value of 000 indicates that this label is not present.
@@ -220,7 +220,7 @@ The **position_tag** (or positionTag) is frequently used in Jukdoc to reference 
 - `h1-001_h2-001_h3-000_p-000` indicates that this block belongs to the first h1 and the first h2. The main content of this block is the section title.
 - `h1-001_h2-001_h3-003_p-002` shows that this block is part of the first h1, first h2, third h3, and the second paragraph. The main content of this block is a paragraph.
 
-(Currently, the position_tag supports levels only up to h3, which limits flexibility; we aim to improve this in the future.)
+(Currently, the position_tag supports levels only up to h3, which limits flexibility; I aim to improve this in the future.)
 
 - The following process uses `structured_paragraph.txt`.
 
@@ -305,14 +305,14 @@ The remaining scripts, `run_retrieve_paragraph.sh` and `run_retrieve_qa.sh`, are
 - Payara Micro 6
   - Embedded H2 Database: Payara Micro has a built-in H2 database enabled by default. Since Jukdoc is a proof-of-concept app, this setup allows for simple execution and deployment without the need for an external database.
 - Payara Starter
-  - Supports development with hot reload and Docker image building.
+  - Generates pom.xml with hot reload and Docker image building.
 
 ## Third-party Libraries
 
 - WebJars
   - Used to manage front-end libraries with Maven.
     - Axios: An HTTP client for the browser.
-    - Alpine.js: A lightweight front-end framework for creating Single Page Application(SPA) combined with JSP.
+    - Alpine.js: A lightweight front-end framework for creating SPA combined with JSP.
 - LangChain4j
   - For low-level AI API processing.
   - Embedding Stores for RAG.
@@ -387,7 +387,7 @@ The `net.sosuisen` package contains 7 sub-packages for the Jukdoc web applicatio
 
 Contains classes related to online AI processing.
 
-In Jukdoc, frequently used AI services are made accessible to the application logic through a CDI Producer. Adjustable parameters for these services can be specified using annotations. Since AI service development often involves frequent parameter adjustments, using declarative annotations for these specifications makes changes easier and more understandable.
+In Jukdoc, frequently used AI services are made accessible to application logic through CDI Producers, with adjustable parameters specified via annotations. Because AI service development often requires frequent parameter adjustments, using declarative annotations simplifies modifications and improves clarity.
 
 - `net.sosuisen.ai.annotation`
   - Contains annotations for AI processing.
@@ -450,7 +450,7 @@ A data class that stores data retrieved from the EmbeddingStore.
 
 A data class that stores conversation history between a user and the AI.
 
-The history field in the `net.sosuisen.model.UserStatus` class records each user’s reading history as a list of HistoryDocument objects.
+The `history` field in the `net.sosuisen.model.UserStatus` class records each user’s reading history as a list of HistoryDocument objects.
  
 - `query`: The user’s question.
 - `answer`: The AI’s response.
@@ -535,7 +535,7 @@ This package centralizes application logic that communicates with external servi
 
 This class provides a chat service that generates responses to user questions.
 
-Jukdoc’s conversational strategy combines AI Chat Processing using RAG (Retrieval-Augmented Generation) with a traditional chatbot approach.
+Jukdoc’s conversational strategy combines AI Chat Processing using RAG with a traditional chatbot approach.
 
 ### *AI Chat Processing* in ChatService
 
@@ -610,7 +610,7 @@ Like ParagraphService and QAService, it injects EmbeddingSearchService. The sugg
 
 ## Overview of the Frontend
 
-The frontend of Jukdoc is a single-page application (SPA) built with Jakarta MVC and Alpine.js.
+The frontend of Jukdoc is a SPA built with Jakarta MVC and Alpine.js.
 This section provides a high-level summary.
 
 ### src/main/webapp/rest.js
@@ -627,7 +627,7 @@ Since Alpine.js keeps the HTML structure intact, understanding the layout is str
 
 REST calls are made using the `$post()`, `$get()`, and `$delete()` functions.
 
-Responses from the backend are reflected reactively in the HTML display.
+Responses from the backend are reflected reactively in the HTML.
 
 This setup allows for seamless integration between REST API responses and Alpine.js updates in the user interface.
 
@@ -650,7 +650,7 @@ Additionally, AI parameter tuning is often necessary to achieve optimal results,
 
 ## Use of AI Library
 
-Jukdoc’s conversation strategy combines RAG (Retrieval-Augmented Generation) with a traditional chatbot approach. This is because Jukdoc’s goal is not just partial document QA, but rather reading through the entire document, which requires strict management of conversation order and history.
+Jukdoc’s conversation strategy combines RAG with a traditional chatbot approach. This is because Jukdoc’s goal is not just partial document QA, but rather reading through the entire document, which requires strict management of conversation order and history.
 
 The AI library used is LangChain4j, which provides high-level APIs (AiServices) and low-level APIs. Since Jukdoc requires fine optimization, the low-level API was selected. Jukdoc manages chat memory within the app and occasionally uses a traditional chatbot to maintain conversations.
 
@@ -682,7 +682,7 @@ The name "Jukdoc" comes from the Japanese word “熟読” (juku doku), meaning
 - The background color of read paragraphs is always orange; it would be more helpful if the color darkened each time a paragraph is referenced.
 - Implement server-side AI training on uploaded documents for increased convenience.
 
-## Infrastructure
+## Infrastructure Improvements:
 
 - Production data storage could benefit from external services like S3, instead of the `src/main/resources` directory.
 - An external database is recommended for production use, replacing the built-in H2 database used in this test setup.
