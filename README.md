@@ -618,8 +618,62 @@ This setup allows for seamless integration between REST API responses and Alpine
 
 # AI concepts integrated with Java and Jakarta EE
 
+## Adopted AI Approaches
+
+Jukdoc enhances an interactive web app built with Jakarta MVC and Jakarta REST using AI. The AI approaches used are as follows:
+
+- (a) Automatic generation of QA pairs from plain text using Generative AI.
+- (b) Document retrieval using Embedding Stores (Vector Stores) for related content.
+- (c) Conversation generation based on chat history, search results, and Generative AI.
+
+Of these, (a) is an offline process, while (b) and (c) are online processes.
+
+In Jukdoc, these AI services are used multiple times within the web app, so they are provided as services through CDI Producers, allowing for injection where needed in the application logic. This setup also makes it easy to configure different parameters for each area of logic that utilizes the service.
+
+Additionally, AI parameter tuning is often necessary to achieve optimal results, so parameters are set based on annotations. This declarative approach using annotations simplifies the tuning process.
+
+## Use of AI Library
+
+Jukdoc’s conversation strategy combines RAG (Retrieval-Augmented Generation) with a traditional chatbot approach. This is because Jukdoc’s goal is not just partial document QA, but rather reading through the entire document, which requires strict management of conversation order and history.
+
+The AI library used is LangChain4j, which provides high-level APIs (AiServices) and low-level APIs. Since Jukdoc requires fine optimization, the low-level API was selected. Jukdoc manages chat memory within the app and occasionally uses a traditional chatbot to maintain conversations.
+
+## Offline Use
+
+AI use is divided into offline training and online usage.
+
+While the offline tools could ideally be a separate project, they are included in the same jukdoc-ee repository for ease of distribution and documentation. The pom.xml configuration excludes them from the .war file.
+
+These tools were initially developed in Python and later ported to Java. Writing parsers and handling string processing was straightforward in Java. Additionally, using exec-maven-plugin allowed for command-line execution of the Maven project in a Python-like manner, making it convenient.
 
 
-# Use Cases
+# Use Cases and Related Works
+
+The primary purpose of Jukdoc is onboarding training. In this context, users are often required to review specific documents thoroughly.
+
+The motivation behind developing Jukdoc stemmed from dissatisfaction with existing RAG approaches. I once tried reading a philosophy book using RAG. Although I gained a lot of knowledge from it, one major question remained: I couldn’t tell what percentage of the book I had actually read. RAG provided answers by utilizing not only the original book but also the vast online knowledge within the LLM. As a result, I didn’t know exactly what and how much of the original book I had covered. Wanting an answer to this led me to create Jukdoc.
+
+Google NotebookLM employs a similar approach to Jukdoc, but it doesn’t seem focused on tracking what’s been read.
+
+With Jukdoc, you can rely on AI to help you read a specific book and track your progress. It enables you to work with AI to know exactly which parts of the book you’ve read. Jukdoc is ideal for thoroughly reading a single book and could also assist in learning from textbooks at both high school and university levels.
+
+The name "Jukdoc" comes from the Japanese word “熟読” (juku doku), meaning “thorough reading.”
 
 # Future Work
+
+## Usability
+
+- The background color of read paragraphs is always orange; it would be more helpful if the color darkened each time a paragraph is referenced.
+- Although AI training is processed offline, it would be more convenient if user-uploaded documents could be processed directly on the server.
+
+## Infrastructure
+
+- As this is a proof-of-concept app, serialized data has been placed in the resources directory. However, storing it on an external service like S3 would be better for production.
+- The built-in H2 database was used for simplicity in this test; in a real deployment, an external cloud database would be more appropriate.
+
+
+# Conclusion
+
+This project serves as a proof of concept to explore how AI can help us live better lives. Feedback and comments are welcome!
+
+Hidekazu Kubota
