@@ -2,6 +2,9 @@
 
 Jukdoc is an onboarding training app supported by AI.
 
+You can access the online demo site from the following URL:
+https://scrapbox.io/jukdoc/Jukdoc_Site
+
 # Project Overview
 
 In the onboarding training, you typically need to study job-related documents, such as:
@@ -377,6 +380,7 @@ In Jukdoc, frequently used AI services are made accessible to the application lo
   - Jukdoc includes the AssistantService class, which provides a chat service, and the EmbeddingSearchService class, which offers search services using the EmbeddingStore.
   - These services are made accessible to the application logic through CDI Producers.
   - The management of OpenAI API models is handled by this package.
+  - The `VectorStoreLoader` class loads pre-trained AI data, serialized as JSON files, into the `InMemoryEmbeddingStore`.
 
 ### net.sosuisen.controller
 
@@ -470,6 +474,43 @@ This package are for offline tools used to generate AI training data.
 - I originally developed these offline tools in Python but later ported them to Java. Writing parsers and handling string processing in Java was straightforward. To enable the same experience as Python command-line tools, I used the exec-maven-plugin to execute them from run_*.sh scripts.
 
 ### net.sosuisen.resources
+
+This package contains Resource classes for Jakarta REST, providing APIs for chat and document-related interactions. 
+
+#### Chat
+
+API for Chat Functions
+
+- **GET /api/chat/opening-words**
+  - Returns messages stored in opening_words.txt, which can be used as introductory chat messages.
+
+- **POST /api/chat/query**
+  - Responds to user questions, using one of three conversation strategies:
+    1. **PROCEED_FROM_INDICATED_POSITION:** If the user specifies a particular position_tag, the conversation is generated from that point.
+    2. **Command Execution:** If the question matches an entry in commands.txt, the corresponding command is executed.
+    3. **AI Chat Processing:** If the question doesn’t match any command, an AI-driven chat process is initiated.
+
+The handling of commands and AI processing is delegated to the 
+`net.sosuisen.service.ChatService` class (injected with @Inject),
+allowing the `net.sosuisen.resources.Chat` class to focus on endpoint management.
+
+#### Document
+
+API for Document Management
+
+- **GET /api/document**
+  - Retrieves and returns all blocks, mainly for displaying in the Document Area.
+
+- **DELETE /api/document/reading-record**
+  - Deletes all reading records, triggered when the "Delete All Records" button is pressed.
+
+### net.sosuisen.security
+
+#### CsrfValidator
+
+This class provides CSRF token validation for classes in the `net.sosuisen.resources` package, ensuring secure communication.
+
+### net.sosuisen.service
 
 
 
