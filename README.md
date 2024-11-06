@@ -61,7 +61,6 @@ cd path-to-your-jukdoc-ee-repo
 mvnw clean package
 ```
 
-
 ## Run
 
 When you run the application, a chat app using sample data will start.
@@ -75,6 +74,7 @@ For Windows, remember to restart the terminal to apply the environment variables
 ```shell
 mvnw clean package payara-micro:start
 ```
+
 Opening http://localhost:8080/ will display the application.
 (This URL will redirect to http://localhost:8080/jukdoc/)
 
@@ -87,6 +87,7 @@ To run in development mode, use the following command:
 ```shell
 mvnw clean package payara-micro:dev
 ```
+
 As a result, the browser will automatically open, displaying the application.
 
 ## Deployment
@@ -96,6 +97,7 @@ How to deploy Jukdoc on AWS Elastic Beanstalk is described in the following arti
 https://www.payara.fish/resource/using-payara-platform-with-docker-on-amazon-aws/
 
 Additional Notes for This Article:
+
 - Starting in October 2024, to set up Auto Scaling on Elastic Beanstalk, you need to use a Launch Template. This requires adding settings in the .config files under the .ebextensions directory. In the jukdoc-ee repository, a configuration file (`.ebextensions/launch-template.config`) is already set up, so no additional changes are necessary.
 - For instances supporting jukdoc-ee, the t3.micro instance type is too small. It is recommended to use t3.small, t3.medium, or a larger instance type to ensure adequate performance.
 
@@ -139,7 +141,7 @@ On the right side is the chat area, which you’ll use the most.
 <img src="./docs/chat_area.png" alt="Chat Area" width="200px">
 
 ## Suggested Questions Area
- 
+
 - At the bottom of the chat area, suggested questions are displayed.
 - If there are questions related to the AI’s last response, up to two suggestions will automatically appear here.
 - You can also move to the next paragraph by selecting "Move on to the next topic."
@@ -153,6 +155,110 @@ On the right side is the chat area, which you’ll use the most.
 - These tools are located in the net.sosuisen.offlineutils package (src/main/java/net/sosuisen/offlineutils/). Although offline tools are typically in separate repositories, they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
 - Utility scripts to start the offline tools are in the root directory of the jukdoc-ee repository, named run_*.sh. Change the line endings of these .sh files to LF.
 
+## Build
+
+First, build the offline tools.
+
+```shell
+mvnw clean package
+```
+
+## Parse Markdown file
+
+Next, run the following command to train the AI model with your document data.
+
+In the jukdoc-ee repository, the sample_en.md file is used as an example.
+Replace this file with your own file.
+
+The parser can handle a Markdown file structured by h1(#), h2(##), and h3(###) marks.
+
+```shell
+  run_markdown_parser.sh ./sample/sample_en.md
+```
+
+It will output the parsed data into the ./src/main/resources/structured_paragraph.txt
+
+Markdown files are divided by headers and paragraphs and recorded in structured_paragraph.txt, with each entry on a new line. In the Jukdoc project, each line is treated as a single block.
+
+Below are two examples of blocks. A block consists of a metadata section enclosed in {}, followed by the main content, which starts after a space.
+
+```
+{h1-001_h2-001_h3-000_p-000:Section 1.1:Basic Role of Pharmaceutical Sales} 1.1 Basic Role of Pharmaceutical Sales
+{h1-001_h2-001_h3-003_p-002:Section 1.1.3:Practicing Ethical Sales Activities} The role of pharmaceutical sales representatives comes with the significant responsibility of supporting optimal treatment for patients through trust with healthcare professionals. By fulfilling this responsibility, appropriate use of pharmaceuticals is promoted, contributing to the improvement of patients' health and quality of life.
+```
+The metadata section is divided into three parts by colons (`:`). 
+- The first part is the ID of this block, called the **position_tag**. 
+- The second part is a human-readable name indicating where this basic block belongs, called the **position_name**.
+- The third part is the title of that section, called the **section_title**.
+
+The **position_tag** (or positionTag) is frequently used in Jukdoc to reference blocks. It is made up of four parts separated by _, labeled as h1, h2, h3, and p. Each label is followed by a three-digit number starting from 000; a value of 000 indicates that this label is not present.
+
+**Example:**
+- `h1-001_h2-001_h3-000_p-000` indicates that this block belongs to the first h1 and the first h2. The main content of this block is the section title.
+- `h1-001_h2-001_h3-003_p-002` shows that this block is part of the first h1, first h2, third h3, and the second paragraph. The main content of this block is a paragraph.
+
+(Currently, the position_tag supports levels only up to h3, which limits flexibility; we aim to improve this in the future.)
+
+- The following process uses `structured_paragraph.txt`.
+
+## Building the Paragraph Store
+
+An embedding store is built to enable paragraph searches.
+
+This process requires the environment variable `OPENAI_API_KEY`.
+
+```shell
+  run_create_paragraph_store.sh
+```
+- The content of each block in `structured_paragraph.txt` is extracted to build the Embedding Store, 
+using the OpenAI API and LangChain4j.
+- Metadata (**position_tag**, **position_name**, and **section_title**) is also stored with the embedding.
+- The created Embedding Store is serialized as `paragraph_store.json` and saved under `./src/main/resources/`.
+
+## Building the QA Store
+
+Another embedding store is built to enable question-answering.
+
+This process requires the environment variable `OPENAI_API_KEY`.
+
+First, delete qa.txt in ./src/main/resources/. 
+```shell
+  rm ./src/main/resources/qa.txt
+  run_create_qa_store.sh
+```
+
+- In Jukdoc, two Embedding Stores are used for RAG (Retrieval-Augmented Generation). 
+  - The QA Store holds Q&A pairs designed to accurately answer user questions.
+  - The Paragraph Store supports questions that are not addressed in the QA Store.
+- run_create_qa_store.sh generates Q&A pairs using ChatGPT based on the text in structured_paragraph.txt. The pairs are saved temporarily as qa.txt under ./src/main/resources/.
+- The script then loads qa.txt to build the Embedding Store. Questions are used to build embeddings, and metadata includes the original block’s metadata (**position_tag**, **position_name**, and **section_title**) and the answer data.
+- The created Embedding Store is serialized as `qa_store.json` and saved under `./src/main/resources/`.
+- qa.txt file is cached. If you recreate structured_paragraph.txt, please manually delete qa.txt.
+
+## Creating Summaries
+
+To ensure quick responses and reduce API costs, each block is summarized offline by calling the OpenAI API. 
+
+```shell
+  run_create_summary.sh
+```
+- The summary includes an introductory sentence and bullet points for easy reading.
+- In Jukdoc, when a user requests an explanation of each paragraph, this summary is used.
+- The summary is saved as `summary.txt` under `./src/main/resources/`.
+
+## Brief Description
+
+Steps for offline training:
+
+- Prepare your Markdown file.
+- `./run_markdown_parser.sh path-to-your-file.md`
+- `./run_create_paragraph_store.sh`
+- `rm ./src/main/resources/qa.txt`
+- `./run_create_qa_store.sh`
+- `./run_create_summary.sh`
+
+The remaining scripts, `run_retrieve_paragraph.sh` and `run_retrieve_qa.sh`, are small programs for testing the EmbeddingStore. Their use is optional.
+
 # Technology Details
 
 ## Used Jakarta EE Stack
@@ -160,9 +266,10 @@ On the right side is the chat area, which you’ll use the most.
 - Jakarta EE 10
 - Jakarta Contexts and Dependency Injection (CDI)
   - Utilizes a CDI producer to make the AI service available across multiple modules in the app.
-  - CDI is also employed for dependency injection in various parts of the app.
+  - CDI is also used for session management and dependency injection in various parts of the app.
 - Jakarta MVC
   - This application is a single-page application (SPA). A skeleton HTML layout is created using MVC and JSP.
+    This time, since the skeleton is very simple, there is no need to use a template engine more advanced than JSP.
   - Jakarta MVC is also used to generate CSRF tokens.
   - Although Jukdoc currently does not have a login feature, adding a login form or user management panel in the future can be easily accomplished with Jakarta MVC.
 - Jakarta REST
@@ -171,9 +278,10 @@ On the right side is the chat area, which you’ll use the most.
   - Used for input validation on the back end.
 
 ## Used Payara Stack
+
 - Payara Micro 6
   - Embedded H2 Database: Payara Micro has a built-in H2 database enabled by default. Since Jukdoc is a proof-of-concept app, this setup allows for simple execution and deployment without the need for an external database.
-- Payara Starter 
+- Payara Starter
   - Supports development with hot reload and Docker image building.
 
 ## Third-party Libraries
