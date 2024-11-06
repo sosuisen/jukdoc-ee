@@ -3,6 +3,7 @@
 Jukdoc is an onboarding training app supported by AI.
 
 You can access the online demo site from the following URL:
+
 https://scrapbox.io/jukdoc/Jukdoc_Site
 
 # Project Overview
@@ -512,9 +513,112 @@ This class provides CSRF token validation for classes in the `net.sosuisen.resou
 
 ### net.sosuisen.service
 
+This package centralizes application logic that communicates with external services, specifically the OpenAI API in the Jukdoc application.
+
+#### ChatService
+
+This class provides a chat service that generates responses to user questions.
+
+Jukdoc’s conversational strategy combines AI Chat Processing using RAG (Retrieval-Augmented Generation) with a traditional chatbot approach.
+
+#### *AI Chat Processing* in ChatService
+
+- `proceedByPrompt` Method
+  - AI Chat Processing with RAG is handled by the `proceedByPrompt` method.
+  - Jukdoc uses LangChain4j as the AI library, and due to the unique QA approach in Jukdoc, lower-level APIs are used.
+  - The `proceedByPrompt` method retrieves documents relevant to the user question using the `retrieveDocuments` method.
+  - If the question is too short or contains anaphora that could hinder accurate search results, it retrieves related documents from conversation history instead.
+  - The retrieved documents (`retrievalDocs`) and the user question are then passed to the `promptToAI` method to initiate RAG.
+- `retrieveDocuments` Method
+  - This method delegates document retrieval to the ParagraphService and QAService classes (details covered below).
+  - It merges the search results from the QA Store and Paragraph Store and returns them sorted by relevance score.
+- `promptToAI` Method
+  - This method sends prompts to the AI.
+  - It calls the `getPrompt` method to generate the prompt.
+  - The response generation process utilizes the injected `net.sosuisen.ai.service.AssistantService`.
+  - The generated answer includes references such as [*1][*2], which point to referenced documents. Each document is a block identified by a position_tag in Jukdoc. This reference information is then formatted for frontend use and stored in a ChatMessage object.
+  - The conversation history is saved in the history of the UserStatus object.
+  - If reference information is present, the currentPositionTag in UserStatus is updated to point to the relevant position_tag.
+  - Reading history is recorded in the database’s `reading_record` table.
+  - The `suggest` method of `net.sosuisen.service.SuggestService` is called to suggest related questions based on the generated response.
+  - Finally, a ChatMessage object is created and returned as the response for the frontend.
+- `getPrompt` Method
+  - The main features of the prompt Jukdoc sends to the AI include:
+    - Conversation history with the user.
+    - Retrieved documents.
+    - Reference markers [*1][*2] are included if the response is based on the retrieved documents.
+
+#### *Traditional Chatbot Approach* in ChatService
+
+Jukdoc also uses a traditional chatbot approach due to its unique strategy of reading the next paragraph or jumping to unread paragraphs.
+
+- `proceedByCommand` Method
+  - If a user question corresponds to a predefined command, the `proceedByCommand` method executes.
+
+Five commands are defined:
+  - **PROCEED_FROM_BEGINNING:** 
+    - Answers the first paragraph of the target document, using the paragraph’s summary.
+
+  - **PROCEED_FROM_UNREAD:**
+    - Answers the first unread paragraph of the target document, using the paragraph’s summary.
+
+  - **PROCEED_FROM_INDICATED_POSITION:**
+    - Answers a specified paragraph, using the paragraph’s summary.
+
+  - **PROCEED_CURRENT_TOPIC:**
+    - Answers the paragraph following the currently specified paragraph in `UserStatus.currentPositionTag`, using its summary.
+
+  - **REPEAT_ONLY_CURRENT_TOPIC:**
+    - Re-answers the current paragraph, calling `promptToAI` method to process the question again.
+
+#### ParagraphService
+
+This service provides paragraph search functionality using EmbeddingStore. 
+
+The search functionality uses an injected EmbeddingSearchService, with parameters such as the serialized JSON filename of training data, search result limit, and threshold specified via annotations.
+
+#### QAService
+
+This service provides QA search functionality using EmbeddingStore. 
+
+The search functionality uses an injected EmbeddingSearchService, with parameters for the serialized JSON filename and result limit specified via annotations.
+
+These parameters differ from those in ParagraphService.
+
+#### SuggestService
+
+This service provides a search for questions similar to a specified sentence using EmbeddingStore.
+
+Like ParagraphService and QAService, it injects EmbeddingSearchService. The suggest method returns four question suggestions: two questions similar to the AI-generated answer and two default questions ("Move on to the next topic." and "Read the unread parts.").
+
+
+## Overview of the Frontend
+
+The frontend of Jukdoc is a single-page application (SPA) built with Jakarta MVC and Alpine.js.
+This section provides a high-level summary.
+
+### src/main/webapp/rest.js
+
+This is a REST utility code developed for Alpine.js.
+
+It simplifies the process of calling REST APIs, receiving results, and handling errors.
+
+### src/main/webapp/WEB-INF/views/index.jsp
+
+This file contains HTML elements with embedded Alpine.js tags and attributes.
+
+Since Alpine.js keeps the HTML structure intact, understanding the layout is straightforward.
+
+REST calls are made using the `$post()`, `$get()`, and `$delete()` functions.
+
+Responses from the backend are reflected reactively in the HTML display.
+
+This setup allows for seamless integration between REST API responses and Alpine.js updates in the user interface.
 
 
 # AI concepts integrated with Java and Jakarta EE
+
+
 
 # Use Cases
 
