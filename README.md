@@ -367,7 +367,7 @@ Contains data for the Jakarta MVC View module.
 
 The `net.sosuisen` package contains 7 sub-packages for the Jukdoc web application and 1 sub-package for offline utilities.
 
-### net.sosuisen.ai
+## net.sosuisen.ai
 
 Contains classes related to online AI processing.
 
@@ -383,28 +383,28 @@ In Jukdoc, frequently used AI services are made accessible to the application lo
   - The management of OpenAI API models is handled by this package.
   - The `VectorStoreLoader` class loads pre-trained AI data, serialized as JSON files, into the `InMemoryEmbeddingStore`.
 
-### net.sosuisen.controller
+## net.sosuisen.controller
 
 This package contains only the ChatController class, which serves as a controller for Jakarta MVC.
 - ChatController is a simple controller that renders index.jsp when the context root is accessed.
 - If a username does not exist in the session at that time, it generates a UUID and sets it as the username in the session.
 - This session is managed by the `net.sosuisen.model.UserStatus` class, which has a CDI session scope.
 
-### net.sosuisen.exceptions
+## net.sosuisen.exceptions
 
 This package contains only the ConstraintViolationExceptionMapper class, which handles errors from Jakarta Bean Validation.
 
-### net.sosuisen.model
+## net.sosuisen.model
 
 This package contains Jakarta MVC and Jakarta REST model classes.
 
-#### ChatCommand
+### ChatCommand
 
 Jukdoc’s conversation strategy combines a Large Language Model (LLM) with a traditional chatbot. This combination is necessary because LLMs alone aren’t sufficient for Jukdoc’s specific task, which requires a thorough reading of a single document.
 - The ChatCommand class defines five commands related to the chatbot’s conversation strategy. These commands are mapped to user inputs based on the command.txt file, which is created by a human.
 - These commands are used in the conversation generation process within `net.sosuisen.service.ChatService`.
 
-#### ChatMessage
+### ChatMessage
 
 This is a data class used to send AI responses from the backend to the frontend.
 
@@ -413,7 +413,7 @@ This is a data class used to send AI responses from the backend to the frontend.
 - `refs`: A list of referenced blocks
 - `suggestions`: A list of related questions
 
-#### DatabaseSetup
+### DatabaseSetup
 
 onStart() is called only once when starting the Jukdoc application.
 This setup creates and initializes two tables in the built-in H2 database.
@@ -425,12 +425,12 @@ This setup creates and initializes two tables in the built-in H2 database.
 
 This built-in database is temporary, created by Payara Micro, and all data is deleted when the application shuts down.
 
-#### Document
+### Document
 
 A data class that stores data retrieved from the EmbeddingStore.
 - The `type` field indicates whether the data comes from the QA Store ("qa") or the Paragraph Store ("paragraph").
 
-#### HistoryDocument
+### HistoryDocument
 
 A data class that stores conversation history between a user and the AI.
 
@@ -440,25 +440,25 @@ The history field in the `net.sosuisen.model.UserStatus` class records each user
 - `answer`: The AI’s response.
 - `referredDocs`: A list of Document objects used to generate the answer.
 
-#### ParagraphDAO and ParagraphDTO
+### ParagraphDAO and ParagraphDTO
 
 These are used to access information related to paragraphs. 
 
 By joining `paragraph` table with the `reading_record` table, it can also add information on whether the user has read a paragraph (`isRead` field).
 
-#### QueryDTO
+### QueryDTO
 
 A DTO that stores questions from users.
 
-#### ReadingRecordDAO
+### ReadingRecordDAO
 
 The DAO for the `reading_record` table.
 
-#### StaticMessage
+### StaticMessage
 
 A class for handling static messages.
 
-#### UserStatus
+### UserStatus
 
 A session-scoped class for handling user information.
 
@@ -466,7 +466,7 @@ A session-scoped class for handling user information.
 - `currentPositionTag`: The position_tag of the paragraph that is the current topic of discussion between the user and AI.
 - `userName`: UUIDv4 generated for each user.
 
-### net.sosuisen.offlineutils
+## net.sosuisen.offlineutils
 
 This package are for offline tools used to generate AI training data.
 
@@ -474,11 +474,11 @@ This package are for offline tools used to generate AI training data.
 - For usage details, refer to [How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data).
 - I originally developed these offline tools in Python but later ported them to Java. Writing parsers and handling string processing in Java was straightforward. To enable the same experience as Python command-line tools, I used the exec-maven-plugin to execute them from run_*.sh scripts.
 
-### net.sosuisen.resources
+## net.sosuisen.resources
 
 This package contains Resource classes for Jakarta REST, providing APIs for chat and document-related interactions. 
 
-#### Chat
+### Chat
 
 API for Chat Functions
 
@@ -495,7 +495,7 @@ The handling of commands and AI processing is delegated to the
 `net.sosuisen.service.ChatService` class (injected with @Inject),
 allowing the `net.sosuisen.resources.Chat` class to focus on endpoint management.
 
-#### Document
+### Document
 
 API for Document Management
 
@@ -505,23 +505,23 @@ API for Document Management
 - **DELETE /api/document/reading-record**
   - Deletes all reading records, triggered when the "Delete All Records" button is pressed.
 
-### net.sosuisen.security
+## net.sosuisen.security
 
-#### CsrfValidator
+### CsrfValidator
 
 This class provides CSRF token validation for classes in the `net.sosuisen.resources` package, ensuring secure communication.
 
-### net.sosuisen.service
+## net.sosuisen.service
 
 This package centralizes application logic that communicates with external services, specifically the OpenAI API in the Jukdoc application.
 
-#### ChatService
+### ChatService
 
 This class provides a chat service that generates responses to user questions.
 
 Jukdoc’s conversational strategy combines AI Chat Processing using RAG (Retrieval-Augmented Generation) with a traditional chatbot approach.
 
-#### *AI Chat Processing* in ChatService
+### *AI Chat Processing* in ChatService
 
 - `proceedByPrompt` Method
   - AI Chat Processing with RAG is handled by the `proceedByPrompt` method.
@@ -548,7 +548,7 @@ Jukdoc’s conversational strategy combines AI Chat Processing using RAG (Retrie
     - Retrieved documents.
     - Reference markers [*1][*2] are included if the response is based on the retrieved documents.
 
-#### *Traditional Chatbot Approach* in ChatService
+### *Traditional Chatbot Approach* in ChatService
 
 Jukdoc also uses a traditional chatbot approach due to its unique strategy of reading the next paragraph or jumping to unread paragraphs.
 
@@ -571,13 +571,13 @@ Five commands are defined:
   - **REPEAT_ONLY_CURRENT_TOPIC:**
     - Re-answers the current paragraph, calling `promptToAI` method to process the question again.
 
-#### ParagraphService
+### ParagraphService
 
 This service provides paragraph search functionality using EmbeddingStore. 
 
 The search functionality uses an injected EmbeddingSearchService, with parameters such as the serialized JSON filename of training data, search result limit, and threshold specified via annotations.
 
-#### QAService
+### QAService
 
 This service provides QA search functionality using EmbeddingStore. 
 
@@ -585,7 +585,7 @@ The search functionality uses an injected EmbeddingSearchService, with parameter
 
 These parameters differ from those in ParagraphService.
 
-#### SuggestService
+### SuggestService
 
 This service provides a search for questions similar to a specified sentence using EmbeddingStore.
 
