@@ -116,7 +116,7 @@ At the top is the header section.
 
 - In the center, your completion rate for the document is displayed. Aim for 100% completion; it starts at 0%.
 - On the far right, your username is shown. This username is automatically generated when you visit the site and is saved for the session, so it remains the same when you return.
-  - However, if the server is restarted, the session will be lost, and your username will change.
+- However, when the server is restarted, the database content and session will be lost. Your username will change, and your completion rate will reset to 0%.
 - Below your username is the "Delete All Records" button. Pressing this deletes your reading history, resetting your completion rate to 0%.
 
 <img src="./docs/header_area.png" alt="Header Area" width="700px">
@@ -355,11 +355,17 @@ Contains data for the Jakarta MVC View module.
 
 ## net.sosuisen package
 
+- The Jukdoc web application is built using a combination of Jakarta MVC and Jakarta REST.
+
+- The MyApplication class extends the base jakarta.ws.rs.core.Application class, and CSRF settings for Jakarta MVC are also configured in this class.
+
+- The Constants class defines regular expressions that are commonly used throughout the application.
+
 The `net.sosuisen` package contains 7 sub-packages for the Jukdoc web application and 1 sub-package for offline utilities.
 
 ### net.sosuisen.ai
 
-Contains classes related to AI processing.
+Contains classes related to online AI processing.
 
 In Jukdoc, frequently used AI services are made accessible to the application logic through a CDI Producer. Adjustable parameters for these services can be specified using annotations. Since AI service development often involves frequent parameter adjustments, using declarative annotations for these specifications makes changes easier and more understandable.
 
@@ -371,6 +377,99 @@ In Jukdoc, frequently used AI services are made accessible to the application lo
   - Jukdoc includes the AssistantService class, which provides a chat service, and the EmbeddingSearchService class, which offers search services using the EmbeddingStore.
   - These services are made accessible to the application logic through CDI Producers.
   - The management of OpenAI API models is handled by this package.
+
+### net.sosuisen.controller
+
+This package contains only the ChatController class, which serves as a controller for Jakarta MVC.
+- ChatController is a simple controller that renders index.jsp when the context root is accessed.
+- If a username does not exist in the session at that time, it generates a UUID and sets it as the username in the session.
+- This session is managed by the `net.sosuisen.model.UserStatus` class, which has a CDI session scope.
+
+### net.sosuisen.exceptions
+
+This package contains only the ConstraintViolationExceptionMapper class, which handles errors from Jakarta Bean Validation.
+
+### net.sosuisen.model
+
+This package contains Jakarta MVC and Jakarta REST model classes.
+
+#### ChatCommand
+
+Jukdoc’s conversation strategy combines a Large Language Model (LLM) with a traditional chatbot. This combination is necessary because LLMs alone aren’t sufficient for Jukdoc’s specific task, which requires a thorough reading of a single document.
+- The ChatCommand class defines five commands related to the chatbot’s conversation strategy. These commands are mapped to user inputs based on the command.txt file, which is created by a human.
+- These commands are used in the conversation generation process within `net.sosuisen.service.ChatService`.
+
+#### ChatMessage
+
+This is a data class used to send AI responses from the backend to the frontend.
+
+- `speaker`: AI or User
+- `message`: The content of the message
+- `refs`: A list of referenced blocks
+- `suggestions`: A list of related questions
+
+#### DatabaseSetup
+
+onStart() is called only once when starting the Jukdoc application.
+This setup creates and initializes two tables in the built-in H2 database.
+
+- `paragraph` table: Loads data from structured_paragraph.txt and summary.txt. It uses position_tag as the primary key for searching.
+- `reading_record` table: Stores each user's reading history, recording the user_name, position_tag, and reading_time when a user reads a paragraph. 
+  - Initially, this table is empty.
+  - It has a compound key made up of user_name and position_tag.
+
+This built-in database is temporary, created by Payara Micro, and all data is deleted when the application shuts down.
+
+#### Document
+
+A data class that stores data retrieved from the EmbeddingStore.
+- The `type` field indicates whether the data comes from the QA Store ("qa") or the Paragraph Store ("paragraph").
+
+#### HistoryDocument
+
+A data class that stores conversation history between a user and the AI.
+
+The history field in the `net.sosuisen.model.UserStatus` class records each user’s reading history as a list of HistoryDocument objects.
+ 
+- `query`: The user’s question.
+- `answer`: The AI’s response.
+- `referredDocs`: A list of Document objects used to generate the answer.
+
+#### ParagraphDAO and ParagraphDTO
+
+These are used to access information related to paragraphs. 
+
+By joining `paragraph` table with the `reading_record` table, it can also add information on whether the user has read a paragraph (`isRead` field).
+
+#### QueryDTO
+
+A DTO that stores questions from users.
+
+#### ReadingRecordDAO
+
+The DAO for the `reading_record` table.
+
+#### StaticMessage
+
+A class for handling static messages.
+
+#### UserStatus
+
+A session-scoped class for handling user information.
+
+- `history`: Conversation history between the user and AI.
+- `currentPositionTag`: The position_tag of the paragraph that is the current topic of discussion between the user and AI.
+- `userName`: UUIDv4 generated for each user.
+
+### net.sosuisen.offlineutils
+
+This package are for offline tools used to generate AI training data.
+
+- Offline tools are typically stored in separate repositories, but they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
+- For usage details, refer to [How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data).
+- I originally developed these offline tools in Python but later ported them to Java. Writing parsers and handling string processing in Java was straightforward. To enable the same experience as Python command-line tools, I used the exec-maven-plugin to execute them from run_*.sh scripts.
+
+### net.sosuisen.resources
 
 
 
