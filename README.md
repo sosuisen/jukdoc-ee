@@ -27,6 +27,21 @@ You can think of Jukdoc as an AI chat app that helps you read a document from st
 
 <img src="./docs/jukdoc_completed.png" alt="Reading completion rate is 100%" width="300px">
 
+---
+# Table of Contents
+
+- [Setup and Run Instractions](#setup-and-run-instructions)
+- [How to Use](#how-to-use)
+- [How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data)
+- [Technology Details](#technology-details)
+- [Code Structure](#code-structure)
+- [AI Concepts Integrated with Java and Jakarta EE](#ai-concepts-integrated-with-java-and-jakarta-ee)
+- [Use Cases and Related Work](#use-cases-and-related-work)
+- [Future Work](#future-work)
+- [Conclusion](#conclusion)
+
+---
+
 # Setup and Run Instructions
 
 ## Technology Stack Overview
@@ -647,7 +662,7 @@ While the offline tools could ideally be a separate project, they are included i
 These tools were initially developed in Python and later ported to Java. Writing parsers and handling string processing was straightforward in Java. Additionally, using exec-maven-plugin allowed for command-line execution of the Maven project in a Python-like manner, making it convenient.
 
 
-# Use Cases and Related Works
+# Use Cases and Related Work
 
 The primary purpose of Jukdoc is onboarding training. In this context, users are often required to review specific documents thoroughly.
 
