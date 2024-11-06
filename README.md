@@ -61,9 +61,7 @@ Think of Jukdoc as an AI chat app designed to guide you through an entire docume
 - Docker
   - Install Docker Desktop if your OS is Windows.
 - OpenAI API key
-- Google Chrome (for Windows) and Firefox (for Linux) as required by payara-micro-maven-plugin, which uses Selenium for development
-
-This project has been tested in Windows and WSL environments.
+- Google Chrome (for macOS) or Firefox (for Linux) as required by payara-micro-maven-plugin, which uses Selenium for Dev Mode.
 
 ## Build
 
