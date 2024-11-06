@@ -78,7 +78,6 @@ public class ChatService {
                 However, please adhere to the following "Constraints"
                 
                 [Constraints]
-                * If a direct answer cannot be provided based on the above text, you will preface your response concisely with, "As the direct answer is not contained in this document, I cannot provide an exact response, but".
                 * Replace outdated expressions with modern ones.
                 * Avoid repeating the question in the response.
                 * Ensure the response is easy for elementary-level readers to understand.
@@ -95,7 +94,9 @@ public class ChatService {
                 
                 %s
                 * If you place a reference mark, it must be immediately after each sentence. Placing all reference marks at the end of all your answers is not a good method.
-                
+
+                * If a direct answer cannot be provided based on the above text, you will preface your response concisely with, "As the direct answer is not contained in this document, I cannot provide an exact response, but" and then provide a response based on the all your knowledge, ignoring the above text and constraints.                
+
                 [My Question] %s
                 """.formatted(chatHistory, contextBuilder.toString(), refsBuilder.toString(), refsHintBuilder.toString(), query);
 
@@ -203,7 +204,7 @@ public class ChatService {
         log.debug("## response: {}", answer);
 
         // Process references
-        var reEachRef = Pattern.compile("\\[*(\\d+)]", Pattern.DOTALL);
+        var reEachRef = Pattern.compile("\\[*(\\d+).?]", Pattern.DOTALL);
         var refIndexList = new ArrayList<Integer>();
         var matcher = reEachRef.matcher(answer);
         while (matcher.find()) {
