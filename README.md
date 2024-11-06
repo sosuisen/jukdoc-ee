@@ -61,8 +61,9 @@ Think of Jukdoc as an AI chat app designed to guide you through an entire docume
 - Docker
   - Install Docker Desktop if your OS is Windows.
 - OpenAI API key
-- The payara-micro-maven-plugin requires a specific web browser for development as it uses Selenium. You need to install Google Chrome on Windows and Firefox on Linux.
-- I am testing the build of this project in Windows and WSL environments.
+- Google Chrome (for Windows) and Firefox (for Linux) as required by payara-micro-maven-plugin, which uses Selenium for development
+
+This project has been tested in Windows and WSL environments.
 
 ## Build
 
@@ -74,8 +75,8 @@ git clone https://github.com/sosuisen/jukdoc-ee.git
 
 ### Build .war and Docker image
 
-Start Docker before running the following command.
-On Linux and Mac systems, please change the line endings of the mvnw file to LF.
+Start Docker before running the following command. 
+For Linux and Mac systems, convert the line endings of the `mvnw` file to LF.
 
 ```shell
 cd path-to-your-jukdoc-ee-repo
@@ -84,11 +85,11 @@ mvnw clean package
 
 ## Run
 
-When you run the application, a chat app using sample data will start.
+When you run the application, a chat app using sample data will launch.
 
-First, set your OpenAI API key as an environment variable named OPENAI_API_KEY.
+First, set your OpenAI API key as an environment variable named `OPENAI_API_KEY`.
 
-For Windows, remember to restart the terminal to apply the environment variables.
+For Windows, restart the terminal to apply the environment variables.
 
 ### Running in Production Mode
 
@@ -96,38 +97,39 @@ For Windows, remember to restart the terminal to apply the environment variables
 mvnw clean package payara-micro:start
 ```
 
-Opening http://localhost:8080/ will display the application.
-(This URL will redirect to http://localhost:8080/jukdoc/)
+Access the application at http://localhost:8080/,
+which redirects to http://localhost:8080/jukdoc/.
 
 ### Running in Dev Mode
 
-Payara Starter provides the Dev Mode that allows hot reloading. If there are any changes in the source code, the application will automatically rebuild and display updates in the browser.
+Payara Starter’s Dev Mode supports hot reloading. If you modify the source code, the application automatically rebuilds and updates in the browser.
 
-To run in development mode, use the following command:
+To run in Dev Mode, use the following command:
 
 ```shell
 mvnw clean package payara-micro:dev
 ```
-
-As a result, the browser will automatically open, displaying the application.
+The application will open in your browser automatically.
 
 ## Deployment
 
-You can easily deploy Jukdoc application using Docker in the AWS cloud.
-How to deploy Jukdoc on AWS Elastic Beanstalk is described in the following article:
+You can deploy the Jukdoc application on AWS using Docker.
+Instructions for deployment on AWS Elastic Beanstalk are available here:
 https://www.payara.fish/resource/using-payara-platform-with-docker-on-amazon-aws/
 
-Additional Notes for This Article:
+Additional Notes:
 
-- Starting in October 2024, to set up Auto Scaling on Elastic Beanstalk, you need to use a Launch Template. This requires adding settings in the .config files under the .ebextensions directory. In the jukdoc-ee repository, a configuration file (`.ebextensions/launch-template.config`) is already set up, so no additional changes are necessary.
-- For instances supporting jukdoc-ee, the t3.micro instance type is too small. It is recommended to use t3.small, t3.medium, or a larger instance type to ensure adequate performance.
+- Starting in October 2024, Auto Scaling on Elastic Beanstalk requires a Launch Template. Configuration settings for this template are already included in the `.ebextensions/launch-template.config` file in the jukdoc-ee repository.
+- For optimal performance, avoid the `t3.micro` instance type. Instead, use `t3.small`, `t3.medium`, or larger.
 
 # How to Use
 
-This app lets you explore a document through conversations with AI.
-The jukdoc-ee repository includes sample data that has already been trained for onboarding training documents for pharmaceutical sales representatives. To train the AI model with your own data, refer to [How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data).
+This app helps you navigate documents through conversations with AI.
+The jukdoc-ee repository includes sample data tailored to onboarding training for pharmaceutical sales representatives.
+To train the AI model with your own data, see
+[How to Train an AI Model with Your Data](#how-to-train-an-ai-model-with-your-data).
 
-(Note that this sample is fictional data for proof-of-concept testing.)
+(Note: The sample data is fictional and intended for proof-of-concept.)
 
 The screen is divided into four main sections.
 
@@ -135,10 +137,9 @@ The screen is divided into four main sections.
 
 At the top is the header section.
 
-- In the center, your completion rate for the document is displayed. Aim for 100% completion; it starts at 0%.
-- On the far right, your username is shown. This username is automatically generated when you visit the site and is saved for the session, so it remains the same when you return.
-- However, when the server is restarted, the database content and session will be lost. Your username will change, and your completion rate will reset to 0%.
-- Below your username is the "Delete All Records" button. Pressing this deletes your reading history, resetting your completion rate to 0%.
+- The center shows your completion rate for the document, starting at 0% with a target of 100%.
+- Your username appears on the right, generated automatically for each session. Restarting the server resets your completion rate to 0% and creates a new username.
+- Below the username is the "Delete All Records" button, which resets your reading history.
 
 <img src="./docs/header_area.png" alt="Header Area" width="700px">
 
@@ -146,36 +147,34 @@ At the top is the header section.
 
 On the left side is the document area, where the document you need to read is displayed.
 
-- The system tracks your reading status per paragraph. Read paragraphs are marked with an orange background. When all paragraphs are read, your completion rate reaches 100%.
-- At the end of each paragraph, there’s a "Read" button. When you click it, the AI explains the content of that paragraph. Once explained, the paragraph is marked as read.
+- Each paragraph’s reading status is tracked. Read paragraphs are highlighted in orange.
+- When all paragraphs are read, your completion rate reaches 100%.
+- A "Read" button at the end of each paragraph allows you to mark it as read, with the AI explaining its content.
 
 <img src="./docs/document_area.png" alt="Document Area" width="200px">
 
 ## Chat Area
 
-On the right side is the chat area, which you’ll use the most.
+On the right is the chat area, the main space for interacting with the AI.
 
-- Here, you can discuss the document on the left side with the AI.
-- Send your questions about the document to the AI by pressing "Send." The AI will respond based on the document content.
-- If the AI’s answer includes content from specific paragraphs, it will have reference symbols like [*1][*2]. The referenced paragraphs will then be marked as read.
-- At the end of the answer, there will be a link to the referenced paragraph. Clicking it makes the document jump to that paragraph, which will have a blue background. You can read more details on any paragraph by clicking links while chatting with the AI.
-- If the AI’s answer is not based on specific document content, it won’t include any paragraph references, and no paragraphs will be marked as read.
+- Here, you can ask questions about the document by pressing "Send." The AI’s responses may include references to specific paragraphs, which are then marked as read.
+- Links within responses allow you to navigate to referenced paragraphs in the document.
+- If the AI’s answer is not based on the document, it won’t include any paragraph references, and no paragraphs will be marked as read.
 
 <img src="./docs/chat_area.png" alt="Chat Area" width="200px">
 
 ## Suggested Questions Area
 
-- At the bottom of the chat area, suggested questions are displayed.
-- If there are questions related to the AI’s last response, up to two suggestions will automatically appear here.
-- You can also move to the next paragraph by selecting "Move on to the next topic."
-- If you want to skip to unread paragraphs, select "Read the unread parts."
+- Below the chat area, suggested questions appear.
+- If relevant questions exist based on the last response, up to two suggestions are displayed.
+- Options to proceed to the next topic or unread sections are also available.
 
 <img src="./docs/suggested_questoins_area.png" alt="Suggested Questions Area" width="500px">
 
 # How to Train an AI Model with Your Data
 
-- The jukdoc-ee repository includes offline tools for training the AI with your document data.
-- These tools are located in the net.sosuisen.offlineutils package (src/main/java/net/sosuisen/offlineutils/). Although offline tools are typically in separate repositories, they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
+- The jukdoc-ee repository includes tools for offline training with your own document data.
+- These tools are located in the `net.sosuisen.offlineutils` package (src/main/java/net/sosuisen/offlineutils/). Although offline tools are typically in separate repositories, they are included in the same repository as the web app for easier distribution. This package is not included in the .war file used for deployment.
 - Utility scripts to start the offline tools are in the root directory of the jukdoc-ee repository, named run_*.sh. Change the line endings of these .sh files to LF.
 
 ## Build
@@ -678,19 +677,22 @@ The name "Jukdoc" comes from the Japanese word “熟読” (juku doku), meaning
 
 # Future Work
 
-## Usability
+## Usability Enhancements:
 
 - The background color of read paragraphs is always orange; it would be more helpful if the color darkened each time a paragraph is referenced.
-- Although AI training is processed offline, it would be more convenient if user-uploaded documents could be processed directly on the server.
+- Implement server-side AI training on uploaded documents for increased convenience.
 
 ## Infrastructure
 
-- As this is a proof-of-concept app, serialized data has been placed in the resources directory. However, storing it on an external service like S3 would be better for production.
-- The built-in H2 database was used for simplicity in this test; in a real deployment, an external cloud database would be more appropriate.
+- Production data storage could benefit from external services like S3, instead of the `src/main/resources` directory.
+- An external database is recommended for production use, replacing the built-in H2 database used in this test setup.
 
 
 # Conclusion
 
-This project serves as a proof of concept to explore how AI can help us live better lives. Feedback and comments are welcome!
+This project serves as a proof of concept,
+exploring how AI can enhance our lives by assisting with thorough document reading.
+Your feedback is welcome!
+
 
 Hidekazu Kubota
