@@ -6,6 +6,8 @@ You can access the online demo site from the following URL:
 
 https://scrapbox.io/jukdoc/Jukdoc_Site
 
+Demo movie is available on YouTube: https://youtu.be/anR6sW3kAGw
+
 # Project Overview
 
 In the onboarding training, you typically need to study job-related documents, such as:
