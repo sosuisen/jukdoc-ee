@@ -58,8 +58,7 @@ Think of Jukdoc as an AI chat app designed to guide you through an entire docume
 ## Prerequisites
 
 - Java SE 21
-- Docker
-  - Install Docker Desktop if your OS is Windows.
+- Docker (Docker Desktop)
 - OpenAI API key
 - Google Chrome (for macOS) or Firefox (for Linux) as required by payara-micro-maven-plugin, which uses Selenium for Dev Mode.
 
