@@ -2,15 +2,15 @@
 
 Jukdoc is an onboarding training app supported by AI.
 
-You can access the online demo site from the following URL:
+You can access the online demo site here:
 
 https://scrapbox.io/jukdoc/Jukdoc_Site
 
-Demo movie is available on YouTube: https://youtu.be/anR6sW3kAGw
+A demo video is also available on YouTube: https://youtu.be/anR6sW3kAGw
 
 # Project Overview
 
-In the onboarding training, you typically need to study job-related documents, such as:
+In onboarding training, employees typically need to study job-related documents, such as:
 
 - Company overview materials
 - Employee handbook
@@ -19,13 +19,13 @@ In the onboarding training, you typically need to study job-related documents, s
 - Health and safety manual
 - Compliance guidelines
 
-These documents focus on job-specific knowledge within the company. You are expected to read each document thoroughly at least once.
+These documents contain job-specific knowledge essential for the company. You are expected to read each document thoroughly at least once.
 
-Traditionally, training was conducted with human instructors and specialized texts. However, Jukdoc aims to replace much of this process with AI-based conversations.
+Traditionally, training was conducted with human instructors and specialized texts. Jukdoc, however, aims to streamline much of this process through AI-driven interactions.
 
-**A unique feature of Jukdoc is that it visually indicates which parts of the document you have read and which are still unread, using color changes and a progress indicator.**
+**A unique feature of Jukdoc is its visual tracking of document sections, showing read and unread parts with color changes and a progress indicator displayed as a percentage.**
 
-You can think of Jukdoc as an AI chat app that helps you read a document from start to finish. It’s not a general-purpose AI for answering any question, nor is it a support desk app. It’s also not intended for skimming or reading only portions of a document. When your completion rate reaches 100%, you can confidently say you have read the entire document.
+Think of Jukdoc as an AI chat app designed to guide you through an entire document. It’s not a general-purpose AI for answering any question, nor is it a support desk app. It’s also not meant for skimming or reading selected portions. Upon reaching 100% completion, you can be confident you’ve read the entire document.
 
 <img src="./docs/jukdoc_completed.png" alt="Reading completion rate is 100%" width="300px">
 
