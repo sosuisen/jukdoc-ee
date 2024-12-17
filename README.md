@@ -2,11 +2,7 @@
 
 Jukdoc is an onboarding training app supported by AI.
 
-You can access the online demo site here:
-
-https://scrapbox.io/jukdoc/Jukdoc_Site
-
-A demo video is also available on YouTube: https://youtu.be/anR6sW3kAGw
+A demo video is available on YouTube: https://youtu.be/anR6sW3kAGw
 
 # Project Overview
 
