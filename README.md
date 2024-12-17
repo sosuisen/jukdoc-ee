@@ -110,10 +110,12 @@ You can deploy the Jukdoc application on AWS using Docker.
 Instructions for deployment on AWS Elastic Beanstalk are available here:
 https://www.payara.fish/resource/using-payara-platform-with-docker-on-amazon-aws/
 
-Additional Notes:
+Additional Notes for AWS EB:
 
 - Starting in October 2024, Auto Scaling on Elastic Beanstalk requires a Launch Template. Configuration settings for this template are already included in the `.ebextensions/launch-template.config` file in the jukdoc-ee repository.
 - For optimal performance, avoid the `t3.micro` instance type. Instead, use `t3.small`, `t3.medium`, or larger.
+
+If you use Payara Cloud, you will likely need to add MicroProfile Config to the Jukdoc app and set environment variables.
 
 # How to Use
 
