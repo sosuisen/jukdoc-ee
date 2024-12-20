@@ -4,6 +4,9 @@ Jukdoc is an onboarding training app supported by AI.
 
 A demo video is available on YouTube: https://youtu.be/anR6sW3kAGw
 
+:tada: [This project won the 2024 Jakarta EE with AI Hackathon!](https://www.linkedin.com/posts/payara_the-power-up-your-jakarta-ee-with-ai-hackathon-activity-7275895257563607040-lOnn?utm_source=share&utm_medium=member_desktop)
+
+
 # Project Overview
 
 In onboarding training, employees typically need to study job-related documents, such as:
